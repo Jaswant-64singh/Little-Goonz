@@ -681,7 +681,7 @@ a:focus {
 }
 
 .section-title {
-	margin-bottom: 40px;
+	margin-bottom: 20px;
 }
 
 .section-title .section-sub-title {
@@ -692,7 +692,7 @@ a:focus {
 	font-weight: 600;
 	text-transform: uppercase;
 	line-height: 1em;
-	color: var(--highlight-color);
+	color: purple;
 	margin-bottom: 15px;
 }
 
@@ -723,6 +723,7 @@ a:focus {
 .section-title p {
 	margin-top: 15px;
 	margin-bottom: 0;
+	color: black;
 }
 
 .dark-section .section-title .section-sub-title {
@@ -2723,7 +2724,7 @@ header.main-header .container {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 30px;
-	padding-top: 40px;
+	padding-top: 10px;
 	border-top: 1px solid var(--divider-color);
 }
 
@@ -2870,6 +2871,7 @@ header.main-header .container {
 
 .mission-vision-item-content p {
 	margin: 10px 0 0;
+	color: var(--black-color);
 }
 
 .why-choose-us {
@@ -8498,7 +8500,7 @@ ul.view-order-product-info-list li span {
 	}
 
 	.mission-vision-item-content p {
-		margin-top: 5px;
+		margin-top: 10px;
 	}
 
 	.why-choose-item .icon-box {
@@ -9793,7 +9795,7 @@ header.main-header .navbar {
 .adventures-content .section-title .section-sub-title {
 	font-size: 14px;
 	font-weight: 600;
-	color: var(--accent-secondary-color);
+	color: purple;
 	letter-spacing: 2px;
 	margin-bottom: 20px;
 }
@@ -9801,7 +9803,7 @@ header.main-header .navbar {
 .adventures-content .section-title h2 {
 	font-family: var(--accent-font);
 	font-size: 48px;
-	color: var(--primary-color);
+	color: #38177f;
 	margin-bottom: 25px;
 	line-height: 1.2;
 }
@@ -9809,7 +9811,7 @@ header.main-header .navbar {
 .adventures-content .section-title p {
 	font-size: 16px;
 	line-height: 1.7;
-	color: var(--text-color);
+	color: black;
 	margin-bottom: 30px;
 }
 
@@ -9914,8 +9916,9 @@ header.main-header .navbar {
 	max-width: 800px;
 	margin: 0 auto 0px;
 	font-size: 16px;
+	padding: 18px;
 	line-height: 1.6;
-	color: #666;
+	color: black;
 }
 
 .adventure-steps-cards {
@@ -11325,4 +11328,1021 @@ header.main-header .navbar {
 
 .section-color {
 	color: white;
+}
+
+/* ==========================================================================
+   Little Goonz Redesigned About Section Styles (.lg-about)
+   ========================================================================== */
+.about-us.lg-about {
+	position: relative;
+	background-color: #FFF8EE;
+	padding: 100px 0 115px 0;
+	overflow: hidden;
+	box-sizing: border-box;
+	width: 100%;
+	z-index: 1;
+}
+
+/* Playful Background Decorations */
+.lg-about__decorations {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	z-index: 1;
+}
+
+.lg-about__decor {
+	position: absolute;
+	pointer-events: none;
+}
+
+.lg-about__decor--star-left {
+	top: 45px;
+	left: 4%;
+	width: 32px;
+	height: 32px;
+}
+
+.lg-about__decor--pink-accent {
+	top: 75px;
+	left: 8%;
+	width: 55px;
+	height: 55px;
+	opacity: 0.85;
+}
+
+.lg-about__decor--plane-group {
+	position: absolute;
+	top: 35px;
+	right: 6%;
+	width: 160px;
+	height: 90px;
+}
+
+.lg-about__decor--plane-path {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.lg-about__decor--plane {
+	position: absolute;
+	right: 0;
+	top: 5px;
+	width: 34px;
+	height: 34px;
+	transform: rotate(15deg);
+}
+
+.lg-about__decor--squiggly-right {
+	top: 280px;
+	right: 2.5%;
+	width: 30px;
+	height: 140px;
+	opacity: 0.85;
+}
+
+.lg-about__decor--star-yellow {
+	top: 420px;
+	left: 3%;
+	width: 34px;
+	height: 34px;
+}
+
+.lg-about__decor--organic-purple {
+	bottom: -20px;
+	left: -30px;
+	width: 220px;
+	height: 220px;
+}
+
+.lg-about__decor--organic-yellow {
+	bottom: 30px;
+	right: -40px;
+	width: 200px;
+	height: 200px;
+}
+
+.lg-about__decor--organic-turq {
+	bottom: 240px;
+	left: 48%;
+	width: 160px;
+	height: 160px;
+}
+
+.lg-about__decor--dots-grid {
+	position: absolute;
+	top: 180px;
+	left: 42%;
+	display: grid;
+	grid-template-columns: repeat(4, 8px);
+	gap: 10px;
+	opacity: 0.35;
+}
+
+.lg-about__decor--dots-grid span {
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background-color: #38177F;
+}
+
+/* Centered Container */
+.lg-about__container {
+	max-width: 1420px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 45px;
+	position: relative;
+	z-index: 2;
+	box-sizing: border-box;
+}
+
+/* Top 2-Column Layout */
+.lg-about__top {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 50px;
+	align-items: center;
+	margin-bottom: 75px;
+}
+
+/* Left Image Section */
+.lg-about__image-wrap {
+	position: relative;
+	width: 100%;
+	max-width: 640px;
+	margin: 0 auto;
+}
+
+.lg-about__image-frame {
+	position: absolute;
+	inset: -12px;
+	width: calc(100% + 24px);
+	height: calc(100% + 24px);
+	pointer-events: none;
+	z-index: 2;
+}
+
+.lg-about__image-figure {
+	margin: 0;
+	padding: 0;
+	border-radius: 22px;
+	overflow: hidden;
+	box-shadow: 0 18px 45px rgba(56, 23, 127, 0.08);
+	position: relative;
+	z-index: 1;
+	background-color: #ffffff;
+}
+
+.lg-about__image {
+	width: 100%;
+	height: 460px;
+	object-fit: cover;
+	display: block;
+	border-radius: 22px;
+	transition: transform 0.4s ease;
+}
+
+.lg-about__image-wrap:hover .lg-about__image {
+	transform: scale(1.02);
+}
+
+/* Right Content Area */
+.lg-about__content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	max-width: 660px;
+}
+
+.lg-about__header-group {
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 12px;
+}
+
+.lg-about__eyebrow {
+	color: #F32661;
+	font-weight: 800;
+	font-size: 16px;
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+	display: inline-block;
+}
+
+.lg-about__eyebrow-squiggle {
+	width: 42px;
+	height: 10px;
+}
+
+.lg-about__title {
+	color: #38177F;
+	/* font-weight: 800; */
+	font-size: 48px;
+	line-height: 1.12;
+	margin: 0 0 20px 0;
+	/* letter-spacing: -0.5px; */
+}
+
+.lg-about__text p {
+	font-size: 17px;
+	line-height: 1.62;
+	color: #283450;
+	margin-bottom: 16px;
+	font-weight: 400;
+}
+
+.lg-about__text p:last-child {
+	margin-bottom: 0;
+}
+
+.lg-about__divider {
+	border: none;
+	border-top: 1.5px dashed #F32661;
+	opacity: 0.45;
+	margin: 28px 0 24px 0;
+	width: 100%;
+}
+
+/* Feature Highlights */
+.lg-about__features {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 45px;
+}
+
+.lg-about__feature {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+
+.lg-about__feature-icon-box {
+	width: 58px;
+	height: 58px;
+	min-width: 58px;
+	border-radius: 50%;
+	background-color: #38177F;
+	color: #ffffff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 8px 20px rgba(56, 23, 127, 0.18);
+}
+
+.lg-about__feature-icon-box svg {
+	width: 26px;
+	height: 26px;
+}
+
+.lg-about__feature-text {
+	color: #38177F;
+	font-size: 18px;
+	font-weight: 700;
+}
+
+/* Mission / Vision / Support Cards */
+.lg-about__cards {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 32px;
+	margin-top: 50px;
+}
+
+.lg-about__card {
+	position: relative;
+	background: rgba(255, 255, 255, 0.55);
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
+	border-radius: 22px;
+	padding: 72px 32px 36px 32px;
+	text-align: center;
+	border: 1.5px solid transparent;
+	box-shadow: 0 10px 30px rgba(56, 23, 127, 0.05);
+	transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.lg-about__card:hover {
+	transform: translateY(-8px);
+	box-shadow: 0 18px 40px rgba(56, 23, 127, 0.12);
+	background: rgba(255, 255, 255, 0.85);
+}
+
+.lg-about__card--mission {
+	border-color: #5B3A9E;
+}
+
+.lg-about__card--vision {
+	border-color: #32C8C2;
+}
+
+.lg-about__card--support {
+	border-color: #F32661;
+}
+
+.lg-about__card-icon {
+	position: absolute;
+	top: -40px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #ffffff;
+	border: 4px solid #ffffff;
+	box-shadow: 0 10px 25px rgba(56, 23, 127, 0.14);
+}
+
+.lg-about__card-icon svg {
+	width: 34px;
+	height: 34px;
+}
+
+.lg-about__card-icon--purple {
+	background-color: #38177F;
+}
+
+.lg-about__card-icon--turquoise {
+	background-color: #32C8C2;
+}
+
+.lg-about__card-icon--pink {
+	background-color: #F32661;
+}
+
+.lg-about__card-title {
+	color: #38177F;
+	font-size: 30px;
+	/* font-weight: 800; */
+	margin: 0 0 12px 0;
+}
+
+.lg-about__card-text {
+	color: #283450;
+	font-size: 16px;
+	line-height: 1.6;
+	margin: 0;
+	font-weight: 400;
+}
+
+/* Responsive Rules */
+@media (max-width: 1199px) {
+	.lg-about__top {
+		gap: 35px;
+	}
+
+	.lg-about__title {
+		font-size: 40px;
+	}
+
+	.lg-about__image {
+		height: 400px;
+	}
+
+	.lg-about__cards {
+		gap: 24px;
+	}
+
+	.lg-about__card {
+		padding: 68px 24px 30px 24px;
+	}
+}
+
+@media (max-width: 991px) {
+	.about-us.lg-about {
+		padding: 70px 0 80px 0;
+	}
+
+	.lg-about__decor--star-left,
+	.lg-about__decor--star-yellow,
+	.lg-about__decor--pink-accent,
+	.lg-about__decor--plane-group,
+	.lg-about__decor--squiggly-right,
+	.lg-about__decor--dots-grid {
+		display: none;
+	}
+
+	.lg-about__top {
+		grid-template-columns: 1fr;
+		gap: 40px;
+		margin-bottom: 60px;
+	}
+
+	.lg-about__image-wrap {
+		max-width: 100%;
+	}
+
+	.lg-about__image {
+		height: 380px;
+	}
+
+	.lg-about__content {
+		max-width: 100%;
+	}
+
+	.lg-about__cards {
+		grid-template-columns: 1fr;
+		gap: 55px;
+		margin-top: 30px;
+	}
+
+	.lg-about__card {
+		max-width: 500px;
+		margin: 0 auto;
+		width: 100%;
+	}
+}
+
+@media (max-width: 767px) {
+	.lg-about__container {
+		padding: 0 20px;
+	}
+
+	.lg-about__title {
+		font-size: 32px;
+	}
+
+	.lg-about__text p {
+		font-size: 15px;
+	}
+
+	.lg-about__image {
+		height: 280px;
+	}
+
+	.lg-about__features {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 20px;
+	}
+}
+
+/* ==========================================================================
+   Little Goonz Our Philosophy Section Styles (.lg-philosophy)
+   ========================================================================== */
+.lg-philosophy {
+	position: relative;
+	background-color: #FFF8EF;
+	padding: 95px 0 105px 0;
+	overflow: hidden;
+	box-sizing: border-box;
+	width: 100%;
+	z-index: 1;
+}
+
+/* Background Decorations Layer */
+.lg-philosophy__decorations {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	z-index: 1;
+}
+
+.lg-philosophy__blob {
+	position: absolute;
+	pointer-events: none;
+}
+
+.lg-philosophy__blob--top-left {
+	top: -30px;
+	left: -50px;
+	width: 280px;
+	height: 280px;
+}
+
+.lg-philosophy__blob--bottom-left {
+	bottom: -40px;
+	left: -60px;
+	width: 320px;
+	height: 320px;
+}
+
+.lg-philosophy__blob--bottom-right {
+	bottom: -30px;
+	right: -40px;
+	width: 290px;
+	height: 290px;
+}
+
+.lg-philosophy__blob--right-edge {
+	top: 30%;
+	right: -60px;
+	width: 220px;
+	height: 360px;
+}
+
+.lg-philosophy__decor {
+	position: absolute;
+	pointer-events: none;
+}
+
+.lg-philosophy__decor--star-turq {
+	top: 55px;
+	left: 4%;
+	width: 34px;
+	height: 34px;
+}
+
+.lg-philosophy__decor--star-purple-outline {
+	top: 480px;
+	left: 3%;
+	width: 32px;
+	height: 32px;
+}
+
+.lg-philosophy__decor--star-pink-outline {
+	top: 60px;
+	right: 5%;
+	width: 30px;
+	height: 30px;
+}
+
+.lg-philosophy__decor--star-yellow-outline {
+	bottom: 80px;
+	right: 4%;
+	width: 28px;
+	height: 28px;
+}
+
+.lg-philosophy__decor--plane-wrap {
+	position: absolute;
+	top: 35px;
+	right: 8%;
+	width: 170px;
+	height: 100px;
+}
+
+.lg-philosophy__decor--plane-path {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.lg-philosophy__decor--plane {
+	position: absolute;
+	right: 0;
+	top: 10px;
+	width: 34px;
+	height: 34px;
+	transform: rotate(12deg);
+}
+
+.lg-philosophy__decor--wave-pink {
+	top: 320px;
+	right: 3%;
+	width: 60px;
+	height: 15px;
+}
+
+.lg-philosophy__decor--wave-turq {
+	bottom: 220px;
+	left: 46%;
+	width: 60px;
+	height: 15px;
+}
+
+.lg-philosophy__decor--dots-grid {
+	position: absolute;
+	top: 180px;
+	left: 44%;
+	display: grid;
+	grid-template-columns: repeat(4, 8px);
+	gap: 10px;
+	opacity: 0.35;
+}
+
+.lg-philosophy__decor--dots-grid span {
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background-color: #35177D;
+}
+
+/* Main Container */
+.lg-philosophy__container {
+	max-width: 1420px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 50px;
+	position: relative;
+	z-index: 2;
+	box-sizing: border-box;
+	display: grid;
+	grid-template-columns: 46% 54%;
+	gap: 55px;
+	align-items: center;
+}
+
+/* Left Visual / Organic Image Composition */
+.lg-philosophy__visual {
+	position: relative;
+	width: 100%;
+	max-width: 580px;
+	margin: 0 auto;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+/* Layer 1: Pink Organic Shape behind image */
+.lg-philosophy__image-bg-blob {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 85%;
+	height: 75%;
+	background-color: #F32661;
+	opacity: 0.18;
+	border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%;
+	z-index: 1;
+}
+
+/* Layer 2: Main Image with Organic Silhouette */
+.lg-philosophy__image-wrapper {
+	position: relative;
+	z-index: 2;
+	width: 100%;
+	height: 520px;
+	border-radius: 45% 55% 65% 35% / 45% 45% 55% 55%;
+	overflow: hidden;
+	box-shadow: 0 20px 45px rgba(53, 23, 125, 0.12);
+	background-color: #ffffff;
+}
+
+.lg-philosophy__image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+	transition: transform 0.4s ease;
+}
+
+.lg-philosophy__visual:hover .lg-philosophy__image {
+	transform: scale(1.03);
+}
+
+/* Layer 3: Dashed Organic Outline Frame */
+.lg-philosophy__image-outline {
+	position: absolute;
+	top: 8px;
+	left: 8px;
+	right: 8px;
+	bottom: 8px;
+	border: 2.5px dashed #F32661;
+	border-radius: 47% 53% 67% 33% / 47% 47% 53% 53%;
+	pointer-events: none;
+	z-index: 3;
+	opacity: 0.85;
+}
+
+/* Right Content Column */
+.lg-philosophy__content {
+	display: flex;
+	flex-direction: column;
+	max-width: 680px;
+}
+
+.lg-philosophy__eyebrow-group {
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 12px;
+}
+
+.lg-philosophy__eyebrow {
+	color: #F32661;
+	font-weight: 800;
+	font-size: 18px;
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+}
+
+.lg-philosophy__eyebrow-squiggle {
+	width: 42px;
+	height: 10px;
+}
+
+.lg-philosophy__title {
+	color: #35177D;
+	font-size: 52px;
+	line-height: 1.1;
+	margin: 0 0 20px 0;
+}
+
+.lg-philosophy__title-highlight {
+	color: #F32661;
+}
+
+.lg-philosophy__intro p {
+	font-size: 17.5px;
+	line-height: 1.6;
+	color: #283450;
+	margin-bottom: 12px;
+	max-width: 640px;
+}
+
+.lg-philosophy__intro p:last-child {
+	margin-bottom: 24px;
+	font-weight: 600;
+}
+
+/* 4 Philosophy Panels Rows */
+.lg-philosophy__items {
+	display: flex;
+	flex-direction: column;
+	gap: 18px;
+	margin-bottom: 25px;
+}
+
+.lg-philosophy__item {
+	position: relative;
+	display: flex;
+	align-items: center;
+	min-height: 105px;
+	background: #ffffff;
+	border-radius: 60px;
+	padding: 12px 35px 12px 115px;
+	box-shadow: 0 8px 25px rgba(53, 23, 125, 0.04);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	box-sizing: border-box;
+}
+
+.lg-philosophy__item:hover {
+	transform: translateX(6px);
+	box-shadow: 0 12px 32px rgba(53, 23, 125, 0.09);
+}
+
+.lg-philosophy__item--adventure {
+	border: 1.5px dashed #35177D;
+}
+
+.lg-philosophy__item--curiosity {
+	border: 1.5px dashed #32C6C3;
+}
+
+.lg-philosophy__item--confidence {
+	border: 1.5px dashed #FFB800;
+}
+
+.lg-philosophy__item--joy {
+	border: 1.5px dashed #F32661;
+}
+
+/* Overlapping Left Circle Icon */
+.lg-philosophy__icon {
+	position: absolute;
+	left: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 90px;
+	height: 90px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #ffffff;
+	border: 4px solid #ffffff;
+	box-shadow: 0 8px 20px rgba(53, 23, 125, 0.12);
+}
+
+.lg-philosophy__icon svg {
+	width: 38px;
+	height: 38px;
+}
+
+.lg-philosophy__icon--purple {
+	background-color: #35177D;
+}
+
+.lg-philosophy__icon--turquoise {
+	background-color: #32C6C3;
+}
+
+.lg-philosophy__icon--yellow {
+	background-color: #FFB800;
+}
+
+.lg-philosophy__icon--pink {
+	background-color: #F32661;
+}
+
+/* Item Text */
+.lg-philosophy__item-content {
+	flex: 1;
+}
+
+.lg-philosophy__item-title {
+	font-size: 25px;
+	/* font-weight: 800; */
+	margin: 0 0 4px 0;
+	line-height: 1.2;
+}
+
+.lg-philosophy__item--adventure .lg-philosophy__item-title {
+	color: #35177D;
+}
+
+.lg-philosophy__item--curiosity .lg-philosophy__item-title {
+	color: #32C6C3;
+}
+
+.lg-philosophy__item--confidence .lg-philosophy__item-title {
+	color: #FFB800;
+}
+
+.lg-philosophy__item--joy .lg-philosophy__item-title {
+	color: #F32661;
+}
+
+.lg-philosophy__item-description {
+	font-size: 15px;
+	line-height: 1.45;
+	color: #283450;
+	margin: 0;
+}
+
+/* Right Edge Accent Pill */
+.lg-philosophy__item-accent {
+	width: 14px;
+	height: 36px;
+	border-radius: 20px;
+	margin-left: 15px;
+}
+
+.lg-philosophy__item-accent--purple {
+	background-color: #35177D;
+}
+
+.lg-philosophy__item-accent--turquoise {
+	background-color: #32C6C3;
+}
+
+.lg-philosophy__item-accent--yellow {
+	background-color: #FFB800;
+}
+
+.lg-philosophy__item-accent--pink {
+	background-color: #F32661;
+}
+
+/* Closing Statement */
+.lg-philosophy__closing {
+	font-size: 16.5px;
+	line-height: 1.5;
+	color: #283450;
+	margin: 10px 0 0 0;
+}
+
+.lg-philosophy__brand-highlight {
+	color: #35177D;
+	font-weight: 800;
+}
+
+/* ==========================================================================
+   Responsive Styles for .lg-philosophy
+   ========================================================================== */
+@media (max-width: 1199px) {
+	.lg-philosophy__container {
+		gap: 40px;
+		padding: 0 35px;
+	}
+
+	.lg-philosophy__title {
+		font-size: 44px;
+	}
+
+	.lg-philosophy__image-wrapper {
+		height: 440px;
+	}
+
+	.lg-philosophy__item {
+		padding-left: 105px;
+	}
+
+	.lg-philosophy__icon {
+		width: 80px;
+		height: 80px;
+	}
+
+	.lg-philosophy__icon svg {
+		width: 32px;
+		height: 32px;
+	}
+}
+
+@media (max-width: 991px) {
+	.lg-philosophy {
+		padding: 70px 0 80px 0;
+	}
+
+	.lg-philosophy__decor--star-turq,
+	.lg-philosophy__decor--star-purple-outline,
+	.lg-philosophy__decor--star-pink-outline,
+	.lg-philosophy__decor--star-yellow-outline,
+	.lg-philosophy__decor--plane-wrap,
+	.lg-philosophy__decor--wave-pink,
+	.lg-philosophy__decor--wave-turq,
+	.lg-philosophy__decor--dots-grid {
+		display: none;
+	}
+
+	.lg-philosophy__container {
+		grid-template-columns: 1fr;
+		gap: 45px;
+	}
+
+	.lg-philosophy__visual {
+		max-width: 100%;
+		order: 2;
+	}
+
+	.lg-philosophy__content {
+		max-width: 100%;
+		order: 1;
+	}
+
+	.lg-philosophy__image-wrapper {
+		height: 400px;
+	}
+}
+
+@media (max-width: 767px) {
+	.lg-philosophy__container {
+		padding: 0 20px;
+	}
+
+	.lg-philosophy__title {
+		font-size: 34px;
+	}
+
+	.lg-philosophy__intro p {
+		font-size: 15.5px;
+	}
+
+	.lg-philosophy__item {
+		padding: 15px 20px 15px 85px;
+		min-height: auto;
+		border-radius: 30px;
+	}
+
+	.lg-philosophy__icon {
+		width: 65px;
+		height: 65px;
+		left: 8px;
+	}
+
+	.lg-philosophy__icon svg {
+		width: 26px;
+		height: 26px;
+	}
+
+	.lg-philosophy__item-title {
+		font-size: 18px;
+	}
+
+	.lg-philosophy__item-description {
+		font-size: 14px;
+	}
+
+	.lg-philosophy__item-accent {
+		display: none;
+	}
+
+	.lg-philosophy__image-wrapper {
+		height: 300px;
+	}
+}
+
+@media (max-width: 480px) {
+	.lg-philosophy__title {
+		font-size: 28px;
+	}
+
+	.lg-philosophy__item {
+		padding: 12px 15px 12px 75px;
+	}
+
+	.lg-philosophy__icon {
+		width: 55px;
+		height: 55px;
+	}
+
+	.lg-philosophy__icon svg {
+		width: 22px;
+		height: 22px;
+	}
 }
