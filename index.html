@@ -1,0 +1,2325 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Awaiken">
+    <!-- Page Title -->
+    <title>Toyworld - Kids Toys Store eCommerce HTML Template</title>
+    <!-- Favicon Icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/logofav.png">
+    <!-- Google Fonts Css-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mouse+Memoirs&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap Css -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <!-- SlickNav Css -->
+    <link href="css/slicknav.min.css" rel="stylesheet">
+    <!-- Swiper Css -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <!-- Font Awesome Icon Css-->
+    <link href="css/all.min.css" rel="stylesheet" media="screen">
+    <!-- Animated Css -->
+    <link href="css/animate.css" rel="stylesheet">
+    <!-- Magnific Popup Core Css File -->
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <!-- Mouse Cursor Css File -->
+    <link rel="stylesheet" href="css/mousecursor.css">
+    <!-- Main Custom Css -->
+    <link href="css/custom.css" rel="stylesheet" media="screen">
+
+    <!-- Little Goonz FAQ Custom Styles -->
+    <style>
+        /* ==========================================================================
+           Little Goonz FAQ Section - High Fidelity Recreation
+           ========================================================================== */
+        .little-goonz-faq-section {
+            position: relative;
+            width: 100%;
+            min-height: 1024px;
+            background-color: #FFF8EE;
+            background-image: url('images/faq.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            padding: 70px 0 80px 0;
+            overflow: hidden;
+            box-sizing: border-box;
+            font-family: 'Fredoka', 'Inter', sans-serif;
+            display: flex;
+            align-items: center;
+        }
+
+        .faq-canvas-container {
+            max-width: 1420px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 60px;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .faq-two-column-row {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            gap: 65px;
+            width: 100%;
+        }
+
+        /* Left Column: Introduction & Mascot */
+        .faq-left-intro-column {
+            flex: 0 0 39%;
+            max-width: 490px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+
+        /* Mascot Creature SVG Box */
+        .faq-mascot-wrapper {
+            width: 122px;
+            height: auto;
+            margin: 0 auto 10px auto;
+            display: flex;
+            justify-content: center;
+            filter: drop-shadow(0 8px 18px rgba(56, 23, 127, 0.16));
+            transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+            cursor: pointer;
+        }
+
+        .faq-mascot-wrapper:hover {
+            transform: translateY(-5px) scale(1.06);
+        }
+
+        .faq-mascot-svg {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Uppercase Tag Label */
+        .faq-uptitle-label {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 19px;
+            font-weight: 700;
+            color: #F32661;
+            text-transform: uppercase;
+            letter-spacing: 3.5px;
+            margin: 0 0 4px 0;
+            line-height: 1.2;
+            text-align: center;
+        }
+
+        /* Decorative Yellow Squiggle */
+        .faq-squiggle-decoration {
+            margin: 0 auto 14px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Primary Oversized Two-Line Heading */
+        .faq-hero-heading {
+            margin: 0 0 16px 0;
+            text-align: center;
+            line-height: 0.96;
+        }
+
+        .faq-heading-line-brand {
+            display: block;
+            font-family: 'Fredoka', sans-serif;
+            font-size: 84px;
+            font-weight: 900;
+            color: #38177F;
+            letter-spacing: -0.5px;
+            line-height: 0.98;
+        }
+
+        .faq-heading-line-accent {
+            display: block;
+            font-family: 'Fredoka', sans-serif;
+            font-size: 92px;
+            font-weight: 900;
+            color: #F32661;
+            letter-spacing: -0.5px;
+            line-height: 0.98;
+            margin-top: 2px;
+        }
+
+        /* Supporting Paragraph */
+        .faq-supporting-text {
+            font-family: 'Fredoka', 'Inter', sans-serif;
+            font-size: 21px;
+            font-weight: 500;
+            line-height: 1.5;
+            color: #283450;
+            max-width: 380px;
+            margin: 0 auto 28px auto;
+            text-align: center;
+        }
+
+        /* Lower Left Product Photograph */
+        .faq-product-foreground {
+            width: 300px;
+            max-width: 100%;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .faq-product-foreground img {
+            width: 100%;
+            height: auto;
+            display: block;
+            mix-blend-mode: multiply;
+            transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .faq-product-foreground:hover img {
+            transform: translateY(-6px) scale(1.035);
+        }
+
+        /* Right Column: FAQ Accordion Stack */
+        .faq-right-accordion-column {
+            flex: 0 0 59%;
+            max-width: 820px;
+            display: flex;
+            flex-direction: column;
+            gap: 11px;
+            box-sizing: border-box;
+            position: relative;
+            z-index: 3;
+        }
+
+        /* FAQ Accordion Card */
+        .faq-accordion-card {
+            background: #FFFFFF;
+            border-radius: 14px;
+            box-shadow: 0 5px 15px rgba(55, 35, 90, 0.08);
+            transition: box-shadow 0.3s ease, transform 0.25s ease, border-color 0.25s ease;
+            border: 1px solid rgba(56, 23, 127, 0.05);
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .faq-accordion-card:hover {
+            box-shadow: 0 8px 24px rgba(55, 35, 90, 0.12);
+            transform: translateY(-2px);
+        }
+
+        .faq-card-header-btn {
+            display: flex;
+            align-items: center;
+            height: 88px;
+            padding: 0 34px 0 16px;
+            cursor: pointer;
+            user-select: none;
+            box-sizing: border-box;
+            width: 100%;
+            background: transparent;
+            border: none;
+            text-align: left;
+        }
+
+        .faq-card-header-btn:focus-visible {
+            outline: 2px solid #38177F;
+            outline-offset: -2px;
+        }
+
+        /* Left Circular Icon Container */
+        .faq-icon-circle-box {
+            width: 66px;
+            height: 66px;
+            border-radius: 50%;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+            color: #FFFFFF;
+        }
+
+        .faq-icon-circle-box svg {
+            width: 34px;
+            height: 34px;
+            stroke: #FFFFFF;
+            fill: none;
+            stroke-width: 2.2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        /* Center Question Typography */
+        .faq-question-label {
+            font-family: 'Fredoka', 'Inter', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: #38177F;
+            line-height: 1.25;
+            margin: 0;
+            flex: 1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-align: left;
+        }
+
+        /* Right Circular Plus Button */
+        .faq-plus-circle-btn {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 16px;
+            color: #FFFFFF;
+            transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.3s ease;
+        }
+
+        .faq-plus-circle-btn svg {
+            width: 24px;
+            height: 24px;
+            stroke: #FFFFFF;
+            fill: none;
+            stroke-width: 3;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        /* Color Sequence Themes */
+        .faq-theme-purple .faq-icon-circle-box,
+        .faq-theme-purple .faq-plus-circle-btn {
+            background-color: #38177F;
+        }
+
+        .faq-theme-pink .faq-icon-circle-box,
+        .faq-theme-pink .faq-plus-circle-btn {
+            background-color: #F32661;
+        }
+
+        .faq-theme-turquoise .faq-icon-circle-box,
+        .faq-theme-turquoise .faq-plus-circle-btn {
+            background-color: #32C8C2;
+        }
+
+        .faq-theme-yellow .faq-icon-circle-box,
+        .faq-theme-yellow .faq-plus-circle-btn {
+            background-color: #FFB900;
+        }
+
+        .faq-theme-blue .faq-icon-circle-box,
+        .faq-theme-blue .faq-plus-circle-btn {
+            background-color: #2869C4;
+        }
+
+        /* Accordion Collapsible Content */
+        .faq-accordion-drawer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+            opacity: 0;
+        }
+
+        .faq-drawer-inner-content {
+            padding: 0 34px 22px 102px;
+        }
+
+        .faq-drawer-inner-content p {
+            font-family: 'Fredoka', 'Inter', sans-serif;
+            font-size: 17px;
+            font-weight: 500;
+            line-height: 1.6;
+            color: #4a5568;
+            margin: 0;
+        }
+
+        /* Active Expanded State */
+        .faq-accordion-card.active {
+            border-color: rgba(56, 23, 127, 0.14);
+            box-shadow: 0 8px 24px rgba(55, 35, 90, 0.12);
+        }
+
+        .faq-accordion-card.active .faq-plus-circle-btn svg {
+            transform: rotate(45deg);
+        }
+
+        .faq-accordion-card.active .faq-icon-circle-box {
+            transform: scale(1.05);
+        }
+
+        .faq-accordion-card.active .faq-accordion-drawer {
+            max-height: 250px;
+            opacity: 1;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 1280px) {
+            .faq-canvas-container {
+                padding: 0 40px;
+            }
+
+            .faq-two-column-row {
+                gap: 40px;
+            }
+
+            .faq-heading-line-brand {
+                font-size: 72px;
+            }
+
+            .faq-heading-line-accent {
+                font-size: 78px;
+            }
+
+            .faq-question-label {
+                font-size: 20px;
+            }
+
+            .faq-card-header-btn {
+                height: 82px;
+                padding: 0 28px 0 14px;
+            }
+
+            .faq-icon-circle-box {
+                width: 58px;
+                height: 58px;
+                margin-right: 16px;
+            }
+
+            .faq-icon-circle-box svg {
+                width: 28px;
+                height: 28px;
+            }
+
+            .faq-plus-circle-btn {
+                width: 42px;
+                height: 42px;
+            }
+
+            .faq-plus-circle-btn svg {
+                width: 20px;
+                height: 20px;
+            }
+
+            .faq-drawer-inner-content {
+                padding: 0 28px 20px 88px;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .little-goonz-faq-section {
+                min-height: auto;
+                padding: 60px 0 70px 0;
+            }
+
+            .faq-canvas-container {
+                padding: 0 24px;
+            }
+
+            .faq-two-column-row {
+                flex-direction: column;
+                align-items: center;
+                gap: 45px;
+            }
+
+            .faq-left-intro-column {
+                flex: 0 0 100%;
+                max-width: 600px;
+                width: 100%;
+            }
+
+            .faq-right-accordion-column {
+                flex: 0 0 100%;
+                max-width: 100%;
+                width: 100%;
+            }
+
+            .faq-question-label {
+                white-space: normal;
+                font-size: 18px;
+            }
+
+            .faq-drawer-inner-content {
+                padding: 0 24px 18px 24px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .little-goonz-faq-section {
+                padding: 45px 0 55px 0;
+            }
+
+            .faq-canvas-container {
+                padding: 0 16px;
+            }
+
+            .faq-mascot-wrapper {
+                width: 95px;
+                margin-bottom: 8px;
+            }
+
+            .faq-uptitle-label {
+                font-size: 16px;
+                letter-spacing: 2.5px;
+            }
+
+            .faq-heading-line-brand {
+                font-size: 52px;
+            }
+
+            .faq-heading-line-accent {
+                font-size: 58px;
+            }
+
+            .faq-supporting-text {
+                font-size: 17px;
+                line-height: 1.45;
+                margin-bottom: 20px;
+            }
+
+            .faq-product-foreground {
+                width: 220px;
+                margin-bottom: 15px;
+            }
+
+            .faq-card-header-btn {
+                height: 72px;
+                padding: 0 16px 0 12px;
+            }
+
+            .faq-icon-circle-box {
+                width: 50px;
+                height: 50px;
+                margin-right: 12px;
+            }
+
+            .faq-icon-circle-box svg {
+                width: 24px;
+                height: 24px;
+            }
+
+            .faq-question-label {
+                font-size: 15px;
+            }
+
+            .faq-plus-circle-btn {
+                width: 38px;
+                height: 38px;
+                margin-left: 10px;
+            }
+
+            .faq-plus-circle-btn svg {
+                width: 18px;
+                height: 18px;
+            }
+
+            .faq-drawer-inner-content {
+                padding: 0 16px 16px 16px;
+            }
+
+            .faq-drawer-inner-content p {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Preloader Start -->
+    <div class="preloader">
+        <div class="loading-container">
+            <div class="loading"></div>
+            <div id="loading-icon"><img src="images/logofav.png" alt=""></div>
+        </div>
+    </div>
+    <!-- Preloader End -->
+
+    <!-- Topbar Section Start -->
+    <div class="topbar">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <div class="topbar-content-info">
+                        <div class="topbar-contact">
+                            <a href="tel:1800886699"><i class="fa-solid fa-phone"></i> Call Us:
+                                <strong>(1800)-88-66-99</strong></a>
+                            <a href="mailto:hello@littlegoonz.com"><i class="fa-solid fa-envelope"></i>
+                                hello@littlegoonz.com</a>
+                        </div>
+                        <div class="topbar-social" aria-label="Social links">
+                            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar Section End -->
+
+    <!-- Header Start -->
+    <header class="main-header">
+        <div class="header-sticky">
+            <nav class="navbar navbar-expand-lg">
+                <div class="header-action-box">
+                    <!-- Logo Start -->
+                    <a class="navbar-brand" href="./">
+                        <img src="images/logo1.png" alt="Logo">
+                    </a>
+                    <!-- Logo End -->
+
+                </div>
+
+                <!-- Main Menu Start -->
+                <div class="main-menu">
+                    <div class="collapse navbar-collapse">
+                        <div class="nav-menu-wrapper">
+                            <ul class="navbar-nav mr-auto" id="menu">
+                                <li class="nav-item"><a class="nav-link" href="./">Home</a></li>
+                                <li class="nav-item submenu"><a class="nav-link" href="shop.html">Shop</a>
+                                    <ul>
+                                        <li class="nav-item"><a class="nav-link" href="products.html">Kids Walkers</a>
+                                        </li>
+                                        <li class="nav-item"><a class="nav-link" href="products.html">Kids Scooters</a>
+                                        </li>
+                                        <li class="nav-item"><a class="nav-link" href="products.html">Roller Skates</a>
+                                        </li>
+                                        <li class="nav-item"><a class="nav-link" href="products.html">Skateboards</a>
+                                        </li>
+                                        <li class="nav-item"><a class="nav-link" href="products.html">Safety
+                                                Accessories</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item submenu"><a class="nav-link" href="#">Explore</a>
+                                    <ul>
+                                        <li class="nav-item"><a class="nav-link" href="products.html">Little
+                                                Adventures</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="products.html">Ride & Play</a>
+                                        </li>
+                                        <li class="nav-item"><a class="nav-link" href="products.html">First Steps</a>
+                                        </li>
+                                        <li class="nav-item"><a class="nav-link" href="products.html">Scoot & Glide</a>
+                                        </li>
+                                        <li class="nav-item"><a class="nav-link" href="products.html">Skate &
+                                                Explore</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="products.html">Safety First</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item submenu"><a class="nav-link" href="about.html">About Us</a>
+                                    <ul>
+                                        <li class="nav-item"><a class="nav-link" href="about.html">Our Story</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="about.html">Our Philosophy</a>
+                                        </li>
+                                        <li class="nav-item"><a class="nav-link" href="about.html">Why Little Goonz</a>
+                                        </li>
+                                        <li class="nav-item"><a class="nav-link" href="about.html">Made for Little
+                                                Explorers</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item submenu"><a class="nav-link" href="#">Safety</a>
+                                    <ul>
+                                        <li class="nav-item"><a class="nav-link" href="products.html">Safety Gear</a>
+                                        </li>
+                                        <li class="nav-item"><a class="nav-link" href="products.html">Kids Helmets</a>
+                                        </li>
+                                        <li class="nav-item"><a class="nav-link" href="products.html">Protective
+                                                Guards</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="blog.html">Safe Riding Tips</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a class="header-shop-cta" href="shop.html">Shop Now <i class="fa-solid fa-arrow-right"></i></a>
+                    <div class="navbar-toggle"></div>
+                </div>
+                <!-- Main Menu End -->
+            </nav>
+            <div class="responsive-menu"></div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Hero Slider Section Start -->
+    <div class="hero-slider">
+        <div class="swiper hero-swiper">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 Start -->
+                <div class="swiper-slide">
+                    <div class="hero-slide" style="background-image: url('images/hero-img.png');">
+                        <div class="container">
+                            <div class="row align-items-center min-vh-100">
+                                <div class="col-lg-6 col-md-8">
+                                    <div class="hero-content">
+                                        <div class="section-title">
+                                            <span class="section-sub-title wow fadeInUp" data-wow-delay="0s">Little
+                                                Goonz Adventures</span>
+                                            <h1 class="wow fadeInUp" data-wow-delay="0.1s" data-cursor="-opaque">Big
+                                                Adventures Begin with Little Steps</h1>
+                                            <p class="wow fadeInUp" data-wow-delay="0.2s">From those very first steps to
+                                                exciting moments of discovery, Little Goonz makes early movement fun.
+                                                Explore playful 4-in-1 walkers designed to bring together comfort,
+                                                curiosity, and everyday adventure for your little explorer.</p>
+                                        </div>
+                                        <div class="hero-content-btn wow fadeInUp" data-wow-delay="0.3s">
+                                            <a href="products.html" class="btn-default"><span>Explore Walkers</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 1 End -->
+
+                <!-- Slide 2 Start -->
+                <div class="swiper-slide">
+                    <div class="hero-slide" style="background-image: url('images/hero-img2.png');">
+                        <div class="container">
+                            <div class="row align-items-center min-vh-100">
+                                <div class="col-lg-6 col-md-8">
+                                    <div class="hero-content">
+                                        <div class="section-title">
+                                            <span class="section-sub-title wow fadeInUp" data-wow-delay="0s">Scooter
+                                                Adventures</span>
+                                            <h1 class="wow fadeInUp" data-wow-delay="0.1s" data-cursor="-opaque">Ride
+                                                Into Fun. Play Without Limits.</h1>
+                                            <p class="wow fadeInUp" data-wow-delay="0.2s">Let little riders discover the
+                                                joy of movement with Little Goonz scooters. Designed for playful
+                                                exploration, our colorful scooters bring energy, confidence, and
+                                                excitement to every ride.</p>
+                                        </div>
+                                        <div class="hero-content-btn wow fadeInUp" data-wow-delay="0.3s">
+                                            <a href="products.html" class="btn-default"><span>Shop Scooters</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 2 End -->
+
+                <!-- Slide 3 Start -->
+                <div class="swiper-slide">
+                    <div class="hero-slide" style="background-image: url('images/hero-img3.png');">
+                        <div class="container">
+                            <div class="row align-items-center min-vh-100">
+                                <div class="col-lg-6 col-md-8">
+                                    <div class="hero-content">
+                                        <div class="section-title">
+                                            <span class="section-sub-title wow fadeInUp" data-wow-delay="0s">Skate &
+                                                Explore</span>
+                                            <h1 class="wow fadeInUp" data-wow-delay="0.1s" data-cursor="-opaque">Move
+                                                Bold. Glide Free. Explore More.</h1>
+                                            <p class="wow fadeInUp" data-wow-delay="0.2s">From rolling into fun on Hyper
+                                                Speed Skates to discovering new adventures on the PP Skate Board, Little
+                                                Goonz turns every ride into an opportunity to move, explore, and play
+                                                with confidence.</p>
+                                        </div>
+                                        <div class="hero-content-btn wow fadeInUp" data-wow-delay="0.3s">
+                                            <a href="products.html" class="btn-default"><span>Discover Skates</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 3 End -->
+            </div>
+
+            <!-- Navigation buttons -->
+            <div class="hero-slider-navigation">
+                <div class="hero-swiper-button-prev swiper-button-prev">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </div>
+                <div class="hero-swiper-button-next swiper-button-next">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero Slider Section End -->
+
+    <!-- Big Adventures Section Start -->
+    <div class="big-adventures-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-12">
+                    <div class="adventures-mascot">
+                        <div class="mascot-image">
+                            <img src="images/heroabout.png" alt="Little Goonz" class="mascot-img">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="adventures-content">
+                        <div class="section-title">
+                            <span class="section-sub-title">WHO WE ARE</span>
+                            <h2 class="text-anime-style-2">Big Adventures for Little Goonz</h2>
+                            <p>At Little Goonz, we believe childhood is about adventure, curiosity, and endless play.
+                                Every walker, scooter, skate and helmet we make is designed around one simple idea —
+                                that a child's first wobble, first roll and first race should feel joyful and completely
+                                safe. From our workshop in Delhi, we build toys that survive real play and still look
+                                gorgeous in your living room.</p>
+                        </div>
+                        <div class="adventures-quote">
+                            <blockquote>
+                                <p>"Every child is a Little Goonz – fearless, playful, ready to take on the world."</p>
+                            </blockquote>
+                        </div>
+                        <div class="adventures-certifications">
+                            <div class="cert-item">
+                                <i class="fa-solid fa-award"></i>
+                                <span>ISO 9001:2015</span>
+                            </div>
+                            <div class="cert-item">
+                                <i class="fa-solid fa-globe"></i>
+                                <span>MAKE IN INDIA</span>
+                            </div>
+                            <div class="cert-item">
+                                <i class="fa-solid fa-certificate"></i>
+                                <span>BIS CERTIFIED</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Big Adventures Section End -->
+
+    <!-- Our Collection Section Start -->
+    <div class="our-collection">
+        <div class="container">
+            <div class="row section-row">
+                <div class="col-xl-12">
+                    <!-- Section Title Start -->
+                    <div class="section-title section-title-center">
+                        <span class="section-sub-title wow fadeInUp">Favorite Collections</span>
+                        <h2 class="text-anime-style-2" data-cursor="-opaque">Explore Little Goonz Collections</h2>
+                    </div>
+                    <!-- Section Title End -->
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- Collection Item List Start -->
+                    <div class="collection-item-list">
+                        <!-- Collection Item Start -->
+                        <div class="collection-item wow fadeInUp">
+                            <div class="collection-item-image">
+                                <a href="products.html" data-cursor-text="View">
+                                    <figure class="image-anime">
+                                        <img src="images/exploreimg1.png" alt="">
+                                    </figure>
+                                </a>
+                            </div>
+                            <div class="collection-item-content">
+                                <h3><a href="products.html">Kids Walkers</a></h3>
+                            </div>
+                        </div>
+                        <!-- Collection Item End -->
+
+                        <!-- Collection Item Start -->
+                        <div class="collection-item wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="collection-item-image">
+                                <a href="products.html" data-cursor-text="View">
+                                    <figure class="image-anime">
+                                        <img src="images/exploreimg2.png" alt="">
+                                    </figure>
+                                </a>
+                            </div>
+                            <div class="collection-item-content">
+                                <h3><a href="products.html">Kids Scooters</a></h3>
+                            </div>
+                        </div>
+                        <!-- Collection Item End -->
+
+                        <!-- Collection Item Start -->
+                        <div class="collection-item wow fadeInUp" data-wow-delay="0.4s">
+                            <div class="collection-item-image">
+                                <a href="products.html" data-cursor-text="View">
+                                    <figure class="image-anime">
+                                        <img src="images/exploreimg3.png" alt="">
+                                    </figure>
+                                </a>
+                            </div>
+                            <div class="collection-item-content">
+                                <h3><a href="products.html">Roller Skates</a></h3>
+                            </div>
+                        </div>
+                        <!-- Collection Item End -->
+
+                        <!-- Collection Item Start -->
+                        <div class="collection-item wow fadeInUp" data-wow-delay="0.6s">
+                            <div class="collection-item-image">
+                                <a href="products.html" data-cursor-text="View">
+                                    <figure class="image-anime">
+                                        <img src="images/exploreimg4.png" alt="">
+                                    </figure>
+                                </a>
+                            </div>
+                            <div class="collection-item-content">
+                                <h3><a href="products.html">Skateboards</a></h3>
+                            </div>
+                        </div>
+                        <!-- Collection Item End -->
+
+                        <!-- Collection Item Start -->
+                        <div class="collection-item wow fadeInUp" data-wow-delay="0.8s">
+                            <div class="collection-item-image">
+                                <a href="products.html" data-cursor-text="View">
+                                    <figure class="image-anime">
+                                        <img src="images/exploreimg5.png" alt="">
+                                    </figure>
+                                </a>
+                            </div>
+                            <div class="collection-item-content">
+                                <h3><a href="products.html">Safety Gear</a></h3>
+                            </div>
+                        </div>
+                        <!-- Collection Item End -->
+
+                        <!-- Collection Item Start -->
+                        <!-- <div class="collection-item wow fadeInUp" data-wow-delay="1s">
+                            <div class="collection-item-image">
+                                <a href="products.html" data-cursor-text="View">
+                                    <figure class="image-anime">
+                                        <img src="images/collection-item-image-6.jpg" alt="">
+                                    </figure>
+                                </a>
+                            </div>
+                            <div class="collection-item-content">
+                                <h3><a href="products.html">RC Toys</a></h3>
+                            </div>
+                        </div> -->
+                        <!-- Collection Item End -->
+
+                        <!-- Collection Item Start -->
+                        <!-- <div class="collection-item wow fadeInUp" data-wow-delay="1.2s">
+                            <div class="collection-item-image">
+                                <a href="products.html" data-cursor-text="View">
+                                    <figure class="image-anime">
+                                        <img src="images/collection-item-image-7.jpg" alt="">
+                                    </figure>
+                                </a>
+                            </div>
+                            <div class="collection-item-content">
+                                <h3><a href="products.html">Art & Craft</a></h3>
+                            </div>
+                        </div> -->
+                        <!-- Collection Item End -->
+                    </div>
+                    <!-- Collection Item List End -->
+                </div>
+
+                <div class="col-lg-12">
+                    <!-- Special Collection Item List Start -->
+                    <div class="special-collection-item-list">
+                        <!-- Special Collection Item Start -->
+                        <div class="special-collection-item light-box wow fadeInUp">
+                            <!-- Special Collection Item Image Start -->
+                            <div class="special-collection-item-image">
+                                <figure>
+                                    <img src="images/homepagecard1.png" alt="">
+                                </figure>
+                            </div>
+                            <!-- Special Collection Item Image End -->
+
+                            <!-- Special Collection Item Body Start -->
+                            <div class="special-collection-item-body">
+                                <!-- Special Collection Item Content Start -->
+                                <div class="special-collection-item-content">
+                                    <h3>Start Their Adventure</h3>
+                                    <p>From first steps to playful movement, Little Goonz walkers are designed for
+                                        exciting early milestones. With playful features and multiple modes, every
+                                        moment becomes a little adventure.</p>
+                                </div>
+                                <!-- Special Collection Item Content End -->
+
+                                <!-- Special Collection Item Button Start -->
+                                <div class="special-collection-item-btn">
+                                    <a href="products.html" class="readmore-btn white-btn">Explore Walkers</a>
+                                </div>
+                                <!-- Special Collection Item Button End -->
+                            </div>
+                            <!-- Special Collection Item Body End -->
+                        </div>
+                        <!-- Special Collection Item End -->
+
+                        <!-- Special Collection Item Start -->
+                        <div class="special-collection-item wow fadeInUp" data-wow-delay="0.2s">
+                            <!-- Special Collection Item Image Start -->
+                            <div class="special-collection-item-image">
+                                <figure>
+                                    <img src="images/heropagecard2.png" alt="">
+                                </figure>
+                            </div>
+                            <!-- Special Collection Item Image End -->
+
+                            <!-- Special Collection Item Body Start -->
+                            <div class="special-collection-item-body">
+                                <!-- Special Collection Item Content Start -->
+                                <div class="special-collection-item-content">
+                                    <h3>Ride, Roll & Explore</h3>
+                                    <p>Ready for more movement? Let them discover the fun of scooters, skating, and
+                                        skateboarding. From first rides to bigger adventures, there’s always more to
+                                        explore.</p>
+                                </div>
+                                <!-- Special Collection Item Content End -->
+
+                                <!-- Special Collection Item Button Start -->
+                                <div class="special-collection-item-btn">
+                                    <a href="products.html" class="readmore-btn">Explore Adventures</a>
+                                </div>
+                                <!-- Special Collection Item Button End -->
+                            </div>
+                            <!-- Special Collection Item Body End -->
+                        </div>
+                        <!-- Special Collection Item End -->
+                    </div>
+                    <!-- Special Collection Item List End -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Our Collection Section End -->
+
+    <!-- Our Products Section Start -->
+    <div class="our-products">
+        <div class="container">
+            <div class="row section-row">
+                <div class="col-xl-12">
+                    <!-- Section Title Start -->
+                    <div class="section-title section-title-center">
+                        <span class="section-sub-title wow fadeInUp">Best Selling Toys</span>
+                        <h2 class="text-anime-style-2" data-cursor="-opaque">Top Rated Toys Loved by Kids</h2>
+                    </div>
+                    <!-- Section Title End -->
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- Product item Boxes Start -->
+                    <div class="product-item-boxes">
+                        <!-- Product Item Start -->
+                        <div class="product-item highlighted-box wow fadeInUp">
+                            <!-- Bestseller Badge -->
+                            <div class="product-badge-bestseller">Bestseller</div>
+
+                            <!-- Product Item Header Start -->
+                            <div class="product-item-header">
+                                <!-- Product Item Image Start -->
+                                <div class="product-item-image">
+                                    <a href="product-single.html">
+                                        <figure>
+                                            <img src="images/product-image-1.png" alt="Turbo Racer RC Car">
+                                        </figure>
+                                    </a>
+                                </div>
+                                <!-- Product Item Image End -->
+                            </div>
+                            <!-- Product Item Header End -->
+
+                            <!-- Product Item Body Start -->
+                            <div class="product-item-body">
+                                <!-- Product Category -->
+                                <span class="product-category">KIDS WALKERS</span>
+
+                                <!-- Product Item Content Start -->
+                                <div class="product-item-content">
+                                    <h2 class="product-item-title"><a href="product-single.html">Teddy Trek 4-in-1</a>
+                                    </h2>
+                                    <p class="product-description">Playful first steps · 4-in-1 adventure</p>
+                                </div>
+                                <!-- Product Item Content End -->
+
+                                <!-- Product Item Price Start -->
+                                <div class="product-item-price">
+                                    <h3>₹3599.00</h3>
+                                </div>
+                                <!-- Product Item Price End -->
+
+                                <!-- Buy Now Button -->
+                                <a href="product-single.html" class="btn-buy-now">VIEW PRODUCT</a>
+                            </div>
+                            <!-- Product Item Body End -->
+                        </div>
+                        <!-- Product Item End -->
+
+                        <!-- Product Item Start -->
+                        <div class="product-item wow fadeInUp" data-wow-delay="0.2s">
+                            <!-- Product Item Header Start -->
+                            <div class="product-item-header">
+                                <!-- Product Item Image Start -->
+                                <div class="product-item-image">
+                                    <a href="product-single.html">
+                                        <figure>
+                                            <img src="images/productimg2.png" alt="Builder Blocks Kit">
+                                        </figure>
+                                    </a>
+                                </div>
+                                <!-- Product Item Image End -->
+                            </div>
+                            <!-- Product Item Header End -->
+
+                            <!-- Product Item Body Start -->
+                            <div class="product-item-body">
+                                <!-- Product Category -->
+                                <span class="product-category">ROLLER SKATES</span>
+
+                                <!-- Product Item Content Start -->
+                                <div class="product-item-content">
+                                    <h2 class="product-item-title"><a href="product-single.html">Hyper Speed Skates</a>
+                                    </h2>
+                                    <p class="product-description">Roll into fun · Glide with confidence</p>
+                                </div>
+                                <!-- Product Item Content End -->
+
+                                <!-- Product Item Price Start -->
+                                <div class="product-item-price">
+                                    <h3>₹6999</h3>
+                                </div>
+                                <!-- Product Item Price End -->
+
+                                <!-- Buy Now Button -->
+                                <a href="product-single.html" class="btn-buy-now">VIEW PRODUCT</a>
+                            </div>
+                            <!-- Product Item Body End -->
+                        </div>
+                        <!-- Product Item End -->
+
+                        <!-- Product Item Start -->
+                        <div class="product-item highlighted-box wow fadeInUp" data-wow-delay="0.4s">
+                            <!-- Bestseller Badge -->
+                            <div class="product-badge-bestseller">Bestseller</div>
+
+                            <!-- Product Item Header Start -->
+                            <div class="product-item-header">
+                                <!-- Product Item Image Start -->
+                                <div class="product-item-image">
+                                    <a href="product-single.html">
+                                        <figure>
+                                            <img src="images/productimg3.png" alt="Interactive Robot Toy">
+                                        </figure>
+                                    </a>
+                                </div>
+                                <!-- Product Item Image End -->
+                            </div>
+                            <!-- Product Item Header End -->
+
+                            <!-- Product Item Body Start -->
+                            <div class="product-item-body">
+                                <!-- Product Category -->
+                                <span class="product-category">KIDS SCOOTERS</span>
+
+                                <!-- Product Item Content Start -->
+                                <div class="product-item-content">
+                                    <h2 class="product-item-title"><a href="product-single.html">Zippy DX Scooter</a>
+                                    </h2>
+                                    <p class="product-description">Twist & turn · LED PU wheels</p>
+                                </div>
+                                <!-- Product Item Content End -->
+
+                                <!-- Product Item Price Start -->
+                                <div class="product-item-price">
+                                    <h3>₹4599</h3>
+                                </div>
+                                <!-- Product Item Price End -->
+
+                                <!-- Buy Now Button -->
+                                <a href="product-single.html" class="btn-buy-now">VIEW PRODUCT</a>
+                            </div>
+                            <!-- Product Item Body End -->
+                        </div>
+                        <!-- Product Item End -->
+
+                        <!-- Product Item Start -->
+                        <div class="product-item wow fadeInUp" data-wow-delay="0.6s">
+                            <!-- Product Item Header Start -->
+                            <div class="product-item-header">
+                                <!-- Product Item Image Start -->
+                                <div class="product-item-image">
+                                    <a href="product-single.html">
+                                        <figure>
+                                            <img src="images/productimg4.png" alt="Cute Bunny Soft Toy">
+                                        </figure>
+                                    </a>
+                                </div>
+                                <!-- Product Item Image End -->
+                            </div>
+                            <!-- Product Item Header End -->
+
+                            <!-- Product Item Body Start -->
+                            <div class="product-item-body">
+                                <!-- Product Category -->
+                                <span class="product-category">SAFETY GEAR</span>
+
+                                <!-- Product Item Content Start -->
+                                <div class="product-item-content">
+                                    <h2 class="product-item-title"><a href="product-single.html">Sports Helmet Pro</a>
+                                    </h2>
+                                    <p class="product-description">Protection · Comfort · Active play</p>
+                                </div>
+                                <!-- Product Item Content End -->
+
+                                <!-- Product Item Price Start -->
+                                <div class="product-item-price">
+                                    <h3>₹2999</h3>
+                                </div>
+                                <!-- Product Item Price End -->
+
+                                <!-- Buy Now Button -->
+                                <a href="product-single.html" class="btn-buy-now">VIEW PRODUCT</a>
+                            </div>
+                            <!-- Product Item Body End -->
+                        </div>
+                        <!-- Product Item End -->
+                    </div>
+                    <!-- Product item Boxes End -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Our Products Section End -->
+
+    <!-- Adventure Steps Section Start -->
+    <div class="adventure-steps-section">
+        <div class="container">
+            <div class="row section-row">
+                <div class="col-xl-12">
+                    <!-- Section Title Start -->
+                    <div class="section-title section-title-center">
+                        <span class="section-sub-title wow fadeInUp">MADE FOR EVERY LITTLE ADVENTURE</span>
+                        <h2 class="text-anime-style-2" data-cursor="-opaque">From First Steps to Bigger Adventures</h2>
+                        <p class="section-description wow fadeInUp" data-wow-delay="0.1s">Every child discovers movement
+                            in their own way. Little Goonz brings together playful walkers, scooters, skates,
+                            skateboards, and protective gear to accompany different stages of that journey.</p>
+                    </div>
+                    <!-- Section Title End -->
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- Adventure Steps Cards Start -->
+                    <div class="adventure-steps-cards">
+                        <!-- Step Card 1 Start -->
+                        <div class="adventure-step-card step-card-01 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="step-number">01</div>
+                            <div class="step-image-area">
+                                <img src="images/adventureimage.png" alt="First Steps Adventure"
+                                    class="adventure-image">
+                            </div>
+                            <div class="step-content">
+                                <h3>First Steps</h3>
+                                <p>Start with playful 4-in-1 walkers designed for early movement and discovery.</p>
+                            </div>
+                        </div>
+                        <!-- Step Card 1 End -->
+
+                        <!-- Step Card 2 Start -->
+                        <div class="adventure-step-card step-card-02 wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="step-number">02</div>
+                            <div class="step-image-area">
+                                <img src="images/adventureimage2.png" alt="First Rides Adventure"
+                                    class="adventure-image">
+                            </div>
+                            <div class="step-content">
+                                <h3>First Rides</h3>
+                                <p>As little explorers grow, scooters bring a new way to move, play, and explore.</p>
+                            </div>
+                        </div>
+                        <!-- Step Card 2 End -->
+
+                        <!-- Step Card 3 Start -->
+                        <div class="adventure-step-card step-card-03 wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="step-number">03</div>
+                            <div class="step-image-area">
+                                <img src="images/adventureimage3.png" alt="Bigger Adventures" class="adventure-image">
+                            </div>
+                            <div class="step-content">
+                                <h3>Bigger Adventures</h3>
+                                <p>For growing adventurers, roller skates and skateboards open the door to new ways of
+                                    playing and moving.</p>
+                            </div>
+                        </div>
+                        <!-- Step Card 3 End -->
+                    </div>
+                    <!-- Adventure Steps Cards End -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Adventure Steps Section End -->
+
+    <!-- Our Limited Deals Section Start -->
+
+    <!-- Our Limited Deals Section End -->
+
+    <!-- Age Based Toys Section Start -->
+
+    </div>
+    </div>
+    <!-- Age Based Toys Section End -->
+
+    <!-- Our Best Deals Section Start -->
+
+    <!-- Our Best Deals Section End -->
+
+    <!-- Our Featured Products Section Start -->
+
+    <!-- Our Featured Products Section End -->
+
+    <!-- Our New Arrivals Section Start -->
+   
+    <!-- Our New Arrivals Section End -->
+
+    <!-- CTA Section Start -->
+    <div class="cta-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <!-- CTA Box Content Start -->
+                    <div class="cta-box-content">
+                        <!-- Section Title Start -->
+                        <div class="section-title">
+                            <span class="section-sub-title wow fadeInUp">Best Deals for Kids</span>
+                            <h2 class="text-anime-style-2 new-white" data-cursor="-opaque">Discover Amazing Deals On
+                                Kids Toys
+                                Today</h2>
+                            <p class="wow fadeInUp" data-wow-delay="0.2s">Discover exciting deals on colorful and fun
+                                kids toys designed to bring smiles, creativity, and endless entertainment. </p>
+                        </div>
+                        <!-- Section Title End -->
+
+                        <!-- CTA Content Button Start -->
+                        <div class="cta-content-btn wow fadeInUp" data-wow-delay="0.4s">
+                            <a href="products.html" class="btn-default btn-border section-color"><span>Shop Toys
+                                    Now</span></a>
+                        </div>
+                        <!-- CTA Content Button End -->
+                    </div>
+                    <!-- CTA Box Content End -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <div class="our-new-arrivals">
+        <div class="container">
+            <div class="row section-row">
+                <div class="col-xl-12">
+                    <!-- Section Title Start -->
+                    <div class="section-title section-title-center">
+                        <!-- <span class="section-sub-title wow fadeInUp">New Arrivals</span> -->
+                        <h2 class="text-anime-style-2" data-cursor="-opaque">Every Little Ride Starts Somewhere</h2>
+                    </div>
+                    <!-- Section Title End -->
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xl-12">
+                    <!-- Arrivals Item List Start -->
+                    <div class="arrivals-item-list">
+                        <!-- Arrivals Item Start -->
+                        <div class="arrivals-item wow fadeInUp">
+                            <!-- Arrivals Item Image Start -->
+                            <div class="arrivals-item-image dark-section">
+                                <figure>
+                                    <img src="images/slidesection1.png" alt="">
+                                </figure>
+                            </div>
+                            <!-- Arrivals Item Image End -->
+
+                            <!-- Arrivals Item Content Start -->
+                            <div class="arrivals-item-content">
+                                <h3><a href="products.html">Make Every First Step a Little Adventure</a></h3>
+                            </div>
+                            <!-- Arrivals Item Content End -->
+                        </div>
+                        <!-- Arrivals Item End -->
+
+                        <!-- Arrivals Item Start -->
+                        <div class="arrivals-item wow fadeInUp" data-wow-delay="0.2s">
+                            <!-- Arrivals Item Image Start -->
+                            <div class="arrivals-item-image dark-section">
+                                <figure>
+                                    <img src="images/slidesection2.png" alt="">
+                                </figure>
+                            </div>
+                            <!-- Arrivals Item Image End -->
+
+                            <!-- Arrivals Item Content Start -->
+                            <div class="arrivals-item-content">
+                                <h3><a href="products.html">Turn Every Ride Into a New Adventure</a></h3>
+                            </div>
+                            <!-- Arrivals Item Content End -->
+                        </div>
+                        <!-- Arrivals Item End -->
+
+                        <!-- Arrivals Item Start -->
+                        <div class="arrivals-item wow fadeInUp" data-wow-delay="0.4s">
+                            <!-- Arrivals Item Image Start -->
+                            <div class="arrivals-item-image dark-section">
+                                <figure>
+                                    <img src="images/slidesection3.png" alt="">
+                                </figure>
+                            </div>
+                            <!-- Arrivals Item Image End -->
+
+                            <!-- Arrivals Item Content Start -->
+                            <div class="arrivals-item-content">
+                                <h3><a href="products.html">Roll, Glide & Discover Bigger Adventures</a></h3>
+                            </div>
+                            <!-- Arrivals Item Content End -->
+                        </div>
+                        <!-- Arrivals Item End -->
+                    </div>
+                    <!-- Arrivals Item List End -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- CTA Section End -->
+
+    <!-- Our Top Deals Section Start -->
+
+    <!-- Our Top Deals Section End -->
+
+    <!-- Our Social Media Section Start -->
+  
+    <!-- Our Social Media Section End -->
+
+    <!-- Our Testimonials Section Start -->
+    <div class="our-testimonials dark-section">
+        <div class="container">
+            <div class="row section-row">
+                <div class="col-xl-12">
+                    <!-- Section Title Start -->
+                    <div class="section-title section-title-center">
+                        <span class="section-sub-title wow fadeInUp">Testimonials</span>
+                        <h2 class="text-anime-style-2" data-cursor="-opaque">Happy Kids Love Our Toys</h2>
+                    </div>
+                    <!-- Section Title End -->
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xl-12">
+                    <!-- Testimonials Content Box Start -->
+                    <div class="testimonial-content-box">
+                        <!-- Testimonials Image Start -->
+                        <div class="testimonial-image">
+                            <figure class="image-anime reveal">
+                                <img src="images/testimonial-image.jpg" alt="">
+                            </figure>
+                        </div>
+                        <!-- Testimonials Image End -->
+
+                        <!-- Testimonials Content Start -->
+                        <div class="testimonilas-content">
+                            <!-- Section Title Start -->
+                            <div class="section-title">
+                                <h2 class="text-anime-style-2" data-cursor="-opaque">Our Happy Clients</h2>
+                            </div>
+                            <!-- Section Title End -->
+
+                            <!-- Testimonial Slider Start -->
+                            <div class="testimonial-slider">
+                                <div class="swiper">
+                                    <div class="swiper-wrapper" data-cursor-text="Drag">
+                                        <!-- Swiper Slide Start -->
+                                        <div class="swiper-slide">
+                                            <!-- Testimonial Item Start -->
+                                            <div class="testimonial-item">
+                                                <div class="testimonial-item-rating">
+                                                    <i class="fa fa-solid fa-star"></i>
+                                                    <i class="fa fa-solid fa-star"></i>
+                                                    <i class="fa fa-solid fa-star"></i>
+                                                    <i class="fa fa-solid fa-star"></i>
+                                                    <i class="fa fa-solid fa-star"></i>
+                                                </div>
+                                                <div class="testimonial-item-content">
+                                                    <p>“Absolutely amazing toy quality! My daughter loves every product
+                                                        we purchased The educational toys are both fun and creative.
+                                                        Highly recommended store.”</p>
+                                                </div>
+                                                <div class="testimonial-author-content">
+                                                    <h2>Aishwarya Rai</h2>
+                                                    <p>Happy Mom</p>
+                                                </div>
+                                            </div>
+                                            <!-- Testimonial Item End -->
+                                        </div>
+                                        <!-- Swiper Slide End -->
+
+                                        <!-- Swiper Slide Start -->
+                                        <div class="swiper-slide">
+                                            <!-- Testimonial Item Start -->
+                                            <div class="testimonial-item">
+                                                <div class="testimonial-item-rating">
+                                                    <i class="fa fa-solid fa-star"></i>
+                                                    <i class="fa fa-solid fa-star"></i>
+                                                    <i class="fa fa-solid fa-star"></i>
+                                                    <i class="fa fa-solid fa-star"></i>
+                                                    <i class="fa fa-solid fa-star"></i>
+                                                </div>
+                                                <div class="testimonial-item-content">
+                                                    <p>“Absolutely amazing toy quality! My daughter loves every product
+                                                        we purchased The educational toys are both fun and creative.
+                                                        Highly recommended store.”</p>
+                                                </div>
+                                                <div class="testimonial-author-content">
+                                                    <h2>Priyanka Chopra</h2>
+                                                    <p>Happy Mom</p>
+                                                </div>
+                                            </div>
+                                            <!-- Testimonial Item End -->
+                                        </div>
+                                        <!-- Swiper Slide End -->
+
+                                        <!-- Swiper Slide Start -->
+                                        <div class="swiper-slide">
+                                            <!-- Testimonial Item Start -->
+                                            <div class="testimonial-item">
+                                                <div class="testimonial-item-rating">
+                                                    <i class="fa fa-solid fa-star"></i>
+                                                    <i class="fa fa-solid fa-star"></i>
+                                                    <i class="fa fa-solid fa-star"></i>
+                                                    <i class="fa fa-solid fa-star"></i>
+                                                    <i class="fa fa-solid fa-star"></i>
+                                                </div>
+                                                <div class="testimonial-item-content">
+                                                    <p>“Absolutely amazing toy quality! My daughter loves every product
+                                                        we purchased The educational toys are both fun and creative.
+                                                        Highly recommended store.”</p>
+                                                </div>
+                                                <div class="testimonial-author-content">
+                                                    <h2>Ananya Chatterjee</h2>
+                                                    <p>Happy Mom</p>
+                                                </div>
+                                            </div>
+                                            <!-- Testimonial Item End -->
+                                        </div>
+                                        <!-- Swiper Slide End -->
+                                    </div>
+                                    <div class="testimonial-pagination"></div>
+                                </div>
+                            </div>
+                            <!-- Testimonial Slider End -->
+                        </div>
+                        <!-- Testimonials Content End -->
+                    </div>
+                    <!-- Testimonials Content Box End -->
+
+                    <!-- Testimonials Comapany Slider Start -->
+                  
+                    <!-- Testimonials Comapany Slider End -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Our Testimonials Section End -->
+
+    <!-- Little Goonz FAQs Section Start -->
+    <section class="little-goonz-faq-section" id="faq-section">
+        <div class="faq-canvas-container">
+            <div class="faq-two-column-row">
+
+                <!-- Left Introduction Column (38-40%) -->
+                <div class="faq-left-intro-column">
+
+                    <!-- Cute Mascot Creature Illustration -->
+                    <div class="faq-mascot-wrapper" title="Little Goonz Mascot">
+                        <svg viewBox="0 0 140 120" class="faq-mascot-svg" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Spikes on Top/Back -->
+                            <path d="M42 28L32 10L50 22Z" fill="#F32661" stroke="#38177F" stroke-width="3.5"
+                                stroke-linejoin="round" />
+                            <path d="M62 20L58 2L74 16Z" fill="#F32661" stroke="#38177F" stroke-width="3.5"
+                                stroke-linejoin="round" />
+                            <path d="M84 22L88 4L96 23Z" fill="#F32661" stroke="#38177F" stroke-width="3.5"
+                                stroke-linejoin="round" />
+                            <path d="M104 28L114 12L110 32Z" fill="#F32661" stroke="#38177F" stroke-width="3.5"
+                                stroke-linejoin="round" />
+
+                            <!-- Main Creature Body -->
+                            <path
+                                d="M28 65C28 38 48 24 70 24C92 24 112 38 112 65C112 92 94 110 70 110C46 110 28 92 28 65Z"
+                                fill="#FFB900" stroke="#38177F" stroke-width="4" stroke-linejoin="round" />
+
+                            <!-- Highlight on Belly -->
+                            <path d="M42 74C42 58 54 48 70 48C86 48 98 58 98 74C98 90 85 102 70 102C55 102 42 90 42 74Z"
+                                fill="#FFD54F" opacity="0.6" />
+
+                            <!-- Pink Blush Cheeks -->
+                            <ellipse cx="42" cy="68" rx="8" ry="6" fill="#F32661" opacity="0.75" />
+                            <ellipse cx="98" cy="68" rx="8" ry="6" fill="#F32661" opacity="0.75" />
+
+                            <!-- Big Expressive Googly Eyes -->
+                            <!-- Left Eye -->
+                            <circle cx="53" cy="46" r="16" fill="#FFFFFF" stroke="#38177F" stroke-width="3.5" />
+                            <circle cx="55" cy="46" r="7.5" fill="#38177F" />
+                            <circle cx="57.5" cy="43.5" r="2.5" fill="#FFFFFF" />
+                            <circle cx="53.5" cy="48.5" r="1.2" fill="#FFFFFF" />
+
+                            <!-- Right Eye -->
+                            <circle cx="87" cy="46" r="16" fill="#FFFFFF" stroke="#38177F" stroke-width="3.5" />
+                            <circle cx="85" cy="46" r="7.5" fill="#38177F" />
+                            <circle cx="87.5" cy="43.5" r="2.5" fill="#FFFFFF" />
+                            <circle cx="83.5" cy="48.5" r="1.2" fill="#FFFFFF" />
+
+                            <!-- Playful Smiling Mouth with Teeth -->
+                            <path d="M50 72C50 86 60 94 70 94C80 94 90 86 90 72H50Z" fill="#7C1236" stroke="#38177F"
+                                stroke-width="3.5" stroke-linejoin="round" />
+                            <path d="M60 88C64 92 76 92 80 88C78 82 62 82 60 88Z" fill="#F32661" />
+                            <!-- White Monster Teeth -->
+                            <path d="M54 72L58 78L62 72H54Z" fill="#FFFFFF" stroke="#38177F" stroke-width="1.5" />
+                            <path d="M64 72L68 78L72 72H64Z" fill="#FFFFFF" stroke="#38177F" stroke-width="1.5" />
+                            <path d="M74 72L78 78L82 72H74Z" fill="#FFFFFF" stroke="#38177F" stroke-width="1.5" />
+                            <path d="M84 72L86 77L88 72H84Z" fill="#FFFFFF" stroke="#38177F" stroke-width="1.5" />
+
+                            <!-- Tiny Cute Arms / Paws -->
+                            <path d="M26 72C20 74 16 80 20 86C24 90 30 84 32 80" stroke="#38177F" stroke-width="3.5"
+                                stroke-linecap="round" fill="#FFB900" />
+                            <path d="M114 72C120 74 124 80 120 86C116 90 110 84 108 80" stroke="#38177F"
+                                stroke-width="3.5" stroke-linecap="round" fill="#FFB900" />
+                        </svg>
+                    </div>
+
+                    <!-- Uppercase Subtitle Label -->
+                    <div class="faq-uptitle-label">GOT QUESTIONS?</div>
+
+                    <!-- Yellow Squiggle Decoration -->
+                    <div class="faq-squiggle-decoration">
+                        <svg viewBox="0 0 54 10" width="54" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 5C7 2 11 8 15 5C19 2 23 8 27 5C31 2 35 8 39 5C43 2 47 8 51 5" stroke="#FFB900"
+                                stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+
+                    <!-- Primary Oversized Heading -->
+                    <h2 class="faq-hero-heading">
+                        <span class="faq-heading-line-brand">Little Goonz</span>
+                        <span class="faq-heading-line-accent">FAQs</span>
+                    </h2>
+
+                    <!-- Supporting Paragraph -->
+                    <p class="faq-supporting-text">
+                        Everything you need to know about Little Goonz products, safety, age suitability, and more.
+                    </p>
+
+                    <!-- Product Photography Cutout -->
+                    <div class="faq-product-foreground">
+                        <img src="images/product-image-1.png" alt="Little Goonz 4-in-1 Baby Walker Activity Center">
+                    </div>
+
+                </div>
+
+                <!-- Right FAQ Accordion Column (60-62%) -->
+                <div class="faq-right-accordion-column wow fadeInUp" data-wow-delay="0.2s">
+
+                    <!-- Card 1: Deep Purple #38177F (Product/package/cube icon) -->
+                    <div class="faq-accordion-card faq-theme-purple">
+                        <button type="button" class="faq-card-header-btn" aria-expanded="false"
+                            aria-controls="faq-answer-1">
+                            <div class="faq-icon-circle-box" aria-hidden="true">
+                                <svg viewBox="0 0 24 24">
+                                    <path
+                                        d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                                    <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+                                    <line x1="12" y1="22.08" x2="12" y2="12" />
+                                </svg>
+                            </div>
+                            <h3 class="faq-question-label">What products does Little Goonz offer?</h3>
+                            <div class="faq-plus-circle-btn" aria-hidden="true">
+                                <svg viewBox="0 0 24 24">
+                                    <line x1="12" y1="5" x2="12" y2="19" />
+                                    <line x1="5" y1="12" x2="19" y2="12" />
+                                </svg>
+                            </div>
+                        </button>
+                        <div class="faq-accordion-drawer" id="faq-answer-1" role="region">
+                            <div class="faq-drawer-inner-content">
+                                <p>Little Goonz offers a complete range of high-quality active play gear for children,
+                                    including 4-in-1 baby activity walkers, 3-wheel and 2-wheel kick scooters,
+                                    adjustable quad and inline roller skates, beginner skateboards, and premium
+                                    certified safety gear.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Pink #F32661 (Child/baby face icon) -->
+                    <div class="faq-accordion-card faq-theme-pink">
+                        <button type="button" class="faq-card-header-btn" aria-expanded="false"
+                            aria-controls="faq-answer-2">
+                            <div class="faq-icon-circle-box" aria-hidden="true">
+                                <svg viewBox="0 0 24 24">
+                                    <circle cx="12" cy="12" r="9" />
+                                    <path d="M9 10h.01" />
+                                    <path d="M15 10h.01" />
+                                    <path d="M9.5 15a3.5 3.5 0 0 0 5 0" />
+                                    <path d="M12 3a3 3 0 0 1 3 3" />
+                                </svg>
+                            </div>
+                            <h3 class="faq-question-label">What age are Little Goonz products suitable for?</h3>
+                            <div class="faq-plus-circle-btn" aria-hidden="true">
+                                <svg viewBox="0 0 24 24">
+                                    <line x1="12" y1="5" x2="12" y2="19" />
+                                    <line x1="5" y1="12" x2="19" y2="12" />
+                                </svg>
+                            </div>
+                        </button>
+                        <div class="faq-accordion-drawer" id="faq-answer-2" role="region">
+                            <div class="faq-drawer-inner-content">
+                                <p>Our products are thoughtfully tailored for children aged 6 months up to 12+ years. We
+                                    offer baby walkers for infants (6–18 months), beginner 3-wheel scooters for toddlers
+                                    (2–5 years), stunt and 2-wheel scooters for older kids (5–10 years), and adjustable
+                                    skates and skateboards for ages 4 to 12+.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Turquoise #32C8C2 (Baby icon) -->
+                    <div class="faq-accordion-card faq-theme-turquoise">
+                        <button type="button" class="faq-card-header-btn" aria-expanded="false"
+                            aria-controls="faq-answer-3">
+                            <div class="faq-icon-circle-box" aria-hidden="true">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M4 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />
+                                    <path d="M18 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />
+                                    <path d="M5.5 17h11l1.5-7H6l-2-5H2" />
+                                    <path d="M8 10a5 5 0 0 1 10 0" />
+                                </svg>
+                            </div>
+                            <h3 class="faq-question-label">Which Little Goonz products are suitable for babies?</h3>
+                            <div class="faq-plus-circle-btn" aria-hidden="true">
+                                <svg viewBox="0 0 24 24">
+                                    <line x1="12" y1="5" x2="12" y2="19" />
+                                    <line x1="5" y1="12" x2="19" y2="12" />
+                                </svg>
+                            </div>
+                        </button>
+                        <div class="faq-accordion-drawer" id="faq-answer-3" role="region">
+                            <div class="faq-drawer-inner-content">
+                                <p>Our Teddy Trek 4-in-1 Baby Walkers and interactive activity walkers are specially
+                                    built for babies aged 6 to 18 months. They feature cushioned ergonomic seats, wide
+                                    anti-rollover safety bases, multi-stage push bars, and stimulating interactive toy
+                                    trays with lights and music.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Yellow #FFB900 (Scooter icon) -->
+                    <div class="faq-accordion-card faq-theme-yellow">
+                        <button type="button" class="faq-card-header-btn" aria-expanded="false"
+                            aria-controls="faq-answer-4">
+                            <div class="faq-icon-circle-box" aria-hidden="true">
+                                <svg viewBox="0 0 24 24">
+                                    <circle cx="5" cy="18" r="2.5" />
+                                    <circle cx="19" cy="18" r="2.5" />
+                                    <path d="M5 18h12" />
+                                    <path d="M17 18V6l-3-1" />
+                                    <path d="M14 5h6" />
+                                </svg>
+                            </div>
+                            <h3 class="faq-question-label">What scooters does Little Goonz offer?</h3>
+                            <div class="faq-plus-circle-btn" aria-hidden="true">
+                                <svg viewBox="0 0 24 24">
+                                    <line x1="12" y1="5" x2="12" y2="19" />
+                                    <line x1="5" y1="12" x2="19" y2="12" />
+                                </svg>
+                            </div>
+                        </button>
+                        <div class="faq-accordion-drawer" id="faq-answer-4" role="region">
+                            <div class="faq-drawer-inner-content">
+                                <p>We offer lean-to-steer 3-wheel scooters with light-up LED PU wheels for toddlers and
+                                    beginners, as well as foldable, height-adjustable 2-wheel scooters with rear fender
+                                    brakes for growing adventurers seeking speed and agility.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 5: Blue #2869C4 (Protective shield icon) -->
+                    <div class="faq-accordion-card faq-theme-blue">
+                        <button type="button" class="faq-card-header-btn" aria-expanded="false"
+                            aria-controls="faq-answer-5">
+                            <div class="faq-icon-circle-box" aria-hidden="true">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                                    <path d="m9 12 2 2 4-4" />
+                                </svg>
+                            </div>
+                            <h3 class="faq-question-label">Does Little Goonz offer protective gear?</h3>
+                            <div class="faq-plus-circle-btn" aria-hidden="true">
+                                <svg viewBox="0 0 24 24">
+                                    <line x1="12" y1="5" x2="12" y2="19" />
+                                    <line x1="5" y1="12" x2="19" y2="12" />
+                                </svg>
+                            </div>
+                        </button>
+                        <div class="faq-accordion-drawer" id="faq-answer-5" role="region">
+                            <div class="faq-drawer-inner-content">
+                                <p>Yes! Safety is our top priority. We offer multi-sport impact-resistant helmets with
+                                    EPS foam padding and dial-fit systems, along with 6-piece protective pad sets (knee
+                                    pads, elbow pads, and wrist guards) designed specifically for young riders.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 6: Deep Purple #38177F (Roller skate icon) -->
+                    <div class="faq-accordion-card faq-theme-purple">
+                        <button type="button" class="faq-card-header-btn" aria-expanded="false"
+                            aria-controls="faq-answer-6">
+                            <div class="faq-icon-circle-box" aria-hidden="true">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M4 16h13a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-3v4H9l-5 4v2z" />
+                                    <circle cx="6.5" cy="19.5" r="2" />
+                                    <circle cx="14.5" cy="19.5" r="2" />
+                                    <line x1="19" y1="16" x2="21" y2="16" />
+                                </svg>
+                            </div>
+                            <h3 class="faq-question-label">What roller skates does Little Goonz offer?</h3>
+                            <div class="faq-plus-circle-btn" aria-hidden="true">
+                                <svg viewBox="0 0 24 24">
+                                    <line x1="12" y1="5" x2="12" y2="19" />
+                                    <line x1="5" y1="12" x2="19" y2="12" />
+                                </svg>
+                            </div>
+                        </button>
+                        <div class="faq-accordion-drawer" id="faq-answer-6" role="region">
+                            <div class="faq-drawer-inner-content">
+                                <p>Little Goonz offers 4-size adjustable quad skates and inline skates equipped with
+                                    smooth ABEC-7 bearings, illuminated LED wheels, secure triple-lock buckle systems,
+                                    and breathable inner liners for all-day comfort and stability.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 7: Pink #F32661 (Skateboard icon) -->
+                    <div class="faq-accordion-card faq-theme-pink">
+                        <button type="button" class="faq-card-header-btn" aria-expanded="false"
+                            aria-controls="faq-answer-7">
+                            <div class="faq-icon-circle-box" aria-hidden="true">
+                                <svg viewBox="0 0 24 24">
+                                    <path
+                                        d="M2.5 10C5 11 7 11 12 11s7 0 9.5-1c.8-.3 1.5.3 1.5 1.2 0 .8-.6 1.4-1.4 1.6-2.6.7-5.1.7-9.6.7s-7 0-9.6-.7C1.6 13.6 1 13 1 12.2c0-.9.7-1.5 1.5-1.2z" />
+                                    <circle cx="6" cy="17" r="2" />
+                                    <circle cx="18" cy="17" r="2" />
+                                    <line x1="6" y1="13" x2="6" y2="15" />
+                                    <line x1="18" y1="13" x2="18" y2="15" />
+                                </svg>
+                            </div>
+                            <h3 class="faq-question-label">What skateboard does Little Goonz offer?</h3>
+                            <div class="faq-plus-circle-btn" aria-hidden="true">
+                                <svg viewBox="0 0 24 24">
+                                    <line x1="12" y1="5" x2="12" y2="19" />
+                                    <line x1="5" y1="12" x2="19" y2="12" />
+                                </svg>
+                            </div>
+                        </button>
+                        <div class="faq-accordion-drawer" id="faq-answer-7" role="region">
+                            <div class="faq-drawer-inner-content">
+                                <p>We offer 22-inch mini cruiser skateboards and 28-inch double-kick maple skateboards
+                                    with anti-slip grip tape, heavy-duty aluminum trucks, and soft shock-absorbing PU
+                                    wheels ideal for kids learning balance and basic tricks.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 8: Turquoise #32C8C2 (Location pin icon) -->
+                    <div class="faq-accordion-card faq-theme-turquoise">
+                        <button type="button" class="faq-card-header-btn" aria-expanded="false"
+                            aria-controls="faq-answer-8">
+                            <div class="faq-icon-circle-box" aria-hidden="true">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M12 21c-4-4.5-7-8.5-7-12a7 7 0 1 1 14 0c0 3.5-3 7.5-7 12z" />
+                                    <circle cx="12" cy="9" r="2.5" />
+                                </svg>
+                            </div>
+                            <h3 class="faq-question-label">Where are Little Goonz products made?</h3>
+                            <div class="faq-plus-circle-btn" aria-hidden="true">
+                                <svg viewBox="0 0 24 24">
+                                    <line x1="12" y1="5" x2="12" y2="19" />
+                                    <line x1="5" y1="12" x2="19" y2="12" />
+                                </svg>
+                            </div>
+                        </button>
+                        <div class="faq-accordion-drawer" id="faq-answer-8" role="region">
+                            <div class="faq-drawer-inner-content">
+                                <p>Little Goonz products are proudly engineered and assembled in certified, world-class
+                                    manufacturing facilities adhering to strict BIS and international safety standards
+                                    (EN71, ASTM). Every product undergoes rigorous drop, impact, and non-toxic material
+                                    testing before reaching your family.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Little Goonz FAQs Section End -->
+
+    <!-- Our Blog Section Start -->
+
+    <!-- Our Blog Section End -->
+
+    <!-- Little Goonz Footer Start -->
+    <footer class="lg-footer" id="main-footer">
+        <!-- Organic Top Wave & Accent Blobs -->
+        <div class="lg-footer__wave-wrap" aria-hidden="true">
+            <svg class="lg-footer__wave-svg" viewBox="0 0 1440 110" fill="none" xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="none">
+                <!-- Top Left Yellow Organic Shape -->
+                <path
+                    d="M0 25C40 8 95 0 150 18C185 29 210 55 240 50C255 47 268 35 285 42C300 48 315 62 330 68C270 95 140 105 0 85V25Z"
+                    fill="#FFB900" opacity="0.95" />
+
+                <!-- Top Right Pink Organic Shape -->
+                <path
+                    d="M1120 40C1180 15 1250 8 1320 22C1370 32 1410 15 1440 5V85C1380 98 1260 90 1180 65C1150 55 1135 48 1120 40Z"
+                    fill="#F32661" opacity="0.9" />
+
+                <!-- Top Right-Middle Turquoise Shape -->
+                <path d="M980 52C1030 35 1080 38 1130 55C1100 80 1040 88 980 75V52Z" fill="#32C8C2" opacity="0.9" />
+
+                <!-- Main Deep Purple Smooth Organic Wave -->
+                <path
+                    d="M0 58C90 32 180 25 270 48C360 70 450 88 550 78C650 68 740 38 840 32C940 26 1030 52 1130 65C1230 78 1340 60 1440 38V110H0V58Z"
+                    fill="#29166F" />
+            </svg>
+        </div>
+
+        <div class="lg-footer__container">
+            <!-- 5-Column Navigation & Brand Grid -->
+            <div class="lg-footer__grid">
+
+                <!-- Column 1: Brand -->
+                <div class="lg-footer__brand">
+                    <!-- Little Goonz Mascot Creature -->
+                    
+
+                    <!-- Little Goonz Logo -->
+                    <a href="index.html" class="lg-footer__logo-link">
+                        <img src="images/companyslide1.png" alt="Little Goonz" class="lg-footer__logo-img">
+                    </a>
+
+                    <!-- Brand Description -->
+                    <p class="lg-footer__description">
+                        Fun, safe &amp; innovative toys and mobility gear for your little goonz to grow, play and
+                        explore.
+                    </p>
+
+                    <!-- Social Media Links -->
+                    <div class="lg-footer__socials">
+                        <a href="#" class="lg-footer__social-btn lg-footer__social-fb" aria-label="Facebook"
+                            title="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="lg-footer__social-btn lg-footer__social-ig" aria-label="Instagram"
+                            title="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" class="lg-footer__social-btn lg-footer__social-yt" aria-label="YouTube"
+                            title="YouTube">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                        <a href="#" class="lg-footer__social-btn lg-footer__social-wa" aria-label="WhatsApp"
+                            title="WhatsApp">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Column 2: SHOP -->
+                <div class="lg-footer__col lg-footer__col-shop">
+                    <div class="lg-footer__heading-wrap">
+                        <h3 class="lg-footer__heading lg-footer__heading--yellow">SHOP</h3>
+                        <svg class="lg-footer__wavy-underline" viewBox="0 0 40 8" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 4C5 1 8 7 11 4C14 1 17 7 20 4C23 1 26 7 29 4C32 1 35 7 38 4"
+                                stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <ul class="lg-footer__list">
+                        <li class="lg-footer__item">
+                            <span class="lg-footer__bullet" aria-hidden="true"></span>
+                            <a href="products.html" class="lg-footer__link">Kids Walkers</a>
+                        </li>
+                        <li class="lg-footer__item">
+                            <span class="lg-footer__bullet" aria-hidden="true"></span>
+                            <a href="products.html" class="lg-footer__link">Kids Scooters</a>
+                        </li>
+                        <li class="lg-footer__item">
+                            <span class="lg-footer__bullet" aria-hidden="true"></span>
+                            <a href="products.html" class="lg-footer__link">Roller Skates</a>
+                        </li>
+                        <li class="lg-footer__item">
+                            <span class="lg-footer__bullet" aria-hidden="true"></span>
+                            <a href="products.html" class="lg-footer__link">Skateboards</a>
+                        </li>
+                        <li class="lg-footer__item">
+                            <span class="lg-footer__bullet" aria-hidden="true"></span>
+                            <a href="products.html" class="lg-footer__link">Safety Accessories</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: COMPANY -->
+                <div class="lg-footer__col lg-footer__col-company">
+                    <div class="lg-footer__heading-wrap">
+                        <h3 class="lg-footer__heading lg-footer__heading--turquoise">COMPANY</h3>
+                        <svg class="lg-footer__wavy-underline" viewBox="0 0 40 8" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 4C5 1 8 7 11 4C14 1 17 7 20 4C23 1 26 7 29 4C32 1 35 7 38 4"
+                                stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <ul class="lg-footer__list">
+                        <li class="lg-footer__item">
+                            <span class="lg-footer__bullet" aria-hidden="true"></span>
+                            <a href="about.html" class="lg-footer__link">About Us</a>
+                        </li>
+                        <li class="lg-footer__item">
+                            <span class="lg-footer__bullet" aria-hidden="true"></span>
+                            <a href="about.html" class="lg-footer__link">Our Story</a>
+                        </li>
+                        <li class="lg-footer__item">
+                            <span class="lg-footer__bullet" aria-hidden="true"></span>
+                            <a href="about.html" class="lg-footer__link">Our Philosophy</a>
+                        </li>
+                        <li class="lg-footer__item">
+                            <span class="lg-footer__bullet" aria-hidden="true"></span>
+                            <a href="about.html" class="lg-footer__link">Why Little Goonz</a>
+                        </li>
+                        <li class="lg-footer__item">
+                            <span class="lg-footer__bullet" aria-hidden="true"></span>
+                            <a href="about.html" class="lg-footer__link">Made for Little Explorers</a>
+                        </li>
+                        <li class="lg-footer__item">
+                            <span class="lg-footer__bullet" aria-hidden="true"></span>
+                            <a href="products.html" class="lg-footer__link">Little Adventures</a>
+                        </li>
+                        <li class="lg-footer__item">
+                            <span class="lg-footer__bullet" aria-hidden="true"></span>
+                            <a href="products.html" class="lg-footer__link">Ride &amp; Play</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: HELP & SUPPORT -->
+                <div class="lg-footer__col lg-footer__col-support">
+                    <div class="lg-footer__heading-wrap">
+                        <h3 class="lg-footer__heading lg-footer__heading--pink">HELP &amp; SUPPORT</h3>
+                        <svg class="lg-footer__wavy-underline" viewBox="0 0 40 8" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 4C5 1 8 7 11 4C14 1 17 7 20 4C23 1 26 7 29 4C32 1 35 7 38 4"
+                                stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <ul class="lg-footer__list">
+                        <li class="lg-footer__item">
+                            <span class="lg-footer__bullet" aria-hidden="true"></span>
+                            <a href="products.html" class="lg-footer__link">Safety Gear</a>
+                        </li>
+                        <li class="lg-footer__item">
+                            <span class="lg-footer__bullet" aria-hidden="true"></span>
+                            <a href="products.html" class="lg-footer__link">Kids Helmets</a>
+                        </li>
+                        <li class="lg-footer__item">
+                            <span class="lg-footer__bullet" aria-hidden="true"></span>
+                            <a href="products.html" class="lg-footer__link">Protective Guards</a>
+                        </li>
+                        <li class="lg-footer__item">
+                            <span class="lg-footer__bullet" aria-hidden="true"></span>
+                            <a href="blog.html" class="lg-footer__link">Safe Riding Tips</a>
+                        </li>
+                        <li class="lg-footer__item">
+                            <span class="lg-footer__bullet" aria-hidden="true"></span>
+                            <a href="contact.html" class="lg-footer__link">Contact Us</a>
+                        </li>
+                        <li class="lg-footer__item">
+                            <span class="lg-footer__bullet" aria-hidden="true"></span>
+                            <a href="#faq-section" class="lg-footer__link">FAQs</a>
+                        </li>
+                        <li class="lg-footer__item">
+                            <span class="lg-footer__bullet" aria-hidden="true"></span>
+                            <a href="terms.html" class="lg-footer__link">Terms &amp; Conditions</a>
+                        </li>
+                        <li class="lg-footer__item">
+                            <span class="lg-footer__bullet" aria-hidden="true"></span>
+                            <a href="privacy.html" class="lg-footer__link">Privacy Policy</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 5: STAY IN THE LOOP (Newsletter) -->
+                <div class="lg-footer__col lg-footer__col-newsletter">
+                    <div class="lg-footer__heading-wrap">
+                        <h3 class="lg-footer__heading lg-footer__heading--yellow">STAY IN THE LOOP</h3>
+                        <svg class="lg-footer__wavy-underline" viewBox="0 0 40 8" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 4C5 1 8 7 11 4C14 1 17 7 20 4C23 1 26 7 29 4C32 1 35 7 38 4"
+                                stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <p class="lg-footer__newsletter-text">
+                        Subscribe to get special offers, new arrivals &amp; parenting tips.
+                    </p>
+
+                    <!-- Newsletter Form -->
+                    <form class="lg-footer__form" action="#" method="POST" onsubmit="event.preventDefault();">
+                        <div class="lg-footer__input-wrap">
+                            <input type="email" class="lg-footer__input" placeholder="Enter your email" required
+                                aria-label="Enter your email address">
+                            <button type="submit" class="lg-footer__submit-btn" aria-label="Subscribe to newsletter">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="22" y1="2" x2="11" y2="13" />
+                                    <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+            <!-- Trust / Value Indicators Bar -->
+            <div class="lg-footer__trust">
+                <!-- Trust Item 1: Safe & Certified -->
+                <div class="lg-footer__trust-item">
+                    <div class="lg-footer__trust-icon-box lg-footer__trust-purple" aria-hidden="true">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                            <path d="m9 12 2 2 4-4" />
+                        </svg>
+                    </div>
+                    <p class="lg-footer__trust-text">Safe &amp;<br>Certified</p>
+                </div>
+
+                <!-- Trust Item 2: Made for Little Goonz -->
+                <div class="lg-footer__trust-item">
+                    <div class="lg-footer__trust-icon-box lg-footer__trust-pink" aria-hidden="true">
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="9" />
+                            <path d="M9 10h.01" />
+                            <path d="M15 10h.01" />
+                            <path d="M9.5 15a3.5 3.5 0 0 0 5 0" />
+                            <path d="M12 3a3 3 0 0 1 3 3" />
+                        </svg>
+                    </div>
+                    <p class="lg-footer__trust-text">Made for<br>Little Goonz</p>
+                </div>
+
+                <!-- Trust Item 3: Premium Quality -->
+                <div class="lg-footer__trust-item">
+                    <div class="lg-footer__trust-icon-box lg-footer__trust-turquoise" aria-hidden="true">
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="12" cy="9" r="6" />
+                            <path d="m8.5 14.5-2.5 7.5 6-3 6 3-2.5-7.5" />
+                            <path d="m10 9 1.5 1.5 3-3" />
+                        </svg>
+                    </div>
+                    <p class="lg-footer__trust-text">Premium<br>Quality</p>
+                </div>
+
+                <!-- Trust Item 4: Fast & Reliable -->
+                <div class="lg-footer__trust-item">
+                    <div class="lg-footer__trust-icon-box lg-footer__trust-yellow" aria-hidden="true">
+                        <svg viewBox="0 0 24 24">
+                            <rect x="1" y="3" width="15" height="13" rx="2" />
+                            <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
+                            <circle cx="5.5" cy="18.5" r="2.5" />
+                            <circle cx="18.5" cy="18.5" r="2.5" />
+                        </svg>
+                    </div>
+                    <p class="lg-footer__trust-text">Fast &amp;<br>Reliable</p>
+                </div>
+            </div>
+
+            <!-- Subtle Horizontal Divider -->
+            <hr class="lg-footer__divider">
+
+            <!-- Footer Bottom Bar -->
+            <div class="lg-footer__bottom">
+                <!-- Left: Copyright & Heart -->
+                <p class="lg-footer__copyright">
+                    <span class="lg-footer__heart-icon" aria-hidden="true">♥</span>
+                    &copy; 2026 Little Goonz. All rights reserved.
+                </p>
+
+                <!-- Center: Decorative Playful Elements -->
+                <div class="lg-footer__bottom-decor" aria-hidden="true">
+                    <!-- Turquoise Squiggle -->
+                    <svg class="lg-footer__decor-squiggle" viewBox="0 0 36 8" fill="none">
+                        <path d="M2 4C5 1 8 7 11 4C14 1 17 7 20 4C23 1 26 7 29 4C32 1 35 7" stroke="#32C8C2"
+                            stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                    <!-- Yellow Dot -->
+                    <span class="lg-footer__decor-dot"></span>
+                    <!-- Pink Star -->
+                    <svg class="lg-footer__decor-star" viewBox="0 0 24 24" fill="none" stroke="#F32661" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polygon
+                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                    </svg>
+                    <!-- Turquoise Grid -->
+                    <div class="lg-footer__decor-grid">
+                        <span class="lg-footer__decor-grid-dot"></span>
+                        <span class="lg-footer__decor-grid-dot"></span>
+                        <span class="lg-footer__decor-grid-dot"></span>
+                        <span class="lg-footer__decor-grid-dot"></span>
+                        <span class="lg-footer__decor-grid-dot"></span>
+                        <span class="lg-footer__decor-grid-dot"></span>
+                    </div>
+                </div>
+
+                <!-- Right: Secure Payments & Logos -->
+                <div class="lg-footer__payments">
+                    <span class="lg-footer__payments-label">Secure Payments</span>
+                    <div class="lg-footer__payment-badges">
+                        <!-- VISA -->
+                        <div class="lg-footer__payment-badge" title="Visa">
+                            <img src="images/icon-payment-options-5.svg" alt="Visa">
+                        </div>
+                        <!-- Mastercard -->
+                        <div class="lg-footer__payment-badge" title="Mastercard">
+                            <img src="images/icon-payment-options-6.svg" alt="Mastercard">
+                        </div>
+                        <!-- RuPay -->
+                        <div class="lg-footer__payment-badge" title="RuPay">
+                            <svg viewBox="0 0 74 24" width="48" height="18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <text x="1" y="18" font-family="'Fredoka', Arial, sans-serif" font-weight="900"
+                                    font-size="17" fill="#0C2340" letter-spacing="-0.5">RuPay</text>
+                                <polygon points="56,5 61,12 56,19 60,19 65,12 60,5" fill="#F37021" />
+                                <polygon points="63,5 68,12 63,19 67,19 72,12 67,5" fill="#00A859" />
+                            </svg>
+                        </div>
+                        <!-- UPI -->
+                        <div class="lg-footer__payment-badge" title="UPI">
+                            <svg viewBox="0 0 60 24" width="46" height="18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <text x="1" y="18" font-family="'Fredoka', Arial, sans-serif" font-weight="900"
+                                    font-size="18" fill="#0C2340" letter-spacing="-0.5">UPI</text>
+                                <polygon points="42,5 47,12 42,19 46,19 51,12 46,5" fill="#00A859" />
+                                <polygon points="49,5 54,12 49,19 53,19 58,12 53,5" fill="#F37021" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <!-- Little Goonz Footer End -->
+
+    <!-- Jquery Library File -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap js file -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Validator js file -->
+    <script src="js/validator.min.js"></script>
+    <!-- SlickNav js file -->
+    <script src="js/jquery.slicknav.js"></script>
+    <!-- Swiper js file -->
+    <script src="js/swiper-bundle.min.js"></script>
+    <!-- Counter js file -->
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <!-- Magnific js file -->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <!-- SmoothScroll -->
+    <script src="js/SmoothScroll.js"></script>
+    <!-- Parallax js -->
+    <script src="js/parallaxie.js"></script>
+    <!-- MagicCursor js file -->
+    <script src="js/gsap.min.js"></script>
+    <script src="js/magiccursor.js"></script>
+    <!-- Text Effect js file -->
+    <script src="js/SplitText.min.js"></script>
+    <script src="js/ScrollTrigger.min.js"></script>
+    <!-- YTPlayer js File -->
+    <script src="js/jquery.mb.YTPlayer.min.js"></script>
+    <!-- Wow js file -->
+    <script src="js/wow.min.js"></script>
+    <!-- Main Custom js file -->
+    <script src="js/function.js"></script>
+
+    <!-- Little Goonz FAQ Accordion Script -->
+    <script>
+        (function () {
+            function initFaqAccordion() {
+                var cards = document.querySelectorAll('.little-goonz-faq-section .faq-accordion-card');
+                if (!cards.length) return;
+
+                cards.forEach(function (card) {
+                    var btn = card.querySelector('.faq-card-header-btn');
+                    if (!btn) return;
+
+                    btn.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        var isActive = card.classList.contains('active');
+
+                        // Close all other open cards for clean accordion behaviour
+                        cards.forEach(function (otherCard) {
+                            if (otherCard !== card && otherCard.classList.contains('active')) {
+                                otherCard.classList.remove('active');
+                                var otherBtn = otherCard.querySelector('.faq-card-header-btn');
+                                if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+                            }
+                        });
+
+                        // Toggle clicked card
+                        if (isActive) {
+                            card.classList.remove('active');
+                            btn.setAttribute('aria-expanded', 'false');
+                        } else {
+                            card.classList.add('active');
+                            btn.setAttribute('aria-expanded', 'true');
+                        }
+                    });
+                });
+            }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initFaqAccordion);
+            } else {
+                initFaqAccordion();
+            }
+        })();
+    </script>
+
+</body>
+
+</html>
