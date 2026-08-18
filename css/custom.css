@@ -52,7 +52,16 @@
 44. Empty Cart Page css
 45. 404 Error Page css
 46. Responsive css
+
 -------------------------------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+@font-face {
+	font-family: "IT Pimo Demo";
+	src: url("../fonts/IT Pimo Demo.otf") format("opentype");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
 
 /****************************************/
 /*** 	   01. Global Variables 	  ***/
@@ -71,10 +80,10 @@
 	--dark-divider-color: #FFFFFF1A;
 	--highlight-color: #F5B51A;
 	--aqua-color: #2DBCAF;
-	--blue-color: #0070AB;
+	--blue-color: #0070AB;	
 	--error-color: rgb(230, 87, 87);
-	--default-font: "Inter", sans-serif;
-	--accent-font: "Mouse Memoirs", sans-serif;
+	--default-font: "Exo 2", sans-serif;
+	--accent-font: "IT Pimo Demo", "Mouse Memoirs", sans-serif;
 }
 
 /* Little Goonz header refresh */
