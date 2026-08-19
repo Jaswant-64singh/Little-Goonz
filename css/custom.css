@@ -88,10 +88,21 @@
 }
 
 /* Little Goonz header refresh */
-.topbar {
+/* .topbar {
 	background: var(--primary-color);
 	padding: 9px 0;
 	border-bottom: 3px solid var(--accent-secondary-color);
+} */
+
+.topbar {
+	background: #F6B21A !important;
+	/* Replace with your color code */
+	padding: 9px 0;
+	border-bottom: 3px solid var(--accent-secondary-color);
+}
+
+.new-top {
+	background-color: red;
 }
 
 .topbar-content-info {
@@ -108,10 +119,19 @@
 	gap: 24px;
 }
 
-.topbar-contact a,
+/* .topbar-contact a,
 .topbar-social a {
 	color: var(--white-color);
 	font-size: 13px;
+	font-weight: 500;
+	line-height: 1.4;
+	transition: color .25s ease, transform .25s ease;
+} */
+
+.topbar-contact a,
+.topbar-social a {
+	color: black !important;
+	font-size: 15px !important;
 	font-weight: 500;
 	line-height: 1.4;
 	transition: color .25s ease, transform .25s ease;
@@ -150,7 +170,7 @@ header.main-header .navbar {
 	margin: 0 auto;
 	padding: 0 20px;
 	flex-wrap: nowrap;
-	gap: 18px;
+	gap: 23px;
 }
 
 .header-action-box {
@@ -171,9 +191,9 @@ header.main-header .navbar {
 	transform: rotate(-2deg) scale(1.04);
 }
 
-.navbar-brand img {
-	width: 148px;
-	height: 82px;
+.navb	ar-brand img {
+	width: 169px;
+	height: 81px;
 	max-width: none;
 	object-fit: contain;
 }
@@ -2125,6 +2145,10 @@ header.main-header .container {
 
 .cta-box-content {
 	max-width: 590px;
+}
+
+.cta-box-content .section-title .section-sub-title {
+	color: #ffffff;
 }
 
 .cta-box-content .section-title p {
@@ -9106,7 +9130,7 @@ ul.view-order-product-info-list li span {
 
 header.main-header .header-sticky {
 	background-color: #342365;
-	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 160' preserveAspectRatio='none'%3E%3Crect width='1600' height='160' fill='%23352264'/%3E%3Cpath d='M94 0 C105 40 83 112 92 160 H216 C205 112 225 40 223 0 Z' fill='%23F6B21A'/%3E%3Cpath d='M223 0 C225 40 205 112 216 160 H338 C328 112 349 40 345 0 Z' fill='%23E31A51'/%3E%3Cpath d='M345 0 C349 40 328 112 338 160 H459 C451 112 472 40 467 0 Z' fill='%232DB8AA'/%3E%3Cpath d='M467 0 C472 40 451 112 459 160 H584 C574 112 596 40 591 0 Z' fill='%23066AAA'/%3E%3Cpath d='M591 0 C596 40 574 112 584 160 H705 C696 112 718 40 710 0 Z' fill='%23352264'/%3E%3Cpath d='M710 0 C718 40 696 112 705 160 H827 C817 112 840 40 834 0 Z' fill='%23F6B21A'/%3E%3Cpath d='M834 0 C840 40 817 112 827 160 H949 C939 112 961 40 956 0 Z' fill='%23E31A51'/%3E%3Cpath d='M956 0 C961 40 939 112 949 160 H1070 C1061 112 1083 40 1077 0 Z' fill='%232DB8AA'/%3E%3Cpath d='M1077 0 C1083 40 1061 112 1070 160 H1194 C1184 112 1206 40 1199 0 Z' fill='%23066AAA'/%3E%3Cpath d='M1199 0 C1206 40 1184 112 1194 160 H1314 C1304 112 1326 40 1318 0 Z' fill='%23352264'/%3E%3Cpath d='M1318 0 C1326 40 1304 112 1314 160 H1433 C1423 112 1445 40 1439 0 Z' fill='%23F6B21A'/%3E%3Cpath d='M1439 0 C1445 40 1423 112 1433 160 H1551 C1541 112 1563 40 1556 0 Z' fill='%23E31A51'/%3E%3Cpath d='M1556 0 C1563 40 1541 112 1551 160 H1600 V0 Z' fill='%232DB8AA'/%3E%3C/svg%3E");
+	/* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 160' preserveAspectRatio='none'%3E%3Crect width='1600' height='160' fill='%23352264'/%3E%3Cpath d='M94 0 C105 40 83 112 92 160 H216 C205 112 225 40 223 0 Z' fill='%23F6B21A'/%3E%3Cpath d='M223 0 C225 40 205 112 216 160 H338 C328 112 349 40 345 0 Z' fill='%23E31A51'/%3E%3Cpath d='M345 0 C349 40 328 112 338 160 H459 C451 112 472 40 467 0 Z' fill='%232DB8AA'/%3E%3Cpath d='M467 0 C472 40 451 112 459 160 H584 C574 112 596 40 591 0 Z' fill='%23066AAA'/%3E%3Cpath d='M591 0 C596 40 574 112 584 160 H705 C696 112 718 40 710 0 Z' fill='%23352264'/%3E%3Cpath d='M710 0 C718 40 696 112 705 160 H827 C817 112 840 40 834 0 Z' fill='%23F6B21A'/%3E%3Cpath d='M834 0 C840 40 817 112 827 160 H949 C939 112 961 40 956 0 Z' fill='%23E31A51'/%3E%3Cpath d='M956 0 C961 40 939 112 949 160 H1070 C1061 112 1083 40 1077 0 Z' fill='%232DB8AA'/%3E%3Cpath d='M1077 0 C1083 40 1061 112 1070 160 H1194 C1184 112 1206 40 1199 0 Z' fill='%23066AAA'/%3E%3Cpath d='M1199 0 C1206 40 1184 112 1194 160 H1314 C1304 112 1326 40 1318 0 Z' fill='%23352264'/%3E%3Cpath d='M1318 0 C1326 40 1304 112 1314 160 H1433 C1423 112 1445 40 1439 0 Z' fill='%23F6B21A'/%3E%3Cpath d='M1439 0 C1445 40 1423 112 1433 160 H1551 C1541 112 1563 40 1556 0 Z' fill='%23E31A51'/%3E%3Cpath d='M1556 0 C1563 40 1541 112 1551 160 H1600 V0 Z' fill='%232DB8AA'/%3E%3C/svg%3E"); */
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
@@ -9142,8 +9166,8 @@ header.main-header .navbar {
 }
 
 .navbar-brand img {
-	width: 148px;
-	height: 82px;
+	width: 161px;
+	height: 81px;
 	max-width: none;
 	object-fit: contain
 }
@@ -9257,7 +9281,7 @@ header.main-header .navbar {
 	/* padding: 0 16px; */
 	font-size: 20px;
 	line-height: 1;
-	letter-spacing: .02em;
+	letter-spacing: 0.01em;
 	white-space: nowrap;
 	box-shadow: 0 3px 8px rgba(0, 0, 0, .12);
 	transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease;
