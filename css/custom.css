@@ -55,6 +55,7 @@
 
 -------------------------------------------------------------------------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
 @font-face {
 	font-family: "IT Pimo Demo";
 	src: url("../fonts/IT Pimo Demo.otf") format("opentype");
@@ -80,7 +81,7 @@
 	--dark-divider-color: #FFFFFF1A;
 	--highlight-color: #F5B51A;
 	--aqua-color: #2DBCAF;
-	--blue-color: #0070AB;	
+	--blue-color: #0070AB;
 	--error-color: rgb(230, 87, 87);
 	--default-font: "Exo 2", sans-serif;
 	--accent-font: "IT Pimo Demo", "Mouse Memoirs", sans-serif;
@@ -704,6 +705,8 @@ a:focus {
 	color: purple;
 	margin-bottom: 15px;
 }
+
+
 
 .section-title.section-sub-heading,
 .section-title.section-sub-heading .section-sub-title {
@@ -10173,7 +10176,7 @@ header.main-header .navbar {
 
 .faq-heading-line-brand {
 	display: block;
-	font-family: "IT Pimo Demo",cursive;
+	font-family: "IT Pimo Demo", cursive;
 	font-size: 84px;
 	font-weight: 900;
 	color: #38177F;
@@ -10183,7 +10186,7 @@ header.main-header .navbar {
 
 .faq-heading-line-accent {
 	display: block;
-	font-family: "IT Pimo Demo",cursive;
+	font-family: "IT Pimo Demo", cursive;
 	font-size: 92px;
 	font-weight: 900;
 	color: #F32661;
@@ -10194,7 +10197,7 @@ header.main-header .navbar {
 
 /* Supporting Paragraph */
 .faq-supporting-text {
-	font-family: "Exo 2",sans-serif;
+	font-family: "Exo 2", sans-serif;
 	font-size: 21px;
 	font-weight: 500;
 	line-height: 1.5;
@@ -10297,7 +10300,7 @@ header.main-header .navbar {
 
 /* Center Question Typography */
 .faq-question-label {
-	font-family: "Exo 2",sans-serif;
+	font-family: "Exo 2", sans-serif;
 	font-size: 22px;
 	font-weight: 700;
 	color: #38177F;
@@ -10374,7 +10377,7 @@ header.main-header .navbar {
 }
 
 .faq-drawer-inner-content p {
-	font-family: "Exo 2",sans-serif;
+	font-family: "Exo 2", sans-serif;
 	font-size: 17px;
 	font-weight: 500;
 	line-height: 1.6;
@@ -10737,7 +10740,7 @@ header.main-header .navbar {
 }
 
 .lg-footer__heading {
-	font-family: "IT Pimo Demo",sans-serif;
+	font-family: "IT Pimo Demo", sans-serif;
 	font-size: 22px;
 	font-weight: 800;
 	text-transform: uppercase;
@@ -10805,7 +10808,7 @@ header.main-header .navbar {
 }
 
 .lg-footer__link {
-	font-family: "Exo 2",sans-serif;
+	font-family: "Exo 2", sans-serif;
 	font-size: 16px;
 	font-weight: 500;
 	color: var(--lg-white);
@@ -10998,7 +11001,7 @@ header.main-header .navbar {
 }
 
 .lg-footer__trust-text {
-	font-family: "Exo 2",sans-serif;
+	font-family: "Exo 2", sans-serif;
 	font-size: 16px;
 	font-weight: 600;
 	color: #FFFFFF;
@@ -11028,7 +11031,7 @@ header.main-header .navbar {
 	display: flex;
 	align-items: center;
 	gap: 8px;
-	font-family: "Exo 2",sans-serif;
+	font-family: "Exo 2", sans-serif;
 	font-size: 18px;
 	font-weight: 500;
 	color: var(--lg-text-muted);
