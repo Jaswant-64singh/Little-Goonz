@@ -9252,7 +9252,7 @@ header.main-header .navbar {
 	color: #000;
 	border-radius: 10px;
 	/* padding: 0 16px; */
-	font-size: 22px;
+	font-size: 20px;
 	line-height: 1;
 	letter-spacing: .02em;
 	white-space: nowrap;
@@ -10008,11 +10008,11 @@ header.main-header .navbar {
 }
 
 .step-content h3 {
-	font-size: 35px;
+	font-size: 27px;
 	font-weight: 700;
 	margin-bottom: 15px;
 	color: #2c1810;
-	font-family: 'Mouse Memoirs', cursive;
+	font-family: "IT Pimo Demo", cursive;
 }
 
 .step-content p {
@@ -10020,6 +10020,7 @@ header.main-header .navbar {
 	line-height: 1.6;
 	color: #000000;
 	margin-bottom: 0;
+	font-family: "Exo 2";
 }
 
 /* Responsive Design */
@@ -10144,12 +10145,12 @@ header.main-header .navbar {
 
 /* Uppercase Tag Label */
 .faq-uptitle-label {
-	font-family: 'Fredoka', sans-serif;
+	font-family: "IT Pimo Demo", cursive;
 	font-size: 19px;
 	font-weight: 700;
 	color: #F32661;
 	text-transform: uppercase;
-	letter-spacing: 3.5px;
+	letter-spacing: 0.5px;
 	margin: 0 0 4px 0;
 	line-height: 1.2;
 	text-align: center;
@@ -10172,7 +10173,7 @@ header.main-header .navbar {
 
 .faq-heading-line-brand {
 	display: block;
-	font-family: 'Fredoka', sans-serif;
+	font-family: "IT Pimo Demo",cursive;
 	font-size: 84px;
 	font-weight: 900;
 	color: #38177F;
@@ -10182,7 +10183,7 @@ header.main-header .navbar {
 
 .faq-heading-line-accent {
 	display: block;
-	font-family: 'Fredoka', sans-serif;
+	font-family: "IT Pimo Demo",cursive;
 	font-size: 92px;
 	font-weight: 900;
 	color: #F32661;
@@ -10193,7 +10194,7 @@ header.main-header .navbar {
 
 /* Supporting Paragraph */
 .faq-supporting-text {
-	font-family: 'Fredoka', 'Inter', sans-serif;
+	font-family: "Exo 2",sans-serif;
 	font-size: 21px;
 	font-weight: 500;
 	line-height: 1.5;
@@ -10296,7 +10297,7 @@ header.main-header .navbar {
 
 /* Center Question Typography */
 .faq-question-label {
-	font-family: 'Fredoka', 'Inter', sans-serif;
+	font-family: "Exo 2",sans-serif;
 	font-size: 22px;
 	font-weight: 700;
 	color: #38177F;
@@ -10373,7 +10374,7 @@ header.main-header .navbar {
 }
 
 .faq-drawer-inner-content p {
-	font-family: 'Fredoka', 'Inter', sans-serif;
+	font-family: "Exo 2",sans-serif;
 	font-size: 17px;
 	font-weight: 500;
 	line-height: 1.6;
@@ -10736,7 +10737,7 @@ header.main-header .navbar {
 }
 
 .lg-footer__heading {
-	font-family: 'Fredoka', sans-serif;
+	font-family: "IT Pimo Demo",sans-serif;
 	font-size: 22px;
 	font-weight: 800;
 	text-transform: uppercase;
@@ -10804,7 +10805,7 @@ header.main-header .navbar {
 }
 
 .lg-footer__link {
-	font-family: 'Fredoka', 'Inter', sans-serif;
+	font-family: "Exo 2",sans-serif;
 	font-size: 16px;
 	font-weight: 500;
 	color: var(--lg-white);
@@ -10997,7 +10998,7 @@ header.main-header .navbar {
 }
 
 .lg-footer__trust-text {
-	font-family: 'Fredoka', sans-serif;
+	font-family: "Exo 2",sans-serif;
 	font-size: 16px;
 	font-weight: 600;
 	color: #FFFFFF;
@@ -11027,8 +11028,8 @@ header.main-header .navbar {
 	display: flex;
 	align-items: center;
 	gap: 8px;
-	font-family: 'Fredoka', 'Inter', sans-serif;
-	font-size: 15px;
+	font-family: "Exo 2",sans-serif;
+	font-size: 18px;
 	font-weight: 500;
 	color: var(--lg-text-muted);
 	margin: 0;
