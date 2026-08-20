@@ -2059,6 +2059,7 @@ header.main-header .container {
 
 .our-new-arrivals {
 	padding: 50px 0 100px;
+	background-color: #FFF8EE;
 }
 
 .arrivals-item-list {
@@ -9986,7 +9987,7 @@ header.main-header .navbar {
 /* Adventure Steps Section CSS */
 .adventure-steps-section {
 	padding: 40px 0;
-	background-color: #fafafa;
+	background-color: #FFF8EE;
 }
 
 .adventure-steps-section .section-description {
@@ -10024,7 +10025,7 @@ header.main-header .navbar {
 
 /* Card Background Colors */
 .step-card-01 {
-	background-color: #fdf5e6;
+	background-color: #ffe9c0a1;
 }
 
 .step-card-02 {
@@ -10213,7 +10214,7 @@ header.main-header .navbar {
 
 /* Uppercase Tag Label */
 .faq-uptitle-label {
-	font-family: "IT Pimo Demo", cursive;
+	font-family: "IT Pimo Demo", cursive !important;
 	font-size: 19px;
 	font-weight: 700;
 	color: #F32661;
@@ -10241,7 +10242,7 @@ header.main-header .navbar {
 
 .faq-heading-line-brand {
 	display: block;
-	font-family: "IT Pimo Demo", cursive;
+    font-family: "IT Pimo Demo", sans-serif !important;
 	font-size: 84px;
 	font-weight: 900;
 	color: #38177F;
@@ -10251,7 +10252,7 @@ header.main-header .navbar {
 
 .faq-heading-line-accent {
 	display: block;
-	font-family: "IT Pimo Demo", cursive;
+    font-family: "IT Pimo Demo", sans-serif !important;
 	font-size: 92px;
 	font-weight: 900;
 	color: #F32661;
@@ -10263,7 +10264,7 @@ header.main-header .navbar {
 /* Supporting Paragraph */
 .faq-supporting-text {
 	font-family: "Exo 2", sans-serif;
-	font-size: 21px;
+	font-size: 19px;
 	font-weight: 500;
 	line-height: 1.5;
 	color: #283450;
