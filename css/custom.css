@@ -12639,7 +12639,7 @@ header.main-header .navbar {
 	font-family: var(--accent-font);
 	color: #35177D;
 	font-size: 64px;
-	font-weight: 700;
+	/* font-weight: 700; */
 	line-height: 1.08;
 	margin: 0 0 8px 0;
 	text-align: center;
