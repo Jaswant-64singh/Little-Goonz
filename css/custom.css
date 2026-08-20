@@ -2326,7 +2326,7 @@ header.main-header .container {
 
 .our-testimonials {
 	padding: 100px 0 50px;
-	background: linear-gradient(180deg, var(--primary-color) 55%, var(--bg-color) 45%);
+	background: linear-gradient(180deg, var(--primary-color) 55%, #FFF8EE 45%);
 }
 
 .testimonial-content-box {
