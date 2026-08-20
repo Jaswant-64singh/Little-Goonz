@@ -37,7 +37,459 @@
     <link href="css/custom.css" rel="stylesheet" media="screen">
 
     <!-- Little Goonz FAQ Custom Styles -->
-   
+    <style>
+        /* ==========================================================================
+           Little Goonz FAQ Section - High Fidelity Recreation
+           ========================================================================== */
+        .little-goonz-faq-section {
+            position: relative;
+            width: 100%;
+            min-height: 1024px;
+            background-color: #FFF8EE;
+            background-image: url('images/faq.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            padding: 70px 0 80px 0;
+            overflow: hidden;
+            box-sizing: border-box;
+            font-family: 'Fredoka', 'Inter', sans-serif;
+            display: flex;
+            align-items: center;
+        }
+
+        .faq-canvas-container {
+            max-width: 1420px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 60px;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .faq-two-column-row {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            gap: 65px;
+            width: 100%;
+        }
+
+        /* Left Column: Introduction & Mascot */
+        .faq-left-intro-column {
+            flex: 0 0 39%;
+            max-width: 490px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+
+        /* Mascot Creature SVG Box */
+        .faq-mascot-wrapper {
+            width: 122px;
+            height: auto;
+            margin: 0 auto 10px auto;
+            display: flex;
+            justify-content: center;
+            filter: drop-shadow(0 8px 18px rgba(56, 23, 127, 0.16));
+            transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+            cursor: pointer;
+        }
+
+        .faq-mascot-wrapper:hover {
+            transform: translateY(-5px) scale(1.06);
+        }
+
+        .faq-mascot-svg {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Uppercase Tag Label */
+
+
+        /* Decorative Yellow Squiggle */
+        .faq-squiggle-decoration {
+            margin: 0 auto 14px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Primary Oversized Two-Line Heading */
+        .faq-hero-heading {
+            margin: 0 0 16px 0;
+            text-align: center;
+            line-height: 0.96;
+        }
+
+    
+       
+
+        /* Lower Left Product Photograph */
+        .faq-product-foreground {
+            width: 300px;
+            max-width: 100%;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .faq-product-foreground img {
+            width: 100%;
+            height: auto;
+            display: block;
+            mix-blend-mode: multiply;
+            transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .faq-product-foreground:hover img {
+            transform: translateY(-6px) scale(1.035);
+        }
+
+        /* Right Column: FAQ Accordion Stack */
+        .faq-right-accordion-column {
+            flex: 0 0 59%;
+            max-width: 820px;
+            display: flex;
+            flex-direction: column;
+            gap: 11px;
+            box-sizing: border-box;
+            position: relative;
+            z-index: 3;
+        }
+
+        /* FAQ Accordion Card */
+        .faq-accordion-card {
+            background: #FFFFFF;
+            border-radius: 14px;
+            box-shadow: 0 5px 15px rgba(55, 35, 90, 0.08);
+            transition: box-shadow 0.3s ease, transform 0.25s ease, border-color 0.25s ease;
+            border: 1px solid rgba(56, 23, 127, 0.05);
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .faq-accordion-card:hover {
+            box-shadow: 0 8px 24px rgba(55, 35, 90, 0.12);
+            transform: translateY(-2px);
+        }
+
+        .faq-card-header-btn {
+            display: flex;
+            align-items: center;
+            height: 88px;
+            padding: 0 34px 0 16px;
+            cursor: pointer;
+            user-select: none;
+            box-sizing: border-box;
+            width: 100%;
+            background: transparent;
+            border: none;
+            text-align: left;
+        }
+
+        .faq-card-header-btn:focus-visible {
+            outline: 2px solid #38177F;
+            outline-offset: -2px;
+        }
+
+        /* Left Circular Icon Container */
+        .faq-icon-circle-box {
+            width: 66px;
+            height: 66px;
+            border-radius: 50%;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+            color: #FFFFFF;
+        }
+
+        .faq-icon-circle-box svg {
+            width: 34px;
+            height: 34px;
+            stroke: #FFFFFF;
+            fill: none;
+            stroke-width: 2.2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        /* Center Question Typography */
+        .faq-question-label {
+            font-family: 'Fredoka', 'Inter', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: #38177F;
+            line-height: 1.25;
+            margin: 0;
+            flex: 1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-align: left;
+        }
+
+        /* Right Circular Plus Button */
+        .faq-plus-circle-btn {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 16px;
+            color: #FFFFFF;
+            transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.3s ease;
+        }
+
+        .faq-plus-circle-btn svg {
+            width: 24px;
+            height: 24px;
+            stroke: #FFFFFF;
+            fill: none;
+            stroke-width: 3;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        /* Color Sequence Themes */
+        .faq-theme-purple .faq-icon-circle-box,
+        .faq-theme-purple .faq-plus-circle-btn {
+            background-color: #38177F;
+        }
+
+        .faq-theme-pink .faq-icon-circle-box,
+        .faq-theme-pink .faq-plus-circle-btn {
+            background-color: #F32661;
+        }
+
+        .faq-theme-turquoise .faq-icon-circle-box,
+        .faq-theme-turquoise .faq-plus-circle-btn {
+            background-color: #32C8C2;
+        }
+
+        .faq-theme-yellow .faq-icon-circle-box,
+        .faq-theme-yellow .faq-plus-circle-btn {
+            background-color: #FFB900;
+        }
+
+        .faq-theme-blue .faq-icon-circle-box,
+        .faq-theme-blue .faq-plus-circle-btn {
+            background-color: #2869C4;
+        }
+
+        /* Accordion Collapsible Content */
+        .faq-accordion-drawer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+            opacity: 0;
+        }
+
+        .faq-drawer-inner-content {
+            padding: 0 34px 22px 102px;
+        }
+
+        .faq-drawer-inner-content p {
+            font-family: 'Fredoka', 'Inter', sans-serif;
+            font-size: 17px;
+            font-weight: 500;
+            line-height: 1.6;
+            color: #4a5568;
+            margin: 0;
+        }
+
+        /* Active Expanded State */
+        .faq-accordion-card.active {
+            border-color: rgba(56, 23, 127, 0.14);
+            box-shadow: 0 8px 24px rgba(55, 35, 90, 0.12);
+        }
+
+        .faq-accordion-card.active .faq-plus-circle-btn svg {
+            transform: rotate(45deg);
+        }
+
+        .faq-accordion-card.active .faq-icon-circle-box {
+            transform: scale(1.05);
+        }
+
+        .faq-accordion-card.active .faq-accordion-drawer {
+            max-height: 250px;
+            opacity: 1;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 1280px) {
+            .faq-canvas-container {
+                padding: 0 40px;
+            }
+
+            .faq-two-column-row {
+                gap: 40px;
+            }
+
+            .faq-heading-line-brand {
+                font-size: 72px;
+            }
+
+            .faq-heading-line-accent {
+                font-size: 78px;
+            }
+
+            .faq-question-label {
+                font-size: 20px;
+            }
+
+            .faq-card-header-btn {
+                height: 82px;
+                padding: 0 28px 0 14px;
+            }
+
+            .faq-icon-circle-box {
+                width: 58px;
+                height: 58px;
+                margin-right: 16px;
+            }
+
+            .faq-icon-circle-box svg {
+                width: 28px;
+                height: 28px;
+            }
+
+            .faq-plus-circle-btn {
+                width: 42px;
+                height: 42px;
+            }
+
+            .faq-plus-circle-btn svg {
+                width: 20px;
+                height: 20px;
+            }
+
+            .faq-drawer-inner-content {
+                padding: 0 28px 20px 88px;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .little-goonz-faq-section {
+                min-height: auto;
+                padding: 60px 0 70px 0;
+            }
+
+            .faq-canvas-container {
+                padding: 0 24px;
+            }
+
+            .faq-two-column-row {
+                flex-direction: column;
+                align-items: center;
+                gap: 45px;
+            }
+
+            .faq-left-intro-column {
+                flex: 0 0 100%;
+                max-width: 600px;
+                width: 100%;
+            }
+
+            .faq-right-accordion-column {
+                flex: 0 0 100%;
+                max-width: 100%;
+                width: 100%;
+            }
+
+            .faq-question-label {
+                white-space: normal;
+                font-size: 18px;
+            }
+
+            .faq-drawer-inner-content {
+                padding: 0 24px 18px 24px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .little-goonz-faq-section {
+                padding: 45px 0 55px 0;
+            }
+
+            .faq-canvas-container {
+                padding: 0 16px;
+            }
+
+            .faq-mascot-wrapper {
+                width: 95px;
+                margin-bottom: 8px;
+            }
+
+            .faq-uptitle-label {
+                font-size: 16px;
+                letter-spacing: 2.5px;
+            }
+
+            .faq-heading-line-brand {
+                font-size: 52px;
+            }
+
+            .faq-heading-line-accent {
+                font-size: 58px;
+            }
+
+            .faq-product-foreground {
+                width: 220px;
+                margin-bottom: 15px;
+            }
+
+            .faq-card-header-btn {
+                height: 72px;
+                padding: 0 16px 0 12px;
+            }
+
+            .faq-icon-circle-box {
+                width: 50px;
+                height: 50px;
+                margin-right: 12px;
+            }
+
+            .faq-icon-circle-box svg {
+                width: 24px;
+                height: 24px;
+            }
+
+            .faq-question-label {
+                font-size: 15px;
+            }
+
+            .faq-plus-circle-btn {
+                width: 38px;
+                height: 38px;
+                margin-left: 10px;
+            }
+
+            .faq-plus-circle-btn svg {
+                width: 18px;
+                height: 18px;
+            }
+
+            .faq-drawer-inner-content {
+                padding: 0 16px 16px 16px;
+            }
+
+            .faq-drawer-inner-content p {
+                font-size: 14px;
+            }
+        }
+    </style>
 </head>
 
 <body>
