@@ -13106,7 +13106,7 @@ header.main-header .navbar {
 	font-family: var(--accent-font);
 	color: #35177D;
 	font-size: 58px;
-	font-weight: 700;
+	/* font-weight: 700; */
 	line-height: 1.08;
 	margin: 0 0 24px 0;
 	letter-spacing: 0.5px;
