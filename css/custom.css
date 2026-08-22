@@ -13402,7 +13402,7 @@ header.main-header .navbar {
 	z-index: 2;
 	width: min(calc(100% - 80px), 1400px);
 	margin: auto;
-	padding: 24px;
+	padding: 36px;
 	border-radius: 42px;
 	background: #fff;
 	box-shadow: 0 18px 50px rgba(37, 32, 68, .09)
@@ -13411,22 +13411,27 @@ header.main-header .navbar {
 .lg-contact-section__layout {
 	display: grid;
 	grid-template-columns: .85fr 1fr;
-	gap: clamp(35px, 5vw, 80px)
+	gap: clamp(30px, 4vw, 60px);
+	align-items: stretch
 }
 
 .lg-contact-section__info {
-	display: grid;
-	gap: 22px
+	display: flex;
+	flex-direction: column;
+	gap: 22px;
+	height: 100%;
+	justify-content: space-between
 }
 
 .lg-contact-section__card {
 	position: relative;
-	min-height: 178px;
+	flex: 1;
+	min-height: 165px;
 	display: flex;
 	align-items: center;
 	overflow: hidden;
-	padding: 25px 135px 25px 27px;
-	border-radius: 15px
+	padding: 24px 135px 24px 27px;
+	border-radius: 18px
 }
 
 .lg-contact-section__card--email {
@@ -13514,7 +13519,10 @@ header.main-header .navbar {
 }
 
 .lg-contact-section__form {
-	padding: 56px 48px 34px 0
+	padding: 8px 24px 8px 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center
 }
 
 .lg-contact-section__heading h2 {
