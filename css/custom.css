@@ -2695,7 +2695,7 @@ header.main-header .container {
 
 .page-header {
 	background-color: var(--secondary-color);
-	background-image: url('../images/page-header-bg-image.jpg');
+	background-image: url('../images/contact-us-banner.png');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
@@ -13394,7 +13394,7 @@ header.main-header .navbar {
 	isolation: isolate;
 	overflow: hidden;
 	padding: 82px 0 138px;
-	background: #f2faf9
+	background: #FFF8EE
 }
 
 .lg-contact-section__container {
