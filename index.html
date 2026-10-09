@@ -127,8 +127,8 @@
             line-height: 0.96;
         }
 
-    
-       
+
+
 
         /* Lower Left Product Photograph */
         .faq-product-foreground {
@@ -490,6 +490,698 @@
             }
         }
     </style>
+    <!-- Reference navbar styles: scoped to this header only. -->
+    <style>
+        .topbar.branded-topbar {
+            padding: 4px 0;
+        }
+
+        .branded-topbar .topbar-content-info {
+            min-height: 32px;
+            gap: 24px;
+        }
+
+        .branded-topbar .topbar-contact {
+            min-width: 0;
+            flex-wrap: wrap;
+            gap: 6px 24px;
+        }
+
+        .branded-topbar .topbar-contact a {
+            white-space: nowrap;
+        }
+
+        .branded-topbar .topbar-partner-logo {
+            display: block;
+            flex: 0 0 auto;
+            width: 112px;
+            height: 32px;
+            object-fit: contain;
+        }
+
+        @media (max-width: 767px) {
+            .branded-topbar .container {
+                padding-right: 16px;
+                padding-left: 16px;
+            }
+
+            .branded-topbar .topbar-content-info {
+                justify-content: space-between;
+                gap: 12px;
+            }
+
+            .branded-topbar .topbar-contact {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 3px;
+            }
+
+            .branded-topbar .topbar-contact a {
+                font-size: 13px !important;
+                line-height: 1.3;
+            }
+
+            .branded-topbar .topbar-contact a:nth-child(2) {
+                display: inline-block;
+            }
+
+            .branded-topbar .topbar-partner-logo {
+                width: 92px;
+                height: 28px;
+            }
+        }
+
+        header.reference-navbar {
+            background: #fafafa;
+            border-radius: 4px;
+        }
+
+        header.reference-navbar .header-sticky {
+            isolation: isolate;
+            background: #fafafa;
+            background-image: none;
+            border-radius: 4px;
+            box-shadow: inset 0 0 0 1px #e5e5e5;
+        }
+
+        header.reference-navbar .header-sticky::before {
+            content: '';
+            position: absolute;
+            top: 1px;
+            left: 0;
+            width: clamp(198px, 20.372vw, 274px);
+            height: 76px;
+            border-radius: 4px 0 0 4px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 274 76' preserveAspectRatio='none'%3E%3Cpath d='M0 0H220C247 13 266 39 274 76H0Z' fill='%23ffde3f'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        header.reference-navbar .navbar {
+            max-width: none;
+            min-height: 78px;
+            margin: 0;
+            padding: 0 24px 0 0;
+            gap: 21px;
+            flex-wrap: nowrap;
+        }
+
+        header.reference-navbar .header-action-box {
+            position: relative;
+            flex: 0 0 clamp(198px, 20.372vw, 274px);
+            width: auto;
+            max-width: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        header.reference-navbar .navbar-brand {
+            position: relative;
+            width: 130px;
+            margin: 0 0 0 clamp(26px, 4.46vw, 60px);
+            padding: 0;
+        }
+
+        header.reference-navbar .navbar-brand img {
+            display: block;
+            width: 130px;
+            height: 62px;
+            max-width: none;
+            object-fit: contain;
+            filter: drop-shadow(0 2px 1px rgba(52, 35, 101, .25));
+        }
+
+        /* Give the existing logo's white LITTLE lettering the reference's purple ink. */
+        header.reference-navbar .navbar-brand::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: #342365;
+            -webkit-mask: url('images/companyslide1.png') center / contain no-repeat;
+            mask: url('images/companyslide1.png') center / contain no-repeat;
+            clip-path: inset(18% 0 58% 42%);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        header.reference-navbar .header-logo-spark {
+            position: absolute;
+            top: 1px;
+            left: calc(clamp(26px, 4.46vw, 60px) + 138px);
+            width: 21px;
+            height: 28px;
+            pointer-events: none;
+        }
+
+        header.reference-navbar .main-menu {
+            flex: 1 1 auto;
+            align-self: stretch;
+            min-width: 0;
+            width: auto;
+            gap: 12px;
+            border: 0;
+            padding: 0;
+            background: transparent;
+        }
+
+        header.reference-navbar .navbar-collapse {
+            flex: 0 0 auto;
+            width: auto;
+            max-width: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        header.reference-navbar .nav-menu-wrapper {
+            flex: 0 0 auto;
+            margin: 0;
+        }
+
+        header.reference-navbar #menu {
+            gap: 10px;
+            margin: 0;
+            padding: 0;
+            flex-wrap: nowrap;
+        }
+
+        header.reference-navbar #menu>li {
+            --menu-pill: #ed1050;
+            --menu-ink: #fff;
+            --menu-width: 85px;
+            margin: 0;
+            padding: 0;
+        }
+
+        header.reference-navbar #menu>li:nth-child(2) {
+            --menu-pill: #8dcbff;
+            --menu-ink: #101010;
+            --menu-width: 89px;
+        }
+
+        header.reference-navbar #menu>li:nth-child(3) {
+            --menu-pill: #ff7c24;
+            --menu-width: 96px;
+        }
+
+        header.reference-navbar #menu>li:nth-child(4) {
+            --menu-pill: #c0dc39;
+            --menu-ink: #101010;
+            --menu-width: 108px;
+        }
+
+        header.reference-navbar #menu>li:nth-child(5) {
+            --menu-pill: #a2e0e2;
+            --menu-ink: #101010;
+            --menu-width: 98px;
+        }
+
+        header.reference-navbar #menu>li:nth-child(6) {
+            --menu-pill: #c797f7;
+            --menu-ink: #101010;
+            --menu-width: 152px;
+        }
+
+        header.reference-navbar #menu>li>.nav-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 0;
+            width: var(--menu-width);
+            min-height: 38px;
+            padding: 0 14px !important;
+            border: 0;
+            border-radius: 999px;
+            background: var(--menu-pill);
+            color: var(--menu-ink);
+            font-family: var(--accent-font);
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1;
+            letter-spacing: 0;
+            text-transform: none;
+            white-space: nowrap;
+            box-shadow: 0 3px 5px rgba(0, 0, 0, .12), inset 0 1px 2px rgba(255, 255, 255, .18);
+            transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+        }
+
+        header.reference-navbar #menu>li>.nav-link[href="become-a-dealer.html"] {
+            width: max-content;
+            min-width: 152px;
+            padding: 0 20px !important;
+        }
+
+        header.reference-navbar .nav-link::before {
+            content: none;
+        }
+
+        header.reference-navbar #menu>.submenu>.nav-link::after {
+            content: '';
+            width: 6px;
+            height: 6px;
+            margin: -3px 0 0 8px;
+            border-right: 1.5px solid currentColor;
+            border-bottom: 1.5px solid currentColor;
+            transform: rotate(45deg);
+        }
+
+        header.reference-navbar #menu>li>.nav-link:hover,
+        header.reference-navbar #menu>li>.nav-link:focus-visible {
+            color: var(--menu-ink);
+            transform: translateY(-1px);
+            filter: brightness(1.03);
+            box-shadow: 0 4px 7px rgba(0, 0, 0, .16);
+        }
+
+        header.reference-navbar a:focus-visible {
+            outline: 2px solid #342365;
+            outline-offset: 3px;
+        }
+
+        header.reference-navbar #menu>li>ul {
+            top: calc(100% + 9px);
+            border: 1px solid #e5e5e5;
+            padding: 7px 0;
+        }
+
+        /* The invisible bridge keeps the dropdown open while crossing the gap. */
+        header.reference-navbar #menu>li>ul::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 0;
+            width: 100%;
+            height: 10px;
+        }
+
+        header.reference-navbar #menu li:focus-within>ul {
+            visibility: visible;
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        header.reference-navbar #menu ul .nav-link {
+            font-size: 17px;
+            line-height: 1.3;
+            letter-spacing: 0;
+            text-transform: none;
+        }
+
+        header.reference-navbar .header-nav-tools {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            flex: 0 0 350px;
+            align-self: stretch;
+            gap: 10px;
+            margin-left: auto;
+        }
+
+        header.reference-navbar .header-nav-tools::before {
+            content: '';
+            position: absolute;
+            top: 1px;
+            bottom: 1px;
+            left: -52px;
+            right: -23px;
+            border-radius: 0 4px 4px 0;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 426 76' preserveAspectRatio='none'%3E%3Cpath d='M0 0H426V76H82C44 68 15 43 0 0Z' fill='%230080b2'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        header.reference-navbar .header-plane-doodle {
+            flex: 0 0 86px;
+            width: 86px;
+            height: 54px;
+            pointer-events: none;
+        }
+
+        header.reference-navbar .header-shop-cta {
+            justify-content: center;
+            width: 132px;
+            min-height: 38px;
+            gap: 9px;
+            padding: 0 14px;
+            border-radius: 999px;
+            background: #fff;
+            color: #f51158;
+            font-family: var(--accent-font);
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1;
+            letter-spacing: 0;
+            white-space: nowrap;
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, .06);
+        }
+
+        header.reference-navbar .header-shop-cta i {
+            font-size: 13px;
+        }
+
+        header.reference-navbar .header-shop-cta:hover,
+        header.reference-navbar .header-shop-cta:focus-visible {
+            color: #f51158;
+            background: #fff;
+            transform: translateY(-1px);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, .12);
+        }
+
+        header.reference-navbar .header-nav-social {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex: 0 0 104px;
+            height: 31px;
+            margin-left: 6px;
+            padding-left: 17px;
+            border-left: 1px solid rgba(255, 255, 255, .36);
+        }
+
+        header.reference-navbar .header-nav-social a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            min-height: 31px;
+            color: #fff;
+            font-size: 15px;
+            line-height: 1;
+            transition: transform .2s ease;
+        }
+
+        header.reference-navbar .header-nav-social a:hover {
+            transform: translateY(-1px);
+        }
+
+        @media (min-width: 1200px) {
+            header.reference-navbar .navbar-collapse {
+                display: flex !important;
+                position: static;
+                flex: 1 1 auto;
+                min-width: 0;
+                justify-content: center;
+                /* Balance the logo gap and the blue panel's curved leading edge. */
+                padding-right: 61px;
+                transform: none;
+            }
+
+            header.reference-navbar .responsive-menu,
+            header.reference-navbar .navbar-toggle {
+                display: none;
+            }
+        }
+
+        @media (min-width: 1200px) and (max-width: 1459px) {
+            header.reference-navbar .header-nav-tools {
+                flex-basis: 264px;
+            }
+
+            header.reference-navbar .header-plane-doodle {
+                display: none;
+            }
+        }
+
+        @media (min-width: 1200px) and (max-width: 1330px) {
+            header.reference-navbar .navbar {
+                gap: 16px;
+                padding-right: 20px;
+            }
+
+            header.reference-navbar .navbar-collapse {
+                padding-right: 56px;
+            }
+
+            header.reference-navbar .header-action-box,
+            header.reference-navbar .header-sticky::before {
+                width: 178px;
+            }
+
+            header.reference-navbar .header-action-box {
+                flex-basis: 178px;
+            }
+
+            header.reference-navbar .navbar-brand {
+                margin-left: 24px;
+            }
+
+            header.reference-navbar .header-logo-spark {
+                display: none;
+            }
+
+            header.reference-navbar #menu {
+                gap: 8px;
+            }
+
+            header.reference-navbar #menu>li>.nav-link {
+                width: calc(var(--menu-width) - 9px);
+                font-size: 15px;
+                padding: 0 10px !important;
+            }
+
+            header.reference-navbar .header-nav-tools {
+                flex-basis: 264px;
+            }
+
+            header.reference-navbar .header-nav-tools::before {
+                right: -19px;
+            }
+
+            header.reference-navbar .header-plane-doodle {
+                display: none;
+            }
+        }
+
+        @media (max-width: 1199px) {
+            header.reference-navbar .navbar {
+                padding: 0 20px;
+                gap: 16px;
+            }
+
+            header.reference-navbar .header-sticky::before {
+                width: 210px;
+            }
+
+            header.reference-navbar .header-action-box {
+                flex: 0 0 auto;
+            }
+
+            header.reference-navbar .navbar-brand {
+                margin-left: 4px;
+            }
+
+            header.reference-navbar .header-logo-spark {
+                left: 142px;
+            }
+
+            header.reference-navbar .main-menu {
+                justify-content: flex-end;
+            }
+
+            header.reference-navbar .navbar-collapse {
+                display: none !important;
+            }
+
+            header.reference-navbar .header-nav-tools {
+                flex: 0 0 auto;
+                min-height: 78px;
+            }
+
+            header.reference-navbar .header-nav-tools::before {
+                left: -70px;
+                right: -19px;
+            }
+
+            header.reference-navbar .header-plane-doodle {
+                display: none;
+            }
+
+            header.reference-navbar .navbar-toggle {
+                display: block;
+                margin-left: 2px;
+            }
+
+            header.reference-navbar .slicknav_btn {
+                width: 38px;
+                height: 38px;
+                border-radius: 50%;
+                background: rgba(255, 255, 255, .15);
+            }
+
+            header.reference-navbar .slicknav_icon {
+                width: 22px;
+                height: 17px;
+                margin: 0;
+            }
+
+            header.reference-navbar .responsive-menu {
+                display: block;
+            }
+
+            header.reference-navbar .slicknav_menu {
+                position: absolute;
+                width: 100%;
+                background: transparent;
+                padding: 0;
+            }
+
+            header.reference-navbar .slicknav_nav {
+                max-height: calc(100vh - 140px);
+                max-height: calc(100dvh - 140px);
+                overflow-y: auto;
+                margin: 0;
+                padding: 8px 16px 16px;
+                border: 1px solid #e5e5e5;
+                border-top: 0;
+                background: #fafafa;
+                box-shadow: 0 8px 12px rgba(0, 0, 0, .1);
+            }
+
+            header.reference-navbar .slicknav_nav>li {
+                margin: 8px 0 0;
+            }
+
+            header.reference-navbar .slicknav_nav>li>a {
+                min-height: 44px;
+                margin: 0;
+                padding: 12px 18px;
+                border-radius: 24px !important;
+                background: #ed1050;
+                color: #fff;
+                font-family: var(--accent-font);
+                font-size: 18px;
+                line-height: 20px;
+                text-transform: none;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+            }
+
+            header.reference-navbar .slicknav_nav>li:nth-child(2)>a {
+                background: #8dcbff;
+                color: #101010;
+            }
+
+            header.reference-navbar .slicknav_nav>li:nth-child(3)>a {
+                background: #ff7c24;
+            }
+
+            header.reference-navbar .slicknav_nav>li:nth-child(4)>a {
+                background: #c0dc39;
+                color: #101010;
+            }
+
+            header.reference-navbar .slicknav_nav>li:nth-child(5)>a {
+                background: #a2e0e2;
+                color: #101010;
+            }
+
+            header.reference-navbar .slicknav_nav>li:nth-child(6)>a {
+                background: #c797f7;
+                color: #101010;
+            }
+
+            header.reference-navbar .slicknav_nav .slicknav_row>a {
+                color: inherit;
+                font-size: inherit;
+                padding: 0;
+                line-height: inherit;
+                text-transform: none;
+            }
+
+            header.reference-navbar .slicknav_arrow::after {
+                color: #101010;
+            }
+
+            header.reference-navbar .slicknav_nav ul {
+                margin: 6px 0 0;
+            }
+
+            header.reference-navbar .slicknav_nav ul li a {
+                padding: 10px 24px;
+                color: #342365;
+                font-family: var(--accent-font);
+                font-size: 17px;
+                text-transform: none;
+            }
+
+            header.reference-navbar .slicknav_nav ul li a:hover {
+                background: #f0f0f0;
+            }
+        }
+
+        @media (max-width: 599px) {
+            header.reference-navbar .navbar {
+                padding: 0 12px;
+                gap: 10px;
+            }
+
+            header.reference-navbar .header-sticky::before {
+                width: 164px;
+            }
+
+            header.reference-navbar .navbar-brand {
+                width: 112px;
+                margin-left: 0;
+            }
+
+            header.reference-navbar .navbar-brand img {
+                width: 112px;
+                height: 62px;
+            }
+
+            header.reference-navbar .header-logo-spark {
+                display: none;
+            }
+
+            header.reference-navbar .header-nav-tools {
+                gap: 8px;
+            }
+
+            header.reference-navbar .header-nav-tools::before {
+                left: -10px;
+                right: -11px;
+            }
+
+            header.reference-navbar .header-shop-cta {
+                width: 122px;
+                min-height: 38px;
+                padding: 0 10px;
+                font-size: 15px;
+            }
+
+            header.reference-navbar .header-nav-social {
+                position: absolute;
+                display: none;
+                top: 78px;
+                right: -11px;
+                width: 104px;
+                height: 38px;
+                margin: 0;
+                padding: 0 12px;
+                border: 0;
+                border-radius: 0 0 0 16px;
+                background: #0080b2;
+            }
+
+            header.reference-navbar .header-nav-social a {
+                min-height: 38px;
+            }
+
+            header.reference-navbar:has(.slicknav_open) .header-nav-social {
+                display: flex;
+                z-index: 1;
+            }
+
+            header.reference-navbar .slicknav_nav {
+                padding-top: 38px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            header.reference-navbar a {
+                transition: none !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -504,22 +1196,18 @@
     <!-- Preloader End -->
 
     <!-- Topbar Section Start -->
-    <div class="topbar new-top">
+    <div class="topbar new-top branded-topbar">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-12">
                     <div class="topbar-content-info">
                         <div class="topbar-contact">
-                            <a href="tel:1800886699"><i class="fa-solid fa-phone"></i> Call Us:
-                                <strong>(1800)-88-66-99</strong></a>
-                            <a href="mailto:hello@littlegoonz.com"><i class="fa-solid fa-envelope"></i>
-                                hello@littlegoonz.com</a>
+                            <a href="tel:7290040518"><i class="fa-solid fa-phone"></i> Call Us:
+                                <strong>7290040518</strong></a>
+                            <a href="mailto:info@littlegoonz.com"><i class="fa-solid fa-envelope"></i>
+                                info@littlegoonz.com</a>
                         </div>
-                        <div class="topbar-social" aria-label="Social links">
-                            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-                        </div>
+                        <img class="topbar-partner-logo" src="images/bodygym-logo.png" alt="Bodygym">
                     </div>
                 </div>
             </div>
@@ -528,7 +1216,7 @@
     <!-- Topbar Section End -->
 
     <!-- Header Start -->
-    <header class="main-header">
+    <header class="main-header reference-navbar">
         <div class="header-sticky">
             <nav class="navbar navbar-expand-lg">
                 <div class="header-action-box">
@@ -537,7 +1225,10 @@
                         <img src="images/companyslide1.png" alt="Logo">
                     </a>
                     <!-- Logo End -->
-
+                    <svg class="header-logo-spark" viewBox="0 0 21 28" fill="none" aria-hidden="true">
+                        <path d="M3 12L7 2M8 15L16 7M11 21L19 18M12 26L18 26" stroke="#ff5275" stroke-width="2.5"
+                            stroke-linecap="round" />
+                    </svg>
                 </div>
 
                 <!-- Main Menu Start -->
@@ -560,52 +1251,31 @@
                                                 Accessories</a></li>
                                     </ul>
                                 </li>
-                                <li class="nav-item submenu"><a class="nav-link" href="#">Explore</a>
-                                    <ul>
-                                        <li class="nav-item"><a class="nav-link" href="products.html">Little
-                                                Adventures</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="products.html">Ride & Play</a>
-                                        </li>
-                                        <li class="nav-item"><a class="nav-link" href="products.html">First Steps</a>
-                                        </li>
-                                        <li class="nav-item"><a class="nav-link" href="products.html">Scoot & Glide</a>
-                                        </li>
-                                        <li class="nav-item"><a class="nav-link" href="products.html">Skate &
-                                                Explore</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="products.html">Safety First</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item submenu"><a class="nav-link" href="about.html">About Us</a>
-                                    <ul>
-                                        <li class="nav-item"><a class="nav-link" href="about.html">Our Story</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="about.html">Our Philosophy</a>
-                                        </li>
-                                        <li class="nav-item"><a class="nav-link" href="about.html">Why Little Goonz</a>
-                                        </li>
-                                        <li class="nav-item"><a class="nav-link" href="about.html">Made for Little
-                                                Explorers</a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item submenu"><a class="nav-link" href="#">Safety</a>
-                                    <ul>
-                                        <li class="nav-item"><a class="nav-link" href="products.html">Safety Gear</a>
-                                        </li>
-                                        <li class="nav-item"><a class="nav-link" href="products.html">Kids Helmets</a>
-                                        </li>
-                                        <li class="nav-item"><a class="nav-link" href="products.html">Protective
-                                                Guards</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="blog.html">Safe Riding Tips</a>
-                                        </li>
-                                    </ul>
-                                </li>
+                                
+                                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+
                                 <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                                <li class="nav-item"><a class="nav-link" href="become-a-dealer.html">Become a
+                                        Dealer</a></li>
                             </ul>
                         </div>
                     </div>
-                    <a class="header-shop-cta" href="Little Goonz Catalog 2026.pdf" target="_blank">E-catalogue<i
-                            class="fa-solid fa-arrow-right"></i></a>
-                    <div class="navbar-toggle"></div>
+                    <div class="header-nav-tools">
+                        <svg class="header-plane-doodle" viewBox="0 0 86 54" fill="none" aria-hidden="true">
+                            <path d="M4 14L22 14L7 27L8 17L19 15L12 22L18 27L17 19" stroke="#87d579" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M18 29C26 47 56 51 59 30C62 8 36 12 48 33C57 50 75 46 85 36" stroke="#85c8da"
+                                stroke-width=".7" stroke-dasharray="1.2 2.6" />
+                        </svg>
+                        <a class="header-shop-cta" href="Little Goonz Catalog 2026.pdf" target="_blank">E-catalogue<i
+                                class="fa-solid fa-arrow-right"></i></a>
+                        <div class="header-nav-social" aria-label="Social links">
+                            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        </div>
+                        <div class="navbar-toggle"></div>
+                    </div>
                 </div>
                 <!-- Main Menu End -->
             </nav>
@@ -741,7 +1411,7 @@
                         </div>
                         <div class="adventures-quote">
                             <blockquote>
-                                <p>"Every child is a Little Goonz – fearless, playful, ready to take on the world."</p>
+                                <p>"Every child is a Little Goon – fearless, playful, ready to take on the world."</p>
                             </blockquote>
                         </div>
                         <div class="adventures-certifications">
@@ -891,7 +1561,7 @@
                     <!-- Collection Item List End -->
                 </div>
 
-               
+
             </div>
         </div>
     </div>
@@ -983,7 +1653,7 @@
 
                                 <!-- Product Item Content Start -->
                                 <div class="product-item-content">
-                                    <h2 class="product-item-title"><a href="product-single.html">Hyper Speed Skates</a>
+                                    <h2 class="product-item-title"><a href="product-single.html">Skateboard</a>
                                     </h2>
                                     <p class="product-description">Roll into fun · Glide with confidence</p>
                                 </div>
@@ -1555,10 +2225,10 @@
                         </button>
                         <div class="faq-accordion-drawer" id="faq-answer-1" role="region">
                             <div class="faq-drawer-inner-content">
-                                <p>Little Goonz offers a complete range of high-quality active play gear for children,
-                                    including 4-in-1 baby activity walkers, 3-wheel and 2-wheel kick scooters,
-                                    adjustable quad and inline roller skates, beginner skateboards, and premium
-                                    certified safety gear.</p>
+                                <p>Little Goonz offers a range of kids' mobility and adventure products, including
+                                    4-in-1 walkers, kids' scooters, roller skates, skateboards, sports helmets, and
+                                    protective guards. Our products are designed to bring fun, movement, and excitement
+                                    to little explorers.</p>
                             </div>
                         </div>
                     </div>
@@ -1586,10 +2256,10 @@
                         </button>
                         <div class="faq-accordion-drawer" id="faq-answer-2" role="region">
                             <div class="faq-drawer-inner-content">
-                                <p>Our products are thoughtfully tailored for children aged 6 months up to 12+ years. We
-                                    offer baby walkers for infants (6–18 months), beginner 3-wheel scooters for toddlers
-                                    (2–5 years), stunt and 2-wheel scooters for older kids (5–10 years), and adjustable
-                                    skates and skateboards for ages 4 to 12+.</p>
+                                <p>Our products cater to different stages of childhood. Teddy Trek and Joystep walkers
+                                    are listed for ages 6 months+, Zippy scooters for 2 years+, Hyper Speed Skates for
+                                    6–14 years, and the PP Skate Board for children above 8 years. Always check
+                                    individual product age recommendations before use.</p>
                             </div>
                         </div>
                     </div>
@@ -1606,7 +2276,8 @@
                                     <path d="M8 10a5 5 0 0 1 10 0" />
                                 </svg>
                             </div>
-                            <h3 class="faq-question-label">Which Little Goonz products are suitable for babies?</h3>
+                            <h3 class="faq-question-label">Which Little Goonz products are suitable for babies and
+                                toddlers?</h3>
                             <div class="faq-plus-circle-btn" aria-hidden="true">
                                 <svg viewBox="0 0 24 24">
                                     <line x1="12" y1="5" x2="12" y2="19" />
@@ -1616,10 +2287,9 @@
                         </button>
                         <div class="faq-accordion-drawer" id="faq-answer-3" role="region">
                             <div class="faq-drawer-inner-content">
-                                <p>Our Teddy Trek 4-in-1 Baby Walkers and interactive activity walkers are specially
-                                    built for babies aged 6 to 18 months. They feature cushioned ergonomic seats, wide
-                                    anti-rollover safety bases, multi-stage push bars, and stimulating interactive toy
-                                    trays with lights and music.</p>
+                                <p>Little Goonz offers Teddy Trek 4-in-1 and Joystep 4-in-1 walkers for children aged 6
+                                    months and above. These products feature multiple modes and playful activities
+                                    designed to make early movement and exploration more engaging.</p>
                             </div>
                         </div>
                     </div>
@@ -1637,7 +2307,7 @@
                                     <path d="M14 5h6" />
                                 </svg>
                             </div>
-                            <h3 class="faq-question-label">What scooters does Little Goonz offer?</h3>
+                            <h3 class="faq-question-label">Does Little Goonz offer safety accessories for kids?</h3>
                             <div class="faq-plus-circle-btn" aria-hidden="true">
                                 <svg viewBox="0 0 24 24">
                                     <line x1="12" y1="5" x2="12" y2="19" />
@@ -1647,9 +2317,9 @@
                         </button>
                         <div class="faq-accordion-drawer" id="faq-answer-4" role="region">
                             <div class="faq-drawer-inner-content">
-                                <p>We offer lean-to-steer 3-wheel scooters with light-up LED PU wheels for toddlers and
-                                    beginners, as well as foldable, height-adjustable 2-wheel scooters with rear fender
-                                    brakes for growing adventurers seeking speed and agility.</p>
+                                <p>Yes! Little Goonz offers Sports Helmet Pro, Sports Helmet Lite, and Knee/Elbow/Wrist
+                                    Guards. These accessories complement activities such as scooting, skating, and
+                                    skateboarding, helping families prepare for active outdoor play.</p>
                             </div>
                         </div>
                     </div>
@@ -1664,7 +2334,7 @@
                                     <path d="m9 12 2 2 4-4" />
                                 </svg>
                             </div>
-                            <h3 class="faq-question-label">Does Little Goonz offer protective gear?</h3>
+                            <h3 class="faq-question-label">Where are Little Goonz products made?</h3>
                             <div class="faq-plus-circle-btn" aria-hidden="true">
                                 <svg viewBox="0 0 24 24">
                                     <line x1="12" y1="5" x2="12" y2="19" />
@@ -1674,9 +2344,9 @@
                         </button>
                         <div class="faq-accordion-drawer" id="faq-answer-5" role="region">
                             <div class="faq-drawer-inner-content">
-                                <p>Yes! Safety is our top priority. We offer multi-sport impact-resistant helmets with
-                                    EPS foam padding and dial-fit systems, along with 6-piece protective pad sets (knee
-                                    pads, elbow pads, and wrist guards) designed specifically for young riders.</p>
+                                <p>Little Goonz products are crafted with care in India. Our brand focuses on playful
+                                    designs, durability, and quality products that bring adventure and joy into
+                                    children's everyday lives.</p>
                             </div>
                         </div>
                     </div>
@@ -1693,7 +2363,7 @@
                                     <line x1="19" y1="16" x2="21" y2="16" />
                                 </svg>
                             </div>
-                            <h3 class="faq-question-label">What roller skates does Little Goonz offer?</h3>
+                            <h3 class="faq-question-label">How can I become an authorized Little Goonz dealer?</h3>
                             <div class="faq-plus-circle-btn" aria-hidden="true">
                                 <svg viewBox="0 0 24 24">
                                     <line x1="12" y1="5" x2="12" y2="19" />
@@ -1703,9 +2373,9 @@
                         </button>
                         <div class="faq-accordion-drawer" id="faq-answer-6" role="region">
                             <div class="faq-drawer-inner-content">
-                                <p>Little Goonz offers 4-size adjustable quad skates and inline skates equipped with
-                                    smooth ABEC-7 bearings, illuminated LED wheels, secure triple-lock buckle systems,
-                                    and breathable inner liners for all-day comfort and stability.</p>
+                                <p>Interested in becoming a Little Goonz dealer? Visit our Become a Dealer page and
+                                    submit your business details and contact information. Our team can help you
+                                    understand the dealership enquiry process and discuss potential opportunities.</p>
                             </div>
                         </div>
                     </div>
@@ -1724,7 +2394,8 @@
                                     <line x1="18" y1="13" x2="18" y2="15" />
                                 </svg>
                             </div>
-                            <h3 class="faq-question-label">What skateboard does Little Goonz offer?</h3>
+                            <h3 class="faq-question-label">Can toy shop owners and retailers sell Little Goonz products?
+                            </h3>
                             <div class="faq-plus-circle-btn" aria-hidden="true">
                                 <svg viewBox="0 0 24 24">
                                     <line x1="12" y1="5" x2="12" y2="19" />
@@ -1734,9 +2405,9 @@
                         </button>
                         <div class="faq-accordion-drawer" id="faq-answer-7" role="region">
                             <div class="faq-drawer-inner-content">
-                                <p>We offer 22-inch mini cruiser skateboards and 28-inch double-kick maple skateboards
-                                    with anti-slip grip tape, heavy-duty aluminum trucks, and soft shock-absorbing PU
-                                    wheels ideal for kids learning balance and basic tricks.</p>
+                                <p>If you own a toy shop, children's products store, or retail business, you can enquire
+                                    about stocking Little Goonz products. Contact our team with your store details and
+                                    location to discuss dealership availability and possible retail partnerships.</p>
                             </div>
                         </div>
                     </div>
@@ -1751,7 +2422,7 @@
                                     <circle cx="12" cy="9" r="2.5" />
                                 </svg>
                             </div>
-                            <h3 class="faq-question-label">Where are Little Goonz products made?</h3>
+                            <h3 class="faq-question-label">How can I get wholesale pricing and dealership details?</h3>
                             <div class="faq-plus-circle-btn" aria-hidden="true">
                                 <svg viewBox="0 0 24 24">
                                     <line x1="12" y1="5" x2="12" y2="19" />
@@ -1761,10 +2432,10 @@
                         </button>
                         <div class="faq-accordion-drawer" id="faq-answer-8" role="region">
                             <div class="faq-drawer-inner-content">
-                                <p>Little Goonz products are proudly engineered and assembled in certified, world-class
-                                    manufacturing facilities adhering to strict BIS and international safety standards
-                                    (EN71, ASTM). Every product undergoes rigorous drop, impact, and non-toxic material
-                                    testing before reaching your family.</p>
+                                <p>For wholesale pricing, product availability, minimum order quantities, and
+                                    dealership-related information, please submit an enquiry through our Become a Dealer
+                                    page or contact the Little Goonz team directly. Specific commercial terms can be
+                                    discussed based on your business requirements.</p>
                             </div>
                         </div>
                     </div>
@@ -1821,9 +2492,9 @@
 
                     <!-- Brand Description -->
                     <p class="lg-footer__description">
-                        Fun, safe &amp; innovative toys and mobility gear for your little goonz to grow, play and
-                        explore.
+                        Fun, safe &amp; innovative toys and mobility gear for your little one to grow, play and explore.
                     </p>
+
 
                     <!-- Social Media Links -->
                     <div class="lg-footer__socials">
@@ -2165,6 +2836,20 @@
     <script src="js/wow.min.js"></script>
     <!-- Main Custom js file -->
     <script src="js/function.js"></script>
+
+    <!-- Keep SlickNav's existing toggle and handlers in the navbar's mobile slot. -->
+    <script>
+        (function () {
+            var header = document.querySelector('header.reference-navbar');
+            if (!header) return;
+            var toggle = header.querySelector('.responsive-menu .slicknav_btn');
+            var slot = header.querySelector('.navbar-toggle');
+            if (toggle && slot) {
+                toggle.setAttribute('aria-label', 'Toggle navigation');
+                slot.appendChild(toggle);
+            }
+        })();
+    </script>
 
     <!-- Little Goonz FAQ Accordion Script -->
     <script>
