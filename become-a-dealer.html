@@ -5,13 +5,12 @@
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-    <meta name="description"
-        content="Explore Sports Helmet Pro, Sports Helmet Lite and the Knee / Elbow / Wrist Guard Set. Find the accessories pictured in the catalogue, with color choices to complete the collection.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Enquire about becoming a Little Goonz dealer. Tell us about your business and explore our walkers, scooters, skates, skateboards and safety accessories.">
     <meta name="keywords" content="">
     <meta name="author" content="Awaiken">
     <!-- Page Title -->
-    <title>Safety Accessories | Little Goonz</title>
+    <title>Become a Dealer | Little Goonz</title>
     <!-- Favicon Icon -->
     <link rel="shortcut icon" type="image/x-icon" href="images/logofav.png">
     <!-- Google Fonts Css-->
@@ -729,9 +728,103 @@
             }
         }
     </style>
-    <link rel="stylesheet" href="css/catalog.css">
+    <!-- Dealer page styles are scoped to this page's main content. -->
+    <style>
+        .dealer-main { --dealer-purple:#38177f; --dealer-pink:#f32661; --dealer-ink:#283450; --dealer-cream:#fff8ee; --dealer-yellow:#ffb800; background:var(--dealer-cream); color:var(--dealer-ink); font-family:var(--default-font); line-height:1.65; position:relative; overflow:clip; }
+        .dealer-main *, .dealer-main *::before, .dealer-main *::after { box-sizing:border-box; }
+        .dealer-main h1, .dealer-main h2, .dealer-main h3 { font-family:var(--accent-font); font-weight:400; color:var(--dealer-purple); text-transform:none; letter-spacing:0; }
+        .dealer-main p { color:inherit; }
+        .dealer-main a { color:var(--dealer-purple); }
+        .dealer-main a:focus-visible, .dealer-main button:focus-visible { outline:3px solid var(--dealer-purple); outline-offset:5px; }
+        .dealer-container { width:min(100%,1360px); padding-inline:44px; margin-inline:auto; }
+        .dealer-hero { padding:30px 0 78px; background:radial-gradient(ellipse at 0% 40%,#ffedee 0,transparent 50%),radial-gradient(ellipse at 100% 15%,#eaf7f3 0,transparent 55%); position:relative; isolation:isolate; }
+        .dealer-hero::after { content:""; position:absolute; width:300px; height:220px; right:-130px; bottom:80px; border-radius:45% 55% 64% 36%; background:#ffdf78; opacity:.35; z-index:-1; pointer-events:none; }
+        .dealer-breadcrumb { display:flex; flex-wrap:wrap; gap:10px; margin:0 0 42px; padding:0; list-style:none; font-size:14px; color:var(--dealer-purple); }
+        .dealer-breadcrumb li+li::before { content:"/"; margin-right:10px; color:#a096b1; }
+        .dealer-breadcrumb a { text-decoration:none; }
+        .dealer-breadcrumb a:hover { text-decoration:underline; text-underline-offset:4px; }
+        .dealer-layout { display:grid; grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr); gap:60px; align-items:start; }
+        .dealer-story { min-width:0; padding:18px 0 0; }
+        .dealer-main .dealer-eyebrow { display:flex; align-items:center; gap:12px; color:var(--dealer-pink); font-size:13px; font-weight:800; text-transform:uppercase; letter-spacing:1.8px; margin:0 0 18px; }
+        .dealer-eyebrow::after { content:""; width:35px; height:9px; flex:0 0 35px; background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 38 10'%3E%3Cpath d='M2 5Q10 0 18 5T36 5' fill='none' stroke='%23FFB800' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E") center/contain no-repeat; }
+        .dealer-title { font-size:clamp(48px,5.1vw,76px); line-height:1.12; margin:0 0 25px; max-width:560px; }
+        .dealer-title span { color:var(--dealer-pink); }
+        .dealer-intro { font-size:18px; line-height:1.8; margin:0 0 24px; max-width:515px; }
+        .dealer-tags { display:flex; gap:9px; flex-wrap:wrap; margin:0; padding:0; list-style:none; }
+        .dealer-tags li { background:#fff; color:var(--dealer-purple); border:1px solid #e7dcf2; padding:7px 13px; border-radius:24px; font-size:13px; font-weight:700; }
+        .dealer-art { height:320px; position:relative; margin:36px 0 25px; isolation:isolate; }
+        .dealer-art::before { content:""; position:absolute; inset:10px 3% 10px 2%; border:2px dashed #efb6c9; border-radius:49% 51% 43% 57% / 53% 42% 58% 47%; transform:rotate(-8deg); z-index:-1; }
+        .dealer-product-card { position:absolute; width:59%; height:278px; padding:19px; border:1px solid #efddec; border-radius:32px; background:#fff; box-shadow:0 18px 42px #38177f10; animation:dealer-float 6s ease-in-out infinite; }
+        .dealer-product-card img { display:block; width:100%; height:100%; object-fit:contain; }
+        .dealer-product-card--walker { left:4%; top:12px; --card-angle:-6deg; transform:rotate(-6deg); }
+        .dealer-product-card--scooter { right:1%; top:45px; width:37%; height:238px; background:#e6f8f5; --card-angle:7deg; animation-delay:-2s; transform:rotate(7deg); }
+        .dealer-floating-icon { display:grid; place-items:center; position:absolute; top:-6px; right:16%; width:58px; height:58px; border-radius:18px; color:var(--dealer-purple); background:var(--dealer-yellow); border:4px solid var(--dealer-cream); box-shadow:0 8px 20px #38177f12; font-size:23px; animation:dealer-bob 5s ease-in-out infinite; }
+        .dealer-floating-note { position:absolute; bottom:0; left:15%; padding:13px 23px; background:var(--dealer-yellow); border-radius:14px; color:var(--dealer-purple); font-family:var(--accent-font); font-size:21px; transform:rotate(-4deg); box-shadow:0 10px 25px #38177f10; animation:dealer-note 6s ease-in-out infinite; animation-delay:-1s; }
+        .dealer-contact { margin:28px 0 0; padding:20px 22px; background:#ffffffb3; border:1px dashed #d8c9e8; border-radius:20px; }
+        .dealer-main .dealer-contact-title { margin:0 0 6px; font-size:15px; font-weight:700; color:var(--dealer-purple); }
+        .dealer-contact-links { display:flex; flex-wrap:wrap; column-gap:20px; row-gap:8px; }
+        .dealer-contact-links a { display:inline-flex; align-items:center; gap:9px; font-size:14px; text-decoration:none; overflow-wrap:anywhere; }
+        .dealer-contact-links a:hover { color:var(--dealer-pink); }
+        .dealer-explore { display:inline-flex; align-items:center; gap:10px; margin:23px 0 0; font-family:var(--accent-font); font-size:19px; text-decoration:none; }
+        .dealer-explore:hover { color:var(--dealer-pink); }
+        .dealer-form-panel { position:relative; min-width:0; padding:35px 34px 30px; border:1px solid #e9ddef; border-radius:32px; background:#fff; box-shadow:0 22px 65px #38177f0e; }
+        .dealer-form-panel::before { content:""; position:absolute; top:0; left:34px; right:34px; height:5px; background:linear-gradient(90deg,var(--dealer-pink) 0 32%,var(--dealer-yellow) 32% 65%,#32c8c2 65%); border-radius:0 0 8px 8px; }
+        .dealer-form-heading { display:flex; gap:15px; align-items:center; margin-bottom:15px; }
+        .dealer-form-icon { display:grid; place-items:center; width:53px; height:53px; flex:0 0 53px; font-size:22px; color:var(--dealer-pink); background:#fff0f4; border-radius:18px; }
+        .dealer-main .dealer-form-kicker { color:var(--dealer-pink); text-transform:uppercase; font-weight:800; font-size:11px; letter-spacing:1.4px; line-height:1.5; margin:0 0 4px; }
+        .dealer-form-heading h2 { font-size:32px; line-height:1.2; margin:0; }
+        .dealer-form-intro { font-size:15px; line-height:1.7; margin:0 0 10px; }
+        .dealer-main .dealer-required-note { font-size:12px; color:#68627c; margin:0 0 22px; }
+        .dealer-field-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px 16px; }
+        .dealer-field { min-width:0; }
+        .dealer-field--full { grid-column:1/-1; }
+        .dealer-field label { display:block; color:var(--dealer-purple); font-size:13px; font-weight:700; line-height:1.5; margin:0 0 8px; }
+        .dealer-field label span { color:var(--dealer-pink); }
+        .dealer-field label .dealer-optional { font-weight:400; color:#787087; font-size:12px; }
+        .dealer-input-wrap { position:relative; }
+        .dealer-input-wrap > i { position:absolute; top:18px; left:15px; width:17px; font-size:15px; line-height:17px; color:#927faa; pointer-events:none; }
+        .dealer-field input, .dealer-field select, .dealer-field textarea { display:block; width:100%; min-width:0; max-width:100%; border:1px solid #e7deed; border-radius:12px; background:#fffbf7; color:var(--dealer-ink); font-family:var(--default-font); font-size:14px; line-height:1.5; padding:14px 14px 14px 42px; margin:0; box-shadow:none; transition:border-color .2s,background .2s,box-shadow .2s; }
+        .dealer-field input, .dealer-field select { min-height:52px; }
+        .dealer-field textarea { min-height:124px; resize:vertical; }
+        .dealer-field input::placeholder, .dealer-field textarea::placeholder { color:#958b9f; opacity:1; }
+        .dealer-field select { padding-right:35px; appearance:none; -webkit-appearance:none; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='m1 1 5 5 5-5' stroke='%2338177f' stroke-width='1.6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:right 15px center; }
+        .dealer-field select:required:invalid { color:#958b9f; }
+        .dealer-field option { color:var(--dealer-ink); background:#fff; }
+        .dealer-field input:focus, .dealer-field select:focus, .dealer-field textarea:focus { outline:none; background:#fff; border-color:#ac83d2; box-shadow:0 0 0 4px #38177f0b; }
+        .dealer-field input:user-invalid, .dealer-field select:user-invalid { border-color:var(--dealer-pink); }
+        .dealer-field:focus-within .dealer-input-wrap > i { color:var(--dealer-pink); }
+        .dealer-main .dealer-email-note { font-size:12px; line-height:1.7; margin:20px 0 18px; color:#71677e; }
+        .dealer-email-note a { text-decoration:underline; text-underline-offset:3px; overflow-wrap:anywhere; }
+        .dealer-submit { width:100%; display:flex; justify-content:center; align-items:center; gap:13px; min-height:55px; border:0; border-radius:28px; padding:13px 20px; background:var(--dealer-pink); color:#fff; font-family:var(--accent-font); font-size:20px; line-height:1.3; box-shadow:0 4px 0 var(--dealer-purple); cursor:pointer; transition:transform .2s,box-shadow .2s,background .2s; }
+        .dealer-submit i { font-size:16px; }
+        .dealer-submit:hover { transform:translateY(-2px); background:#e51a51; box-shadow:0 6px 0 var(--dealer-purple); }
+        .dealer-submit:active { transform:translateY(2px); box-shadow:0 2px 0 var(--dealer-purple); }
+        .dealer-form-status { background:#eaf8f4; color:var(--dealer-purple); padding:14px 17px; margin-top:23px; border:1px solid #c4e6de; border-radius:14px; font-size:14px; }
+        .dealer-form-status[hidden] { display:none; }
+        .dealer-form-status p { margin:0 0 6px; }
+        .dealer-form-status a { font-weight:700; text-decoration:underline; text-underline-offset:3px; }
+        .dealer-next { padding:0 0 80px; }
+        .dealer-next-heading { text-align:center; margin-bottom:30px; }
+        .dealer-next-heading .dealer-eyebrow { justify-content:center; margin-bottom:12px; }
+        .dealer-next-heading h2 { font-size:39px; line-height:1.25; margin:0; }
+        .dealer-steps { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:22px; }
+        .dealer-step { background:#fff; padding:27px 26px; border:1px solid #e9ddef; border-radius:22px; }
+        .dealer-step-number { width:40px; height:40px; display:grid; place-items:center; background:#ffedee; color:var(--dealer-purple); font-family:var(--accent-font); font-size:21px; border-radius:14px; margin-bottom:17px; }
+        .dealer-step:nth-child(2) .dealer-step-number { background:#e2f7f3; }
+        .dealer-step:nth-child(3) .dealer-step-number { background:#fff1ce; }
+        .dealer-step h3 { font-size:23px; line-height:1.3; margin:0 0 10px; }
+        .dealer-step p { margin:0; font-size:14px; line-height:1.8; }
+        @keyframes dealer-float { 0%,100% { transform:translateY(0) rotate(var(--card-angle)); } 50% { transform:translateY(-10px) rotate(var(--card-angle)); } }
+        @keyframes dealer-bob { 0%,100% { transform:translateY(0) rotate(8deg); } 50% { transform:translateY(-9px) rotate(-4deg); } }
+        @keyframes dealer-note { 0%,100% { transform:translateY(0) rotate(-4deg); } 50% { transform:translateY(-7px) rotate(-4deg); } }
+        @media (max-width:1199px) { .dealer-layout { gap:34px; } .dealer-container { padding-inline:32px; } .dealer-form-panel { padding:30px 25px 28px; } .dealer-field-grid { grid-template-columns:minmax(0,1fr); gap:16px; } .dealer-art { height:340px; } .dealer-product-card--walker { width:66%; } .dealer-product-card--scooter { width:36%; right:-1%; top:82px; } .dealer-contact-links { flex-direction:column; } }
+        @media (max-width:991px) { .dealer-layout { grid-template-columns:minmax(0,1fr); gap:44px; } .dealer-story { padding-top:0; } .dealer-title { font-size:58px; max-width:none; } .dealer-intro { max-width:640px; } .dealer-art { max-width:550px; margin:35px auto 25px; height:320px; } .dealer-product-card--walker { width:59%; } .dealer-product-card--scooter { width:37%; right:1%; top:45px; } .dealer-contact { margin-inline:auto; max-width:640px; } .dealer-contact-links { flex-direction:row; } .dealer-form-panel { padding:35px; } .dealer-field-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; } .dealer-hero { padding-bottom:60px; } .dealer-steps { gap:14px; } .dealer-step { padding:22px 19px; } }
+        @media (max-width:575px) { .dealer-container { padding-inline:20px; } .dealer-hero { padding:24px 0 50px; } .dealer-breadcrumb { margin-bottom:30px; font-size:13px; } .dealer-title { font-size:46px; margin-bottom:19px; } .dealer-main .dealer-eyebrow { font-size:11px; letter-spacing:1.3px; gap:9px; } .dealer-intro { font-size:16px; line-height:1.75; margin-bottom:20px; } .dealer-tags { gap:7px; } .dealer-tags li { font-size:11px; padding:6px 11px; } .dealer-art { height:285px; margin:32px 0 18px; } .dealer-product-card { border-radius:24px; padding:12px; } .dealer-product-card--walker { left:2%; width:64%; height:234px; } .dealer-product-card--scooter { width:38%; right:0; top:66px; height:192px; } .dealer-floating-icon { width:49px; height:49px; border-radius:15px; font-size:19px; right:10%; } .dealer-floating-note { bottom:0; left:8%; font-size:18px; padding:11px 17px; } .dealer-contact { padding:17px; } .dealer-contact-links { flex-direction:column; gap:8px; } .dealer-layout { gap:32px; } .dealer-form-panel { border-radius:24px; padding:27px 20px 24px; } .dealer-form-heading { gap:12px; } .dealer-form-heading h2 { font-size:27px; } .dealer-form-icon { width:43px; height:43px; flex-basis:43px; border-radius:14px; font-size:18px; } .dealer-form-kicker { font-size:10px; } .dealer-field-grid { grid-template-columns:minmax(0,1fr); gap:17px; } .dealer-submit { font-size:19px; } .dealer-steps { grid-template-columns:minmax(0,1fr); gap:15px; } .dealer-next { padding-bottom:50px; } .dealer-next-heading h2 { font-size:32px; } .dealer-step { padding:23px; } }
+        @media (max-width:575px) { .dealer-field input, .dealer-field select, .dealer-field textarea { font-size:16px; } }
+        @media (max-width:359px) { .dealer-container { padding-inline:16px; } .dealer-title { font-size:42px; } .dealer-form-panel { padding-inline:17px; } .dealer-form-heading h2 { font-size:24px; } .dealer-art { height:265px; } .dealer-product-card--walker { height:220px; } .dealer-product-card--scooter { height:174px; } .dealer-floating-note { font-size:16px; } }
+        @media (prefers-reduced-motion:reduce) { .dealer-main *, .dealer-main *::before, .dealer-main *::after { animation:none !important; transition:none !important; scroll-behavior:auto !important; } .dealer-submit:hover, .dealer-submit:active { transform:none; } }
+    </style>
 </head>
-
 <body>
     <!-- Topbar Section Start -->
     <div class="topbar new-top branded-topbar">
@@ -776,14 +869,11 @@
                                 <li class="nav-item"><a class="nav-link" href="./">Home</a></li>
                                 <li class="nav-item submenu"><a class="nav-link" href="shop.html">Shop</a>
                                     <ul>
-                                        <li class="nav-item"><a class="nav-link" href="kids-walkers.html">Kids
-                                                Walkers</a>
+                                        <li class="nav-item"><a class="nav-link" href="kids-walkers.html">Kids Walkers</a>
                                         </li>
-                                        <li class="nav-item"><a class="nav-link" href="kids-scooters.html">Kids
-                                                Scooters</a>
+                                        <li class="nav-item"><a class="nav-link" href="kids-scooters.html">Kids Scooters</a>
                                         </li>
-                                        <li class="nav-item"><a class="nav-link" href="roller-skates.html">Roller
-                                                Skates</a>
+                                        <li class="nav-item"><a class="nav-link" href="roller-skates.html">Roller Skates</a>
                                         </li>
                                         <li class="nav-item"><a class="nav-link" href="skateboards.html">Skateboards</a>
                                         </li>
@@ -791,7 +881,7 @@
                                                 Accessories</a></li>
                                     </ul>
                                 </li>
-
+                                
                                 <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
 
                                 <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
@@ -823,298 +913,61 @@
         </div>
     </header>
     <!-- Header End -->
-    <main class="catalog-main" style="--category-accent: #0070AB; --category-soft: #E6F2FB">
-        <section class="catalog-hero">
-            <div class="catalog-container">
-                <nav aria-label="Breadcrumb">
-                    <ol class="catalog-breadcrumb">
-                        <li><a href="./">Home</a></li>
-                        <li><a href="shop.html">Shop</a></li>
-                        <li aria-current="page">Safety Accessories</li>
-                    </ol>
-                </nav>
-                <div class="catalog-hero-grid">
-                    <div class="catalog-hero-copy">
-                        <p class="catalog-eyebrow">The finishing touch for little adventures.</p>
-                        <h1 class="catalog-title">Safety Accessories</h1>
-                        <p class="catalog-lead">Explore Sports Helmet Pro, Sports Helmet Lite and the Knee / Elbow /
-                            Wrist Guard Set. Find the accessories pictured in the catalogue, with color choices to
-                            complete the collection.</p>
-                        <div class="catalog-badges"><span class="catalog-badge">Helmets &amp; guard set</span><span
-                                class="catalog-badge">3 products</span><span class="catalog-badge">2026
-                                collection</span></div>
-                        <div class="catalog-actions"><a class="catalog-button" href="#sports-helmet-pro">Meet the
-                                collection <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a><a
-                                class="catalog-button catalog-button--secondary"
-                                href="Little Goonz Catalog 2026.pdf">View catalogue <i class="fa-solid fa-arrow-right"
-                                    aria-hidden="true"></i></a></div>
-                    </div>
-                    <div class="catalog-hero-art"><img src="images/catalog/sports-helmet-pro-red.png"
-                            alt="Sports Helmet Pro in red and white" class="catalog-hero-image" fetchpriority="high"
-                            decoding="async"><span class="catalog-hero-note">Ready for the next adventure</span></div>
-                </div>
-            </div>
-        </section>
-        <nav class="catalog-category-nav catalog-container" aria-label="Shop categories"><a
-                class="catalog-category-link" href="kids-walkers.html">Kids Walkers</a><a class="catalog-category-link"
-                href="kids-scooters.html">Kids Scooters</a><a class="catalog-category-link"
-                href="roller-skates.html">Roller Skates</a><a class="catalog-category-link"
-                href="skateboards.html">Skateboards</a><a class="catalog-category-link" href="safety-accessories.html"
-                aria-current="page">Safety Accessories</a></nav>
-        <section class="catalog-section catalog-container">
-            <p class="catalog-eyebrow">Find your little favorite</p>
-            <h2 class="catalog-heading">Complete the adventure</h2>
-            <p class="catalog-section-lead">Explore the models and details below.</p>
-            <div class="catalog-overview-grid">
-                <article class="catalog-preview" style="--category-soft: #E6F2FB; --category-accent: #0070AB">
-                    <a class="catalog-preview-image" href="safety-accessories.html#sports-helmet-pro"
-                        aria-label="Explore Sports Helmet Pro"><img src="images/catalog/sports-helmet-pro-red.png"
-                            alt="Sports Helmet Pro in red and white" class="" loading="lazy" decoding="async"></a>
-                    <div class="catalog-preview-body"><span class="catalog-mini-label">Catalogue accessory</span>
-                        <h3 class="catalog-preview-title"><a href="safety-accessories.html#sports-helmet-pro">Sports
-                                Helmet Pro</a></h3>
-                        <p class="catalog-preview-text">Four listed colors to complete the collection.</p><a
-                            class="catalog-inline-link" href="safety-accessories.html#sports-helmet-pro">Explore Sports
-                            Helmet Pro <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-                    </div>
-                </article>
-                <article class="catalog-preview" style="--category-soft: #E6F2FB; --category-accent: #0070AB">
-                    <a class="catalog-preview-image" href="safety-accessories.html#sports-helmet-lite"
-                        aria-label="Explore Sports Helmet Lite"><img src="images/catalog/sports-helmet-lite-blue.png"
-                            alt="Sports Helmet Lite in blue" class="" loading="lazy" decoding="async"></a>
-                    <div class="catalog-preview-body"><span class="catalog-mini-label">Catalogue accessory</span>
-                        <h3 class="catalog-preview-title"><a href="safety-accessories.html#sports-helmet-lite">Sports
-                                Helmet Lite</a></h3>
-                        <p class="catalog-preview-text">A sports helmet in three listed color choices.</p><a
-                            class="catalog-inline-link" href="safety-accessories.html#sports-helmet-lite">Explore Sports
-                            Helmet Lite <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-                    </div>
-                </article>
-                <article class="catalog-preview" style="--category-soft: #E6F2FB; --category-accent: #0070AB">
-                    <a class="catalog-preview-image" href="safety-accessories.html#guard-set"
-                        aria-label="Explore Knee / Elbow / Wrist Guard Set"><img
-                            src="images/catalog/knee-elbow-wrist-guard-set.png"
-                            alt="Knee, elbow and wrist guard set in its mesh bag" class="" loading="lazy"
-                            decoding="async"></a>
-                    <div class="catalog-preview-body"><span class="catalog-mini-label">Catalogue accessory</span>
-                        <h3 class="catalog-preview-title"><a href="safety-accessories.html#guard-set">Knee / Elbow /
-                                Wrist Guard Set</a></h3>
-                        <p class="catalog-preview-text">Knee, elbow and wrist guards designed for comfort and
-                            compression.</p><a class="catalog-inline-link"
-                            href="safety-accessories.html#guard-set">Explore Knee / Elbow / Wrist Guard Set <i
-                                class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-                    </div>
-                </article>
-            </div>
-        </section>
-        <section class="catalog-product catalog-container" id="sports-helmet-pro"
-            aria-labelledby="title-sports-helmet-pro">
-            <div class="catalog-product-layout">
-                <div class="catalog-gallery"><button type="button" class="catalog-main-image-button"
-                        data-full-image="images/catalog/sports-helmet-pro-red.png"
-                        aria-label="View larger image of Sports Helmet Pro"><img
-                            src="images/catalog/sports-helmet-pro-red.png" alt="Sports Helmet Pro in red and white"
-                            class="" loading="lazy" decoding="async"></button>
-                    <p class="catalog-note">Select the product image for a closer look.</p>
-                </div>
-                <div class="catalog-product-info">
-                    <p class="catalog-product-kicker">Little Goonz collection / Safety Accessories</p>
-                    <h2 class="catalog-product-name" id="title-sports-helmet-pro">Sports Helmet Pro</h2>
-                    <p class="catalog-product-description">Explore the Sports Helmet Pro pictured in the catalogue. The
-                        Pro comes in four listed color choices: Blue, Pink, Red and Black. Get in touch with our team to
-                        confirm the right size and current color availability.</p>
-                    <dl class="catalog-specs">
-                        <div>
-                            <dt>Collection</dt>
-                            <dd>Catalogue accessories</dd>
+    <main class="dealer-main" id="main-content">
+        <section class="dealer-hero" aria-labelledby="dealer-title">
+            <div class="dealer-container">
+                <nav aria-label="Breadcrumb"><ol class="dealer-breadcrumb"><li><a href="./">Home</a></li><li aria-current="page">Become a Dealer</li></ol></nav>
+                <div class="dealer-layout">
+                    <div class="dealer-story">
+                        <p class="dealer-eyebrow">A little partnership. Big possibilities.</p>
+                        <h1 class="dealer-title" id="dealer-title">Become a<br><span>Little Goonz Dealer</span></h1>
+                        <p class="dealer-intro">Bring a world of little adventures to your store. Let&rsquo;s talk about your business and explore the Little Goonz collection together.</p>
+                        <ul class="dealer-tags" aria-label="Our collections"><li>Walkers &amp; Scooters</li><li>Skates &amp; Skateboards</li><li>Safety Accessories</li></ul>
+                        <div class="dealer-art">
+                            <div class="dealer-product-card dealer-product-card--walker"><img src="images/catalog/teddy-trek-red.png" alt="Little Goonz Teddy Trek Kids Walker" width="280" height="280" fetchpriority="high" decoding="async"></div>
+                            <div class="dealer-product-card dealer-product-card--scooter"><img src="images/catalog/zippy-dx-blue.png" alt="Little Goonz Zippy DX Scooter" width="180" height="230" decoding="async"></div>
+                            <span class="dealer-floating-icon" aria-hidden="true"><i class="fa-solid fa-store"></i></span>
+                            <span class="dealer-floating-note">Let&rsquo;s grow together!</span>
                         </div>
-                    </dl>
-                    <h3 class="catalog-product-kicker">Available colors</h3>
-                    <ul class="catalog-color-options">
-                        <li><span class="catalog-swatch" style="--swatch: #3857A8" aria-hidden="true"></span>Blue</li>
-                        <li><span class="catalog-swatch" style="--swatch: #ED99B6" aria-hidden="true"></span>Pink</li>
-                        <li><span class="catalog-swatch" style="--swatch: #E72739" aria-hidden="true"></span>Red</li>
-                        <li><span class="catalog-swatch" style="--swatch: #252525" aria-hidden="true"></span>Black</li>
-                    </ul>
-                    <p class="catalog-note">Contact us to confirm sizing and current availability.</p>
-                    <div class="catalog-product-actions"><a class="catalog-button"
-                            href="contact.html">Enquire
-                            about this product <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a><a
-                            class="catalog-button catalog-button--secondary"
-                            href="Little Goonz Catalog 2026.pdf#page=7">See in catalogue <i
-                                class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div>
-                </div>
-            </div>
-        </section>
-        <section class="catalog-product catalog-container" id="sports-helmet-lite"
-            aria-labelledby="title-sports-helmet-lite">
-            <div class="catalog-product-layout">
-                <div class="catalog-gallery"><button type="button" class="catalog-main-image-button"
-                        data-full-image="images/catalog/sports-helmet-lite-blue.png"
-                        aria-label="View larger image of Sports Helmet Lite"><img
-                            src="images/catalog/sports-helmet-lite-blue.png" alt="Sports Helmet Lite in blue" class=""
-                            loading="lazy" decoding="async"></button>
-                    <p class="catalog-note">Select the product image for a closer look.</p>
-                </div>
-                <div class="catalog-product-info">
-                    <p class="catalog-product-kicker">Little Goonz collection / Safety Accessories</p>
-                    <h2 class="catalog-product-name" id="title-sports-helmet-lite">Sports Helmet Lite</h2>
-                    <p class="catalog-product-description">Complete the collection with Sports Helmet Lite. The
-                        catalogue shows the Blue model and lists Blue, Red and Pink color choices. Our team can help
-                        with size and availability details for the model you choose.</p>
-                    <dl class="catalog-specs">
-                        <div>
-                            <dt>Collection</dt>
-                            <dd>Catalogue accessories</dd>
+                        <div class="dealer-contact">
+                            <p class="dealer-contact-title">Prefer to speak with our team?</p>
+                            <div class="dealer-contact-links"><a href="tel:+917290040518"><i class="fa-solid fa-phone" aria-hidden="true"></i>+91 7290040518</a><a href="mailto:info@littlegoonz.com"><i class="fa-regular fa-envelope" aria-hidden="true"></i>info@littlegoonz.com</a></div>
                         </div>
-                    </dl>
-                    <h3 class="catalog-product-kicker">Available colors</h3>
-                    <ul class="catalog-color-options">
-                        <li><span class="catalog-swatch" style="--swatch: #3857A8" aria-hidden="true"></span>Blue</li>
-                        <li><span class="catalog-swatch" style="--swatch: #E72739" aria-hidden="true"></span>Red</li>
-                        <li><span class="catalog-swatch" style="--swatch: #ED99B6" aria-hidden="true"></span>Pink</li>
-                    </ul>
-                    <p class="catalog-note">Contact us to confirm sizing and current availability.</p>
-                    <div class="catalog-product-actions"><a class="catalog-button"
-                            href="contact.html">Enquire
-                            about this product <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a><a
-                            class="catalog-button catalog-button--secondary"
-                            href="Little Goonz Catalog 2026.pdf#page=7">See in catalogue <i
-                                class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div>
+                        <a class="dealer-explore" href="shop.html">Explore our collection <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                    <div class="dealer-form-panel">
+                        <div class="dealer-form-heading"><span class="dealer-form-icon" aria-hidden="true"><i class="fa-regular fa-paper-plane"></i></span><div><p class="dealer-form-kicker">Let&rsquo;s get to know you</p><h2 id="dealer-form-title">Dealer Enquiry Form</h2></div></div>
+                        <p class="dealer-form-intro">Tell us a little about your store and the products you&rsquo;re interested in.</p>
+                        <p class="dealer-required-note">Fields marked with * are required.</p>
+                        <form id="dealerEnquiryForm" action="mailto:info@littlegoonz.com?subject=Little%20Goonz%20Dealer%20Enquiry" method="post" enctype="text/plain" aria-labelledby="dealer-form-title">
+                            <div class="dealer-field-grid">
+                                <div class="dealer-field"><label for="dealer-full-name">Full Name <span aria-hidden="true">*</span></label><div class="dealer-input-wrap"><i class="fa-regular fa-user" aria-hidden="true"></i><input type="text" id="dealer-full-name" name="fullName" autocomplete="name" placeholder="Your full name" minlength="2" maxlength="100" required></div></div>
+                                <div class="dealer-field"><label for="dealer-business-name">Business / Store Name <span aria-hidden="true">*</span></label><div class="dealer-input-wrap"><i class="fa-solid fa-store" aria-hidden="true"></i><input type="text" id="dealer-business-name" name="businessName" autocomplete="organization" placeholder="Your business name" minlength="2" maxlength="150" required></div></div>
+                                <div class="dealer-field"><label for="dealer-email">Email Address <span aria-hidden="true">*</span></label><div class="dealer-input-wrap"><i class="fa-regular fa-envelope" aria-hidden="true"></i><input type="email" id="dealer-email" name="email" autocomplete="email" placeholder="you@business.com" maxlength="150" required></div></div>
+                                <div class="dealer-field"><label for="dealer-phone">Phone Number <span aria-hidden="true">*</span></label><div class="dealer-input-wrap"><i class="fa-solid fa-phone" aria-hidden="true"></i><input type="tel" id="dealer-phone" name="phone" autocomplete="tel" inputmode="tel" placeholder="Your contact number" minlength="8" maxlength="24" required></div></div>
+                                <div class="dealer-field"><label for="dealer-city-state">City &amp; State <span aria-hidden="true">*</span></label><div class="dealer-input-wrap"><i class="fa-solid fa-location-dot" aria-hidden="true"></i><input type="text" id="dealer-city-state" name="cityState" placeholder="e.g. Mumbai, Maharashtra" minlength="2" maxlength="150" required></div></div>
+                                <div class="dealer-field"><label for="dealer-business-type">Business Type <span aria-hidden="true">*</span></label><div class="dealer-input-wrap"><i class="fa-solid fa-briefcase" aria-hidden="true"></i><select id="dealer-business-type" name="businessType" required><option value="" disabled selected>Select business type</option><option value="Toy Store">Toy Store</option><option value="Baby &amp; Kids Store">Baby &amp; Kids Store</option><option value="Sports Store">Sports Store</option><option value="Multi-brand Retail Store">Multi-brand Retail Store</option><option value="Distributor / Wholesaler">Distributor / Wholesaler</option><option value="Online Retailer">Online Retailer</option><option value="Other">Other</option></select></div></div>
+                                <div class="dealer-field dealer-field--full"><label for="dealer-message">Your Message <span class="dealer-optional">(optional)</span></label><div class="dealer-input-wrap"><i class="fa-regular fa-message" aria-hidden="true"></i><textarea id="dealer-message" name="message" rows="4" maxlength="1500" placeholder="Tell us about your business, products of interest, or any questions you have..."></textarea></div></div>
+                            </div>
+                            <p class="dealer-email-note" id="dealer-email-note">This form prepares an email to <a href="mailto:info@littlegoonz.com">info@littlegoonz.com</a>. Review and send it from your email app.</p>
+                            <button type="submit" class="dealer-submit" aria-describedby="dealer-email-note">Create enquiry email <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+                            <div class="dealer-form-status" id="dealer-form-status" role="status" aria-live="polite" hidden><p>Your enquiry email is ready. Review and send it in your email app.</p><a id="dealer-email-link" href="mailto:info@littlegoonz.com">Open enquiry email <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a></div>
+                            <noscript><p class="dealer-email-note">Submitting opens your email app with your enquiry details. You can also email or call our team directly.</p></noscript>
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>
-        <section class="catalog-product catalog-container" id="guard-set" aria-labelledby="title-guard-set">
-            <div class="catalog-product-layout">
-                <div class="catalog-gallery"><button type="button" class="catalog-main-image-button"
-                        data-full-image="images/catalog/knee-elbow-wrist-guard-set.png"
-                        aria-label="View larger image of Knee / Elbow / Wrist Guard Set"><img
-                            src="images/catalog/knee-elbow-wrist-guard-set.png"
-                            alt="Knee, elbow and wrist guard set in its mesh bag" class="" loading="lazy"
-                            decoding="async"></button>
-                    <p class="catalog-note">Select the product image for a closer look.</p>
-                </div>
-                <div class="catalog-product-info">
-                    <p class="catalog-product-kicker">Little Goonz collection / Safety Accessories</p>
-                    <h2 class="catalog-product-name" id="title-guard-set">Knee / Elbow / Wrist Guard Set</h2>
-                    <p class="catalog-product-description">Keep knee, elbow and wrist protection together in one set.
-                        The catalogue describes these guards as designed for comfort and compression, with the
-                        collection pictured in its mesh bag. Contact us to confirm fit and availability.</p>
-                    <ul class="catalog-traits">
-                        <li>Designed for comfort and compression</li>
-                    </ul>
-                    <dl class="catalog-specs">
-                        <div>
-                            <dt>Collection</dt>
-                            <dd>Catalogue accessories</dd>
-                        </div>
-                        <div>
-                            <dt>Set</dt>
-                            <dd>Knee, elbow and wrist guards</dd>
-                        </div>
-                    </dl>
-                    <p class="catalog-note">Contact us to confirm sizing and current availability.</p>
-                    <div class="catalog-product-actions"><a class="catalog-button"
-                            href="contact.html">Enquire
-                            about this product <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a><a
-                            class="catalog-button catalog-button--secondary"
-                            href="Little Goonz Catalog 2026.pdf#page=7">See in catalogue <i
-                                class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div>
-                </div>
-            </div>
-        </section>
-        <section class="catalog-section catalog-container">
-            <p class="catalog-eyebrow">Good to know</p>
-            <h2 class="catalog-heading">A few little answers</h2>
-            <div class="catalog-faq">
-                <details>
-                    <summary>Which helmet colors are listed?</summary>
-                    <p>Sports Helmet Pro is listed in Blue, Pink, Red and Black. Sports Helmet Lite is listed in Blue,
-                        Red and Pink.</p>
-                </details>
-                <details>
-                    <summary>What is in the guard set?</summary>
-                    <p>The catalogue shows a Knee / Elbow / Wrist Guard Set and describes it as designed for comfort and
-                        compression.</p>
-                </details>
-                <details>
-                    <summary>How do I choose a size?</summary>
-                    <p>Contact our team to confirm the available sizes and fit details for your chosen accessory. The
-                        catalogue does not list sizing measurements.</p>
-                </details>
-            </div>
-        </section>
-        <section class="catalog-help-band catalog-container">
-            <div>
-                <p class="catalog-eyebrow">A little help goes a long way</p>
-                <h2>Let's find their next adventure.</h2>
-                <p>Have a question about a model, color or size? Our team is here to help.</p>
-            </div>
-            <div class="catalog-actions"><a class="catalog-button" href="contact.html">Talk to our team <i
-                        class="fa-solid fa-arrow-right" aria-hidden="true"></i></a><a
-                    class="catalog-button catalog-button--secondary" href="Little Goonz Catalog 2026.pdf">Browse the
-                    catalogue <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div>
-        </section>
-        <section class="catalog-section catalog-container">
-            <p class="catalog-eyebrow">More little adventures</p>
-            <h2 class="catalog-heading">Keep exploring</h2>
-            <div class="catalog-related-grid">
-                <article class="catalog-preview" style="--category-soft: #FFE9EE; --category-accent: #F32661">
-                    <a class="catalog-preview-image" href="kids-walkers.html" aria-label="Explore Kids Walkers"><img
-                            src="images/catalog/teddy-trek-red.png" alt="Teddy Trek Kids Walker in red" class=""
-                            loading="lazy" decoding="async"></a>
-                    <div class="catalog-preview-body"><span class="catalog-mini-label">2 products</span>
-                        <h3 class="catalog-preview-title"><a href="kids-walkers.html">Kids Walkers</a></h3>
-                        <p class="catalog-preview-text">Meet Teddy Trek and Joystep: two playful 4-in-1 walkers with
-                            detachable music trays, parental handles and more than one way to enjoy the day.</p><a
-                            class="catalog-inline-link" href="kids-walkers.html">Explore Kids Walkers <i
-                                class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-                    </div>
-                </article>
-                <article class="catalog-preview" style="--category-soft: #E4F8F5; --category-accent: #32C8C2">
-                    <a class="catalog-preview-image" href="kids-scooters.html" aria-label="Explore Kids Scooters"><img
-                            src="images/catalog/zippy-dx-blue.png" alt="Zippy DX Scooter in blue with play toy" class=""
-                            loading="lazy" decoding="async"></a>
-                    <div class="catalog-preview-body"><span class="catalog-mini-label">2 products</span>
-                        <h3 class="catalog-preview-title"><a href="kids-scooters.html">Kids Scooters</a></h3>
-                        <p class="catalog-preview-text">Make room for the Zippy duo. Explore twist-and-turn scooters
-                            with LED PU wheels, a rear brake and a folding design made for the next little adventure.
-                        </p><a class="catalog-inline-link" href="kids-scooters.html">Explore Kids Scooters <i
-                                class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-                    </div>
-                </article>
-                <article class="catalog-preview" style="--category-soft: #EEE8FC; --category-accent: #9370DB">
-                    <a class="catalog-preview-image" href="roller-skates.html" aria-label="Explore Roller Skates"><img
-                            src="images/catalog/hyper-speed-skates-blue.png"
-                            alt="Leon Athletic Hyper Speed Skates with blue wheels" class="" loading="lazy"
-                            decoding="async"></a>
-                    <div class="catalog-preview-body"><span class="catalog-mini-label">1 product</span>
-                        <h3 class="catalog-preview-title"><a href="roller-skates.html">Roller Skates</a></h3>
-                        <p class="catalog-preview-text">Discover Leon Athletic Hyper Speed Skates, with a rust-proof
-                            body, durable wheels and double shock absorption. A new way for little explorers to get
-                            rolling.</p><a class="catalog-inline-link" href="roller-skates.html">Explore Roller Skates
-                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-                    </div>
-                </article>
-                <article class="catalog-preview" style="--category-soft: #FFF3D7; --category-accent: #FFB900">
-                    <a class="catalog-preview-image" href="skateboards.html" aria-label="Explore Skateboards"><img
-                            src="images/catalog/pp-skate-board-red.png"
-                            alt="PP Skate Board, red deck top and underside views" class="" loading="lazy"
-                            decoding="async"></a>
-                    <div class="catalog-preview-body"><span class="catalog-mini-label">1 product</span>
-                        <h3 class="catalog-preview-title"><a href="skateboards.html">Skateboards</a></h3>
-                        <p class="catalog-preview-text">Meet the Leon Athletic PP Skate Board. A durable PP deck, bold
-                            racing graphics and resilient wheels bring a splash of personality to every four-wheel
-                            adventure.</p><a class="catalog-inline-link" href="skateboards.html">Explore Skateboards <i
-                                class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-                    </div>
-                </article>
+        <section class="dealer-next dealer-container" aria-labelledby="dealer-next-title">
+            <div class="dealer-next-heading"><p class="dealer-eyebrow">Your next little step</p><h2 id="dealer-next-title">Let&rsquo;s start a conversation.</h2></div>
+            <div class="dealer-steps">
+                <article class="dealer-step"><span class="dealer-step-number" aria-hidden="true">01</span><h3>Tell us about your business</h3><p>Share your store name, location and business type so we can understand your enquiry.</p></article>
+                <article class="dealer-step"><span class="dealer-step-number" aria-hidden="true">02</span><h3>Connect with our team</h3><p>Send your enquiry by email and discuss product availability and dealership details with us.</p></article>
+                <article class="dealer-step"><span class="dealer-step-number" aria-hidden="true">03</span><h3>Explore the collection</h3><p>Discover walkers, scooters, skates, skateboards and accessories for your little customers.</p></article>
             </div>
         </section>
     </main>
-    <dialog id="catalog-image-dialog" class="catalog-image-dialog" aria-label="Product image"><button
-            class="catalog-dialog-close" type="button" aria-label="Close product image"><i class="fa-solid fa-xmark"
-                aria-hidden="true"></i></button><img alt=""></dialog>
+
     <!-- Little Goonz Footer Start -->
     <footer class="lg-footer" id="main-footer">
         <!-- Organic Top Wave & Accent Blobs -->
@@ -1489,7 +1342,61 @@
             }
         })();
     </script>
-    <script src="js/catalog.js"></script>
-</body>
 
+    <script>
+        (function () {
+            'use strict';
+            var form = document.getElementById('dealerEnquiryForm');
+            if (!form) return;
+            var fields = form.elements;
+            var textFields = ['fullName', 'businessName', 'cityState'];
+            function validateText(input) {
+                input.setCustomValidity(input.value.trim().length < 2 ? 'Please enter at least two characters.' : '');
+            }
+            function validatePhone() {
+                var phone = fields.phone.value.trim();
+                var digits = phone.replace(/\D/g, '');
+                var valid = /^\+?[0-9\s().-]+$/.test(phone) && digits.length >= 8 && digits.length <= 15;
+                fields.phone.setCustomValidity(valid ? '' : 'Please enter a phone number with 8 to 15 digits.');
+            }
+            textFields.forEach(function (name) {
+                fields[name].addEventListener('input', function () { validateText(fields[name]); });
+                fields[name].addEventListener('blur', function () { validateText(fields[name]); });
+            });
+            fields.phone.addEventListener('input', validatePhone);
+            fields.phone.addEventListener('blur', validatePhone);
+            form.addEventListener('input', function () {
+                document.getElementById('dealer-form-status').hidden = true;
+                document.getElementById('dealer-email-link').href = 'mailto:info@littlegoonz.com';
+            });
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+                textFields.forEach(function (name) { validateText(fields[name]); });
+                validatePhone();
+                if (!form.reportValidity()) return;
+                var subject = 'Little Goonz Dealer Enquiry - ' + fields.businessName.value.trim();
+                var body = [
+                    'Hello Little Goonz Team,',
+                    '',
+                    'I would like to enquire about becoming a dealer.',
+                    '',
+                    'Full Name: ' + fields.fullName.value.trim(),
+                    'Business / Store Name: ' + fields.businessName.value.trim(),
+                    'Email Address: ' + fields.email.value.trim(),
+                    'Phone Number: ' + fields.phone.value.trim(),
+                    'City & State: ' + fields.cityState.value.trim(),
+                    'Business Type: ' + fields.businessType.value,
+                    '',
+                    'Your Message:',
+                    fields.message.value.trim() || 'Not provided.'
+                ].join('\r\n');
+                var mailto = 'mailto:info@littlegoonz.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+                document.getElementById('dealer-email-link').href = mailto;
+                document.getElementById('dealer-form-status').hidden = false;
+                window.location.assign(mailto);
+            });
+        })();
+    </script>
+
+</body>
 </html>
