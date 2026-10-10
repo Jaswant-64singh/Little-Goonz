@@ -1182,6 +1182,176 @@
             }
         }
     </style>
+    <!-- Adventure steps card enhancements: scoped to this section only. -->
+    <style>
+        .adventure-steps-section .adventure-steps-cards {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 30px;
+            width: min(100%, 1170px);
+            margin-inline: auto;
+            align-items: stretch;
+        }
+
+        .adventure-steps-section .adventure-step-card {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            min-width: 0;
+            max-width: none;
+            padding: 104px 25px 32px;
+            border-width: 2px;
+            border-radius: 35px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, .045);
+            transition: transform .3s ease, box-shadow .3s ease;
+            isolation: isolate;
+        }
+
+        .adventure-steps-section .step-card-01 { --step-accent: #FFB800; }
+        .adventure-steps-section .step-card-02 { --step-accent: #E91E63; }
+        .adventure-steps-section .step-card-03 { --step-accent: #00B4D8; }
+
+        .adventure-steps-section .adventure-step-card::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            right: 29px;
+            width: 68px;
+            height: 28px;
+            border-top: 2px dashed var(--step-accent);
+            border-radius: 50%;
+            transform: rotate(-12deg);
+            opacity: .65;
+            pointer-events: none;
+        }
+
+        .adventure-steps-section .adventure-step-card::after {
+            content: '';
+            position: absolute;
+            top: 32px;
+            right: 26px;
+            width: 17px;
+            height: 17px;
+            background: var(--step-accent);
+            clip-path: polygon(50% 0, 62% 36%, 100% 50%, 62% 62%, 50% 100%, 38% 62%, 0 50%, 38% 36%);
+            transform: rotate(12deg);
+            pointer-events: none;
+        }
+
+        .adventure-steps-section .adventure-step-card .step-number {
+            top: 20px;
+            left: 26px;
+            font-size: 70px;
+            line-height: 1;
+        }
+
+        .adventure-steps-section .step-image-area {
+            display: block;
+            width: 100%;
+            min-height: 0;
+            margin: 0 auto 28px;
+            padding: 0;
+        }
+
+        .adventure-steps-section .adventure-image {
+            display: block;
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            max-height: none;
+            border-radius: 23px;
+            object-fit: contain;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, .075);
+        }
+
+        .adventure-steps-section .step-content {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            align-items: center;
+            padding-inline: 2px;
+        }
+
+        .adventure-steps-section .step-content h3 {
+            margin: 0 0 15px;
+            font-size: 28px;
+            line-height: 1.25;
+        }
+
+        .adventure-steps-section .step-content p {
+            max-width: 295px;
+            margin: 0;
+            font-size: 15px;
+            line-height: 1.75;
+            text-wrap: pretty;
+        }
+
+        @media (hover: hover) and (pointer: fine) {
+            .adventure-steps-section .adventure-step-card:hover {
+                transform: translateY(-6px);
+                box-shadow: 0 22px 38px rgba(0, 0, 0, .09);
+            }
+        }
+
+        @media (max-width: 1199px) and (min-width: 993px) {
+            .adventure-steps-section .adventure-steps-cards { gap: 22px; }
+            .adventure-steps-section .adventure-step-card { padding-inline: 20px; }
+            .adventure-steps-section .step-content h3 { font-size: 26px; }
+            .adventure-steps-section .step-content p { font-size: 14px; }
+        }
+
+        @media (max-width: 992px) {
+            .adventure-steps-section .adventure-steps-cards {
+                grid-template-columns: minmax(0, 1fr);
+                width: min(100%, 460px);
+                gap: 27px;
+            }
+            .adventure-steps-section .adventure-step-card { padding: 102px 28px 31px; }
+            .adventure-steps-section .step-content p { max-width: 350px; font-size: 16px; }
+        }
+
+        @media (max-width: 575px) {
+            .adventure-steps-section .adventure-steps-cards { gap: 25px; }
+            .adventure-steps-section .adventure-step-card {
+                padding: 86px 22px 28px;
+                border-radius: 30px;
+            }
+            .adventure-steps-section .adventure-step-card .step-number {
+                top: 16px;
+                left: 23px;
+                font-size: 58px;
+            }
+            .adventure-steps-section .adventure-step-card::before { top: 33px; right: 26px; width: 58px; }
+            .adventure-steps-section .adventure-step-card::after { top: 25px; right: 23px; width: 15px; height: 15px; }
+            .adventure-steps-section .adventure-image { border-radius: 20px; }
+            .adventure-steps-section .step-image-area { margin-bottom: 25px; }
+            .adventure-steps-section .step-content h3 { font-size: 28px; margin-bottom: 13px; }
+            .adventure-steps-section .step-content p { font-size: 15px; line-height: 1.75; }
+        }
+
+        @media (max-width: 359px) {
+            .adventure-steps-section .adventure-step-card { padding-inline: 18px; }
+            .adventure-steps-section .step-content h3 { font-size: 26px; }
+        }
+
+        @media (hover: none) {
+            .adventure-steps-section .adventure-step-card:hover {
+                transform: none;
+                box-shadow: 0 12px 30px rgba(0, 0, 0, .045);
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .adventure-steps-section .adventure-step-card {
+                transition: none;
+            }
+            .adventure-steps-section .adventure-step-card:hover {
+                transform: none;
+                box-shadow: 0 12px 30px rgba(0, 0, 0, .045);
+            }
+        }
+    </style>
+
 </head>
 
 <body>
@@ -1204,8 +1374,8 @@
                         <div class="topbar-contact">
                             <a href="tel:7290040518"><i class="fa-solid fa-phone"></i> Call Us:
                                 <strong>+91 7290040518</strong></a>
-                            <a href="mailto:info@littlegoonz.com"><i class="fa-solid fa-envelope"></i>
-                                info@littlegoonz.com</a>
+                            <a href="mailto:hello@littlegoonz.com"><i class="fa-solid fa-envelope"></i>
+                                hello@littlegoonz.com</a>
                         </div>
                         <img class="topbar-partner-logo" src="images/logo.png" alt="Bodygym">
                     </div>
@@ -1271,7 +1441,7 @@
                                 class="fa-solid fa-arrow-right"></i></a>
                         <div class="header-nav-social" aria-label="Social links">
                             <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.instagram.com/littlegoonz.toys?rpxt=Ym1zbndhYWNpN3Zt" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
                             <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
                         </div>
                         <div class="navbar-toggle"></div>
@@ -1394,7 +1564,7 @@
                 <div class="col-lg-6 col-md-12">
                     <div class="adventures-mascot">
                         <div class="mascot-image">
-                            <img src="images/heroabout.png" alt="Little Goonz" class="mascot-img">
+                            <img src="images/Colorful Kids’ Playtime Adventure.webp" alt="Little Goonz" class="mascot-img">
                         </div>
                     </div>
                 </div>
@@ -1791,7 +1961,7 @@
                         <div class="adventure-step-card step-card-01 wow fadeInUp" data-wow-delay="0.1s">
                             <div class="step-number">01</div>
                             <div class="step-image-area">
-                                <img src="images/adventureimage.png" alt="First Steps Adventure"
+                                <img src="images/First Steps.webp" alt="First Steps Adventure"
                                     class="adventure-image">
                             </div>
                             <div class="step-content">
@@ -1805,7 +1975,7 @@
                         <div class="adventure-step-card step-card-02 wow fadeInUp" data-wow-delay="0.3s">
                             <div class="step-number">02</div>
                             <div class="step-image-area">
-                                <img src="images/adventureimage2.png" alt="First Rides Adventure"
+                                <img src="images/First Rides.webp" alt="First Rides Adventure"
                                     class="adventure-image">
                             </div>
                             <div class="step-content">
@@ -1819,7 +1989,7 @@
                         <div class="adventure-step-card step-card-03 wow fadeInUp" data-wow-delay="0.5s">
                             <div class="step-number">03</div>
                             <div class="step-image-area">
-                                <img src="images/adventureimage3.png" alt="Bigger Adventures" class="adventure-image">
+                                <img src="images/Bigger Adventures.webp" alt="Bigger Adventures" class="adventure-image">
                             </div>
                             <div class="step-content">
                                 <h3>Bigger Adventures</h3>
@@ -2502,7 +2672,7 @@
                             title="Facebook">
                             <i class="fa-brands fa-facebook-f"></i>
                         </a>
-                        <a href="#" class="lg-footer__social-btn lg-footer__social-ig" aria-label="Instagram"
+                        <a href="https://www.instagram.com/littlegoonz.toys?rpxt=Ym1zbndhYWNpN3Zt" class="lg-footer__social-btn lg-footer__social-ig" aria-label="Instagram"
                             title="Instagram">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
