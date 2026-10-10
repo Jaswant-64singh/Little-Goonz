@@ -6,7 +6,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Little Goonz privacy policy for website visitors, product support and business enquiries.">
+    <meta name="description"
+        content="Little Goonz privacy policy for website visitors, product support and business enquiries.">
     <meta name="keywords" content="">
     <meta name="author" content="Awaiken">
     <!-- Page Title -->
@@ -730,95 +731,853 @@
     </style>
     <!-- Help-page content styles; shared header/footer retain their exact styles. -->
     <style>
-        .help-main { --help-purple:#38177f; --help-pink:#f32661; --help-ink:#283450; --help-cream:#fff8ee; --help-soft:#fff0f4; background:var(--help-cream); color:var(--help-ink); font-family:var(--default-font); font-size:16px; line-height:1.8; overflow:clip; }
-        .help-main--safety { --help-soft:#e7f7f3; }
-        .help-main--privacy { --help-soft:#efeafb; }
-        .help-main--terms { --help-soft:#fff3d7; }
-        .help-main *, .help-main *::before, .help-main *::after { box-sizing:border-box; }
-        .help-main h1, .help-main h2, .help-main h3, .help-main h4 { font-family:var(--accent-font); font-weight:400; color:var(--help-purple); letter-spacing:0; text-transform:none; }
-        .help-main p { color:inherit; }
-        .help-main a { color:var(--help-purple); text-decoration:underline; text-underline-offset:4px; }
-        .help-main a:hover { color:var(--help-pink); }
-        .help-main a:focus-visible, .help-main summary:focus-visible, .help-section:focus-visible { outline:3px solid var(--help-purple); outline-offset:4px; }
-        .help-container { width:min(100%,1360px); padding-inline:44px; margin-inline:auto; }
-        .help-hero { position:relative; isolation:isolate; padding:29px 0 48px; background:linear-gradient(120deg,var(--help-cream) 20%,var(--help-soft)); border-bottom:1px solid #e9dfea; }
-        .help-hero::before { content:""; position:absolute; right:-105px; top:35px; width:310px; height:310px; border:2px dashed #a691cf; border-radius:47% 53% 57% 43% / 53% 44% 56% 47%; opacity:.22; transform:rotate(10deg); z-index:-1; pointer-events:none; }
-        .help-hero::after { content:""; position:absolute; right:130px; top:80px; width:37px; height:37px; background:#ffb800; opacity:.8; clip-path:polygon(50% 0,60% 35%,100% 50%,60% 60%,50% 100%,40% 60%,0 50%,40% 35%); transform:rotate(15deg); z-index:-1; pointer-events:none; }
-        .help-breadcrumb ol { display:flex; align-items:center; flex-wrap:wrap; gap:8px 12px; list-style:none; margin:0 0 35px; padding:0; font-size:14px; color:var(--help-purple); }
-        .help-breadcrumb li+li::before { content:"/"; color:#a096b1; margin-right:12px; }
-        .help-breadcrumb a { text-decoration:none; }
-        .help-breadcrumb a:hover { text-decoration:underline; }
-        .help-main .help-eyebrow { display:flex; align-items:center; gap:12px; color:var(--help-pink); font-size:13px; font-weight:800; letter-spacing:1.6px; text-transform:uppercase; margin:0 0 17px; }
-        .help-eyebrow::after { content:""; width:36px; height:9px; flex:0 0 36px; background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 38 10'%3E%3Cpath d='M2 5Q10 0 18 5T36 5' fill='none' stroke='%23FFB800' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E") center/contain no-repeat; }
-        .help-title { font-size:clamp(44px,5vw,68px); line-height:1.15; margin:0 0 20px; max-width:950px; }
-        .help-hero-copy { max-width:920px; }
-        .help-main .help-subtitle { color:var(--help-purple); font-family:var(--accent-font); font-size:28px; line-height:1.35; margin:0 0 17px; }
-        .help-intro { font-size:17px; line-height:1.8; max-width:890px; }
-        .help-intro p { margin:0 0 13px; }
-        .help-intro p:last-child { margin-bottom:0; }
-        .help-actions { display:flex; flex-wrap:wrap; gap:14px; margin-top:25px; }
-        .help-main a.help-button { display:inline-flex; align-items:center; justify-content:center; gap:12px; min-height:48px; padding:11px 22px; border:2px solid var(--help-pink); border-radius:26px; background:var(--help-pink); color:#fff; font-family:var(--accent-font); font-size:18px; line-height:1.3; box-shadow:0 3px 0 var(--help-purple); text-decoration:none; transition:transform .2s,box-shadow .2s; }
-        .help-main a.help-button:hover { transform:translateY(-2px); box-shadow:0 5px 0 var(--help-purple); }
-        .help-button i { font-size:14px; }
-        .help-main a.help-button--secondary { background:#fff; color:var(--help-purple); border-color:var(--help-purple); box-shadow:none; }
-        .help-main a.help-button--secondary:hover { box-shadow:0 3px 0 var(--help-purple); }
-        .help-meta { display:flex; flex-wrap:wrap; gap:10px 24px; color:var(--help-purple); font-size:14px; margin:12px 0 22px; }
-        .help-meta p { margin:0; }
-        .help-main .help-draft-note { font-size:14px; line-height:1.7; max-width:900px; padding:12px 17px; margin:0; border:1px solid #ead5a0; border-left:4px solid #ffb800; border-radius:12px; background:#fff5d9; color:#72501b; }
-        .help-placeholder { color:#765114; background:#fff2c5; padding:2px 5px; border-radius:5px; overflow-wrap:anywhere; box-decoration-break:clone; -webkit-box-decoration-break:clone; }
-        .help-layout { display:grid; grid-template-columns:260px minmax(0,1fr); gap:46px; align-items:start; padding-block:52px 75px; }
-        .help-sidebar { position:sticky; top:105px; min-width:0; }
-        .help-toc-panel { border:1px solid #e6dced; border-radius:20px; background:#fff; overflow:auto; max-height:calc(100vh - 130px); scrollbar-width:thin; scrollbar-color:#d6c5e8 #fff; box-shadow:0 7px 26px #38177f05; }
-        .help-toc-summary { display:flex; align-items:center; justify-content:space-between; gap:10px; padding:18px 19px; margin:0; font-family:var(--accent-font); color:var(--help-purple); font-size:24px; line-height:1.3; list-style:none; cursor:pointer; }
-        .help-toc-summary::-webkit-details-marker { display:none; }
-        .help-toc-summary i { font-size:12px; transition:transform .2s; }
-        .help-toc-panel[open] .help-toc-summary i { transform:rotate(180deg); }
-        .help-toc ol { list-style:none; margin:0; padding:0 10px 14px; }
-        .help-toc li { margin:0; }
-        .help-toc a { display:flex; align-items:flex-start; gap:9px; padding:9px 10px; font-size:13px; line-height:1.55; text-decoration:none; border-left:3px solid transparent; border-radius:0 9px 9px 0; }
-        .help-toc a:hover, .help-toc a[aria-current="location"] { color:var(--help-purple); background:#fff0f4; border-left-color:var(--help-pink); }
-        .help-toc-number { display:inline-block; color:var(--help-pink); font-weight:700; font-size:12px; min-width:16px; padding-top:1px; }
-        .help-related-nav { display:grid; gap:7px; border-top:1px solid #eee5f2; padding:17px 19px 20px; }
-        .help-related-nav h2 { font-size:20px; line-height:1.3; margin:0 0 5px; }
-        .help-related-nav a { font-size:13px; text-decoration:none; }
-        .help-related-nav a[aria-current="page"] { color:var(--help-pink); font-weight:700; }
-        .help-article { min-width:0; }
-        .help-section { position:relative; padding:31px 32px; margin-bottom:23px; background:#fff; border:1px solid #e9dfee; border-radius:22px; scroll-margin-top:105px; }
-        .help-section h2 { display:flex; align-items:flex-start; gap:14px; font-size:30px; line-height:1.35; margin:0 0 22px; }
-        .help-section-number { display:grid; place-items:center; width:35px; height:35px; flex:0 0 35px; background:#fff0cb; color:var(--help-purple); border-radius:11px; font-size:21px; line-height:1; margin-top:2px; }
-        .help-text { font-size:16px; line-height:1.85; }
-        .help-text > p { margin:0 0 18px; }
-        .help-text > :last-child { margin-bottom:0; }
-        .help-text h3 { font-size:25px; line-height:1.35; margin:27px 0 12px; }
-        .help-text h4 { font-size:21px; line-height:1.4; margin:21px 0 8px; }
-        .help-text ul, .help-text ol { padding-left:24px; margin:0 0 19px; }
-        .help-text li { padding-left:3px; margin:7px 0; }
-        .help-text li::marker { color:var(--help-pink); }
-        .help-text p.help-product-label { margin-bottom:7px; }
-        .help-callout { padding:17px 20px; margin:21px 0; border-left:4px solid #ffb800; background:#fff6dd; border-radius:0 13px 13px 0; font-size:15px; }
-        .help-callout p { margin:0; }
-        .help-callout--important { border-left-color:var(--help-pink); background:#fff0f4; }
-        .help-topic-grid, .help-product-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; margin:20px 0; }
-        .help-topic, .help-product-card { min-width:0; padding:19px 20px; background:#fff9f1; border:1px solid #f1e5e1; border-radius:15px; }
-        .help-topic h3, .help-product-card h3 { font-size:23px; margin:0 0 10px; }
-        .help-topic p { font-size:15px; line-height:1.75; margin:0; }
-        .help-product-card ul { margin-bottom:0; padding-left:19px; }
-        .help-product-card li { font-size:15px; margin:5px 0; }
-        .help-contact-details { margin:20px 0; background:#faf7fe; border:1px solid #eae0f2; border-radius:15px; padding:5px 19px; }
-        .help-contact-details dl { margin:0; }
-        .help-contact-details dl > div { display:grid; grid-template-columns:160px minmax(0,1fr); gap:15px; padding:13px 0; border-bottom:1px solid #e7dff0; }
-        .help-contact-details dl > div:last-child { border-bottom:0; }
-        .help-contact-details dt { font-size:14px; font-weight:700; color:var(--help-purple); }
-        .help-contact-details dd { margin:0; font-size:15px; line-height:1.8; overflow-wrap:anywhere; }
-        .help-contact-details a { overflow-wrap:anywhere; }
-        .help-main p.help-signoff { color:var(--help-purple); font-family:var(--accent-font); font-size:25px; line-height:1.4; padding:22px 25px; background:#ede6f9; border-radius:17px; margin:28px 0 0; text-align:center; }
-        @media (max-width:1199px) { .help-container { padding-inline:32px; } .help-layout { grid-template-columns:235px minmax(0,1fr); gap:28px; } .help-section { padding:27px; } .help-section h2 { font-size:27px; } .help-topic-grid, .help-product-grid { grid-template-columns:minmax(0,1fr); } }
-        @media (max-width:991px) { .help-layout { grid-template-columns:minmax(0,1fr); gap:25px; padding-top:32px; } .help-sidebar { position:static; } .help-toc-panel { max-height:none; } .help-toc ol { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:3px 9px; } .help-related-nav { grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; } .help-related-nav h2 { grid-column:1/-1; } .help-topic-grid, .help-product-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .help-section { scroll-margin-top:98px; } .help-hero::after { top:75px; right:45px; width:24px; height:24px; opacity:.45; } }
-        @media (max-width:575px) { .help-container { padding-inline:20px; } .help-hero { padding:24px 0 32px; } .help-breadcrumb ol { margin-bottom:27px; font-size:13px; } .help-main .help-eyebrow { font-size:11px; letter-spacing:1.2px; gap:9px; } .help-title { font-size:43px; margin-bottom:18px; } .help-main .help-subtitle { font-size:25px; } .help-intro { font-size:16px; line-height:1.8; } .help-meta { gap:11px; flex-direction:column; margin-bottom:18px; font-size:13px; } .help-main .help-draft-note { font-size:13px; } .help-hero::before { top:60px; right:-160px; width:260px; height:260px; } .help-hero::after { display:none; } .help-layout { padding-block:25px 46px; gap:22px; } .help-toc-summary { font-size:23px; } .help-toc ol { grid-template-columns:minmax(0,1fr); } .help-toc a { font-size:14px; padding-block:10px; } .help-related-nav { grid-template-columns:minmax(0,1fr); } .help-section { border-radius:18px; padding:22px 20px; margin-bottom:19px; scroll-margin-top:97px; } .help-section h2 { font-size:25px; gap:10px; margin-bottom:20px; } .help-section-number { width:29px; height:29px; flex-basis:29px; font-size:18px; border-radius:9px; margin-top:2px; } .help-text { font-size:16px; line-height:1.8; } .help-text h3 { font-size:23px; margin-top:24px; } .help-text h4 { font-size:20px; } .help-text ul, .help-text ol { padding-left:21px; } .help-text li { padding-left:1px; } .help-topic-grid, .help-product-grid { grid-template-columns:minmax(0,1fr); gap:12px; } .help-topic, .help-product-card { padding:17px; } .help-contact-details { padding-inline:14px; } .help-contact-details dl > div { grid-template-columns:minmax(0,1fr); gap:3px; } .help-contact-details dd { font-size:14px; } .help-callout { padding:15px; } .help-main p.help-signoff { padding:19px; font-size:23px; } .help-main a.help-button { font-size:17px; padding-inline:18px; } }
-        @media (max-width:359px) { .help-container { padding-inline:16px; } .help-title { font-size:39px; } .help-section { padding:20px 16px; } .help-section h2 { font-size:23px; } .help-actions { gap:12px; } }
-        @media (prefers-reduced-motion:reduce) { .help-main *, .help-main *::before, .help-main *::after { transition:none !important; animation:none !important; scroll-behavior:auto !important; } .help-main a.help-button:hover { transform:none; } }
+        .help-main {
+            --help-purple: #38177f;
+            --help-pink: #f32661;
+            --help-ink: #283450;
+            --help-cream: #fff8ee;
+            --help-soft: #fff0f4;
+            background: var(--help-cream);
+            color: var(--help-ink);
+            font-family: var(--default-font);
+            font-size: 16px;
+            line-height: 1.8;
+            overflow: clip;
+        }
+
+        .help-main--safety {
+            --help-soft: #e7f7f3;
+        }
+
+        .help-main--privacy {
+            --help-soft: #efeafb;
+        }
+
+        .help-main--terms {
+            --help-soft: #fff3d7;
+        }
+
+        .help-main *,
+        .help-main *::before,
+        .help-main *::after {
+            box-sizing: border-box;
+        }
+
+        .help-main h1,
+        .help-main h2,
+        .help-main h3,
+        .help-main h4 {
+            font-family: var(--accent-font);
+            font-weight: 400;
+            color: var(--help-purple);
+            letter-spacing: 0;
+            text-transform: none;
+        }
+
+        .help-main p {
+            color: inherit;
+        }
+
+        .help-main a {
+            color: var(--help-purple);
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        .help-main a:hover {
+            color: var(--help-pink);
+        }
+
+        .help-main a:focus-visible,
+        .help-main summary:focus-visible,
+        .help-section:focus-visible {
+            outline: 3px solid var(--help-purple);
+            outline-offset: 4px;
+        }
+
+        .help-container {
+            width: min(100%, 1360px);
+            padding-inline: 44px;
+            margin-inline: auto;
+        }
+
+        .help-hero {
+            position: relative;
+            isolation: isolate;
+            padding: 29px 0 48px;
+            background: linear-gradient(120deg, var(--help-cream) 20%, var(--help-soft));
+            border-bottom: 1px solid #e9dfea;
+        }
+
+        .help-hero::before {
+            content: "";
+            position: absolute;
+            right: -105px;
+            top: 35px;
+            width: 310px;
+            height: 310px;
+            border: 2px dashed #a691cf;
+            border-radius: 47% 53% 57% 43% / 53% 44% 56% 47%;
+            opacity: .22;
+            transform: rotate(10deg);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .help-hero::after {
+            content: "";
+            position: absolute;
+            right: 130px;
+            top: 80px;
+            width: 37px;
+            height: 37px;
+            background: #ffb800;
+            opacity: .8;
+            clip-path: polygon(50% 0, 60% 35%, 100% 50%, 60% 60%, 50% 100%, 40% 60%, 0 50%, 40% 35%);
+            transform: rotate(15deg);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .help-breadcrumb ol {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px 12px;
+            list-style: none;
+            margin: 0 0 35px;
+            padding: 0;
+            font-size: 14px;
+            color: var(--help-purple);
+        }
+
+        .help-breadcrumb li+li::before {
+            content: "/";
+            color: #a096b1;
+            margin-right: 12px;
+        }
+
+        .help-breadcrumb a {
+            text-decoration: none;
+        }
+
+        .help-breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .help-main .help-eyebrow {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--help-pink);
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 1.6px;
+            text-transform: uppercase;
+            margin: 0 0 17px;
+        }
+
+        .help-eyebrow::after {
+            content: "";
+            width: 36px;
+            height: 9px;
+            flex: 0 0 36px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 38 10'%3E%3Cpath d='M2 5Q10 0 18 5T36 5' fill='none' stroke='%23FFB800' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E") center/contain no-repeat;
+        }
+
+        .help-title {
+            font-size: clamp(44px, 5vw, 68px);
+            line-height: 1.15;
+            margin: 0 0 20px;
+            max-width: 950px;
+        }
+
+        .help-hero-copy {
+            max-width: 920px;
+        }
+
+        .help-main .help-subtitle {
+            color: var(--help-purple);
+            font-family: var(--accent-font);
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 0 0 17px;
+        }
+
+        .help-intro {
+            font-size: 17px;
+            line-height: 1.8;
+            max-width: 890px;
+        }
+
+        .help-intro p {
+            margin: 0 0 13px;
+        }
+
+        .help-intro p:last-child {
+            margin-bottom: 0;
+        }
+
+        .help-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-top: 25px;
+        }
+
+        .help-main a.help-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            min-height: 48px;
+            padding: 11px 22px;
+            border: 2px solid var(--help-pink);
+            border-radius: 26px;
+            background: var(--help-pink);
+            color: #fff;
+            font-family: var(--accent-font);
+            font-size: 18px;
+            line-height: 1.3;
+            box-shadow: 0 3px 0 var(--help-purple);
+            text-decoration: none;
+            transition: transform .2s, box-shadow .2s;
+        }
+
+        .help-main a.help-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 0 var(--help-purple);
+        }
+
+        .help-button i {
+            font-size: 14px;
+        }
+
+        .help-main a.help-button--secondary {
+            background: #fff;
+            color: var(--help-purple);
+            border-color: var(--help-purple);
+            box-shadow: none;
+        }
+
+        .help-main a.help-button--secondary:hover {
+            box-shadow: 0 3px 0 var(--help-purple);
+        }
+
+        .help-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 24px;
+            color: var(--help-purple);
+            font-size: 14px;
+            margin: 12px 0 22px;
+        }
+
+        .help-meta p {
+            margin: 0;
+        }
+
+        .help-main .help-draft-note {
+            font-size: 14px;
+            line-height: 1.7;
+            max-width: 900px;
+            padding: 12px 17px;
+            margin: 0;
+            border: 1px solid #ead5a0;
+            border-left: 4px solid #ffb800;
+            border-radius: 12px;
+            background: #fff5d9;
+            color: #72501b;
+        }
+
+        .help-placeholder {
+            color: #765114;
+            background: #fff2c5;
+            padding: 2px 5px;
+            border-radius: 5px;
+            overflow-wrap: anywhere;
+            box-decoration-break: clone;
+            -webkit-box-decoration-break: clone;
+        }
+
+        .help-layout {
+            display: grid;
+            grid-template-columns: 260px minmax(0, 1fr);
+            gap: 46px;
+            align-items: start;
+            padding-block: 52px 75px;
+        }
+
+        .help-sidebar {
+            position: sticky;
+            top: 105px;
+            min-width: 0;
+        }
+
+        .help-toc-panel {
+            border: 1px solid #e6dced;
+            border-radius: 20px;
+            background: #fff;
+            overflow: auto;
+            max-height: calc(100vh - 130px);
+            scrollbar-width: thin;
+            scrollbar-color: #d6c5e8 #fff;
+            box-shadow: 0 7px 26px #38177f05;
+        }
+
+        .help-toc-summary {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            padding: 18px 19px;
+            margin: 0;
+            font-family: var(--accent-font);
+            color: var(--help-purple);
+            font-size: 24px;
+            line-height: 1.3;
+            list-style: none;
+            cursor: pointer;
+        }
+
+        .help-toc-summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .help-toc-summary i {
+            font-size: 12px;
+            transition: transform .2s;
+        }
+
+        .help-toc-panel[open] .help-toc-summary i {
+            transform: rotate(180deg);
+        }
+
+        .help-toc ol {
+            list-style: none;
+            margin: 0;
+            padding: 0 10px 14px;
+        }
+
+        .help-toc li {
+            margin: 0;
+        }
+
+        .help-toc a {
+            display: flex;
+            align-items: flex-start;
+            gap: 9px;
+            padding: 9px 10px;
+            font-size: 13px;
+            line-height: 1.55;
+            text-decoration: none;
+            border-left: 3px solid transparent;
+            border-radius: 0 9px 9px 0;
+        }
+
+        .help-toc a:hover,
+        .help-toc a[aria-current="location"] {
+            color: var(--help-purple);
+            background: #fff0f4;
+            border-left-color: var(--help-pink);
+        }
+
+        .help-toc-number {
+            display: inline-block;
+            color: var(--help-pink);
+            font-weight: 700;
+            font-size: 12px;
+            min-width: 16px;
+            padding-top: 1px;
+        }
+
+        .help-related-nav {
+            display: grid;
+            gap: 7px;
+            border-top: 1px solid #eee5f2;
+            padding: 17px 19px 20px;
+        }
+
+        .help-related-nav h2 {
+            font-size: 20px;
+            line-height: 1.3;
+            margin: 0 0 5px;
+        }
+
+        .help-related-nav a {
+            font-size: 13px;
+            text-decoration: none;
+        }
+
+        .help-related-nav a[aria-current="page"] {
+            color: var(--help-pink);
+            font-weight: 700;
+        }
+
+        .help-article {
+            min-width: 0;
+        }
+
+        .help-section {
+            position: relative;
+            padding: 31px 32px;
+            margin-bottom: 23px;
+            background: #fff;
+            border: 1px solid #e9dfee;
+            border-radius: 22px;
+            scroll-margin-top: 105px;
+        }
+
+        .help-section h2 {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            font-size: 30px;
+            line-height: 1.35;
+            margin: 0 0 22px;
+        }
+
+        .help-section-number {
+            display: grid;
+            place-items: center;
+            width: 35px;
+            height: 35px;
+            flex: 0 0 35px;
+            background: #fff0cb;
+            color: var(--help-purple);
+            border-radius: 11px;
+            font-size: 21px;
+            line-height: 1;
+            margin-top: 2px;
+        }
+
+        .help-text {
+            font-size: 16px;
+            line-height: 1.85;
+        }
+
+        .help-text>p {
+            margin: 0 0 18px;
+        }
+
+        .help-text> :last-child {
+            margin-bottom: 0;
+        }
+
+        .help-text h3 {
+            font-size: 25px;
+            line-height: 1.35;
+            margin: 27px 0 12px;
+        }
+
+        .help-text h4 {
+            font-size: 21px;
+            line-height: 1.4;
+            margin: 21px 0 8px;
+        }
+
+        .help-text ul,
+        .help-text ol {
+            padding-left: 24px;
+            margin: 0 0 19px;
+        }
+
+        .help-text li {
+            padding-left: 3px;
+            margin: 7px 0;
+        }
+
+        .help-text li::marker {
+            color: var(--help-pink);
+        }
+
+        .help-text p.help-product-label {
+            margin-bottom: 7px;
+        }
+
+        .help-callout {
+            padding: 17px 20px;
+            margin: 21px 0;
+            border-left: 4px solid #ffb800;
+            background: #fff6dd;
+            border-radius: 0 13px 13px 0;
+            font-size: 15px;
+        }
+
+        .help-callout p {
+            margin: 0;
+        }
+
+        .help-callout--important {
+            border-left-color: var(--help-pink);
+            background: #fff0f4;
+        }
+
+        .help-topic-grid,
+        .help-product-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+            margin: 20px 0;
+        }
+
+        .help-topic,
+        .help-product-card {
+            min-width: 0;
+            padding: 19px 20px;
+            background: #fff9f1;
+            border: 1px solid #f1e5e1;
+            border-radius: 15px;
+        }
+
+        .help-topic h3,
+        .help-product-card h3 {
+            font-size: 23px;
+            margin: 0 0 10px;
+        }
+
+        .help-topic p {
+            font-size: 15px;
+            line-height: 1.75;
+            margin: 0;
+        }
+
+        .help-product-card ul {
+            margin-bottom: 0;
+            padding-left: 19px;
+        }
+
+        .help-product-card li {
+            font-size: 15px;
+            margin: 5px 0;
+        }
+
+        .help-contact-details {
+            margin: 20px 0;
+            background: #faf7fe;
+            border: 1px solid #eae0f2;
+            border-radius: 15px;
+            padding: 5px 19px;
+        }
+
+        .help-contact-details dl {
+            margin: 0;
+        }
+
+        .help-contact-details dl>div {
+            display: grid;
+            grid-template-columns: 160px minmax(0, 1fr);
+            gap: 15px;
+            padding: 13px 0;
+            border-bottom: 1px solid #e7dff0;
+        }
+
+        .help-contact-details dl>div:last-child {
+            border-bottom: 0;
+        }
+
+        .help-contact-details dt {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--help-purple);
+        }
+
+        .help-contact-details dd {
+            margin: 0;
+            font-size: 15px;
+            line-height: 1.8;
+            overflow-wrap: anywhere;
+        }
+
+        .help-contact-details a {
+            overflow-wrap: anywhere;
+        }
+
+        .help-main p.help-signoff {
+            color: var(--help-purple);
+            font-family: var(--accent-font);
+            font-size: 25px;
+            line-height: 1.4;
+            padding: 22px 25px;
+            background: #ede6f9;
+            border-radius: 17px;
+            margin: 28px 0 0;
+            text-align: center;
+        }
+
+        @media (max-width:1199px) {
+            .help-container {
+                padding-inline: 32px;
+            }
+
+            .help-layout {
+                grid-template-columns: 235px minmax(0, 1fr);
+                gap: 28px;
+            }
+
+            .help-section {
+                padding: 27px;
+            }
+
+            .help-section h2 {
+                font-size: 27px;
+            }
+
+            .help-topic-grid,
+            .help-product-grid {
+                grid-template-columns: minmax(0, 1fr);
+            }
+        }
+
+        @media (max-width:991px) {
+            .help-layout {
+                grid-template-columns: minmax(0, 1fr);
+                gap: 25px;
+                padding-top: 32px;
+            }
+
+            .help-sidebar {
+                position: static;
+            }
+
+            .help-toc-panel {
+                max-height: none;
+            }
+
+            .help-toc ol {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 3px 9px;
+            }
+
+            .help-related-nav {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 10px;
+            }
+
+            .help-related-nav h2 {
+                grid-column: 1/-1;
+            }
+
+            .help-topic-grid,
+            .help-product-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .help-section {
+                scroll-margin-top: 98px;
+            }
+
+            .help-hero::after {
+                top: 75px;
+                right: 45px;
+                width: 24px;
+                height: 24px;
+                opacity: .45;
+            }
+        }
+
+        @media (max-width:575px) {
+            .help-container {
+                padding-inline: 20px;
+            }
+
+            .help-hero {
+                padding: 24px 0 32px;
+            }
+
+            .help-breadcrumb ol {
+                margin-bottom: 27px;
+                font-size: 13px;
+            }
+
+            .help-main .help-eyebrow {
+                font-size: 11px;
+                letter-spacing: 1.2px;
+                gap: 9px;
+            }
+
+            .help-title {
+                font-size: 43px;
+                margin-bottom: 18px;
+            }
+
+            .help-main .help-subtitle {
+                font-size: 25px;
+            }
+
+            .help-intro {
+                font-size: 16px;
+                line-height: 1.8;
+            }
+
+            .help-meta {
+                gap: 11px;
+                flex-direction: column;
+                margin-bottom: 18px;
+                font-size: 13px;
+            }
+
+            .help-main .help-draft-note {
+                font-size: 13px;
+            }
+
+            .help-hero::before {
+                top: 60px;
+                right: -160px;
+                width: 260px;
+                height: 260px;
+            }
+
+            .help-hero::after {
+                display: none;
+            }
+
+            .help-layout {
+                padding-block: 25px 46px;
+                gap: 22px;
+            }
+
+            .help-toc-summary {
+                font-size: 23px;
+            }
+
+            .help-toc ol {
+                grid-template-columns: minmax(0, 1fr);
+            }
+
+            .help-toc a {
+                font-size: 14px;
+                padding-block: 10px;
+            }
+
+            .help-related-nav {
+                grid-template-columns: minmax(0, 1fr);
+            }
+
+            .help-section {
+                border-radius: 18px;
+                padding: 22px 20px;
+                margin-bottom: 19px;
+                scroll-margin-top: 97px;
+            }
+
+            .help-section h2 {
+                font-size: 25px;
+                gap: 10px;
+                margin-bottom: 20px;
+            }
+
+            .help-section-number {
+                width: 29px;
+                height: 29px;
+                flex-basis: 29px;
+                font-size: 18px;
+                border-radius: 9px;
+                margin-top: 2px;
+            }
+
+            .help-text {
+                font-size: 16px;
+                line-height: 1.8;
+            }
+
+            .help-text h3 {
+                font-size: 23px;
+                margin-top: 24px;
+            }
+
+            .help-text h4 {
+                font-size: 20px;
+            }
+
+            .help-text ul,
+            .help-text ol {
+                padding-left: 21px;
+            }
+
+            .help-text li {
+                padding-left: 1px;
+            }
+
+            .help-topic-grid,
+            .help-product-grid {
+                grid-template-columns: minmax(0, 1fr);
+                gap: 12px;
+            }
+
+            .help-topic,
+            .help-product-card {
+                padding: 17px;
+            }
+
+            .help-contact-details {
+                padding-inline: 14px;
+            }
+
+            .help-contact-details dl>div {
+                grid-template-columns: minmax(0, 1fr);
+                gap: 3px;
+            }
+
+            .help-contact-details dd {
+                font-size: 14px;
+            }
+
+            .help-callout {
+                padding: 15px;
+            }
+
+            .help-main p.help-signoff {
+                padding: 19px;
+                font-size: 23px;
+            }
+
+            .help-main a.help-button {
+                font-size: 17px;
+                padding-inline: 18px;
+            }
+        }
+
+        @media (max-width:359px) {
+            .help-container {
+                padding-inline: 16px;
+            }
+
+            .help-title {
+                font-size: 39px;
+            }
+
+            .help-section {
+                padding: 20px 16px;
+            }
+
+            .help-section h2 {
+                font-size: 23px;
+            }
+
+            .help-actions {
+                gap: 12px;
+            }
+        }
+
+        @media (prefers-reduced-motion:reduce) {
+
+            .help-main *,
+            .help-main *::before,
+            .help-main *::after {
+                transition: none !important;
+                animation: none !important;
+                scroll-behavior: auto !important;
+            }
+
+            .help-main a.help-button:hover {
+                transform: none;
+            }
+        }
     </style>
 </head>
+
 <body>
     <!-- Topbar Section Start -->
     <div class="topbar new-top branded-topbar">
@@ -863,11 +1622,14 @@
                                 <li class="nav-item"><a class="nav-link" href="./">Home</a></li>
                                 <li class="nav-item submenu"><a class="nav-link" href="shop.html">Shop</a>
                                     <ul>
-                                        <li class="nav-item"><a class="nav-link" href="kids-walkers.html">Kids Walkers</a>
+                                        <li class="nav-item"><a class="nav-link" href="kids-walkers.html">Kids
+                                                Walkers</a>
                                         </li>
-                                        <li class="nav-item"><a class="nav-link" href="kids-scooters.html">Kids Scooters</a>
+                                        <li class="nav-item"><a class="nav-link" href="kids-scooters.html">Kids
+                                                Scooters</a>
                                         </li>
-                                        <li class="nav-item"><a class="nav-link" href="roller-skates.html">Roller Skates</a>
+                                        <li class="nav-item"><a class="nav-link" href="roller-skates.html">Roller
+                                                Skates</a>
                                         </li>
                                         <li class="nav-item"><a class="nav-link" href="skateboards.html">Skateboards</a>
                                         </li>
@@ -895,7 +1657,8 @@
                                 class="fa-solid fa-arrow-right"></i></a>
                         <div class="header-nav-social" aria-label="Social links">
                             <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="https://www.instagram.com/littlegoonz.toys?rpxt=Ym1zbndhYWNpN3Zt" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.instagram.com/littlegoonz.toys?rpxt=Ym1zbndhYWNpN3Zt"
+                                aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
                             <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
                         </div>
                         <div class="navbar-toggle"></div>
@@ -907,188 +1670,333 @@
         </div>
     </header>
     <!-- Header End -->
-<main class="help-main help-main--privacy">
-<section class="help-hero"><div class="help-container">
-<nav class="help-breadcrumb" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li aria-current="page">Privacy Policy</li></ol></nav>
-<p class="help-eyebrow">Little Goonz / Privacy Policy</p><h1 class="help-title">Privacy Policy</h1>
-<!-- <div class="help-meta"><p>Effective Date: <span class="help-placeholder">[Publication Date]</span></p><p>Last Updated: <span class="help-placeholder">[Revision Date]</span></p></div> -->
-<!-- <p class="help-draft-note">Draft details: highlighted fields are awaiting verified business information.</p> -->
-</div></section>
-<div class="help-container help-layout">
-<aside class="help-sidebar"><details class="help-toc-panel" open><summary class="help-toc-summary">On this page <i class="fa-solid fa-chevron-down" aria-hidden="true"></i></summary><nav class="help-toc" aria-label="On this page"><ol><li><a href="#introduction"><span class="help-toc-number">1</span>Introduction</a></li>
-<li><a href="#information-we-collect"><span class="help-toc-number">2</span>Information We Collect</a></li>
-<li><a href="#how-we-use-your-information"><span class="help-toc-number">3</span>How We Use Your Information</a></li>
-<li><a href="#dealer-enquiry-information"><span class="help-toc-number">4</span>Dealer Enquiry Information</a></li>
-<li><a href="#cookies-similar-technologies"><span class="help-toc-number">5</span>Cookies &amp; Similar Technologies</a></li>
-<li><a href="#sharing-of-personal-information"><span class="help-toc-number">6</span>Sharing of Personal Information</a></li>
-<li><a href="#data-retention"><span class="help-toc-number">7</span>Data Retention</a></li>
-<li><a href="#data-security"><span class="help-toc-number">8</span>Data Security</a></li>
-<li><a href="#children-s-privacy"><span class="help-toc-number">9</span>Children&#x27;s Privacy</a></li>
-<li><a href="#your-privacy-rights"><span class="help-toc-number">10</span>Your Privacy Rights</a></li>
-<li><a href="#third-party-websites"><span class="help-toc-number">11</span>Third-Party Websites</a></li>
-<li><a href="#international-data-processing"><span class="help-toc-number">12</span>International Data Processing</a></li>
-<li><a href="#changes-to-this-privacy-policy"><span class="help-toc-number">13</span>Changes to This Privacy Policy</a></li>
-<li><a href="#contact-privacy-grievances"><span class="help-toc-number">14</span>Contact &amp; Privacy Grievances</a></li></ol></nav>
-<nav class="help-related-nav" aria-label="Help pages"><h2>Help &amp; information</h2><a href="product-support.html">Product Support</a>
-<a href="safety-guidelines.html">Safety Guidelines</a>
-<a href="privacy.html" aria-current="page">Privacy Policy</a>
-<a href="terms.html">Terms &amp; Conditions</a></nav></details></aside>
-<article class="help-article" aria-label="Privacy Policy content">
-<section class="help-section" id="introduction"><h2><span class="help-section-number">1</span>Introduction</h2><div class="help-text">
-<p>Welcome to Little Goonz.</p>
-<p>We respect the privacy of individuals who visit our website, contact our team, request product information, or enquire about dealership opportunities.</p>
-<p>This Privacy Policy explains what personal information we collect, why we collect it, how it is used, when it may be shared, and how individuals can contact us about their information.</p>
-<p>The website is operated by Your Full Name, operating under the Little Goonz brand, at C-599, DSIIDC industrial zone, Narela, Delhi-110040.</p>
-<p>Throughout this Privacy Policy, "Little Goonz", "we", "our", and "us" refer to the website operator identified above.</p>
-<p>By using our website, you can review our privacy practices. Where consent is required for particular processing activities, we will request it separately in accordance with applicable law.</p>
-</div></section>
-<section class="help-section" id="information-we-collect"><h2><span class="help-section-number">2</span>Information We Collect</h2><div class="help-text">
-<p>Depending on how you interact with the website, we may collect the following information.</p>
-<h3>A. Contact Information</h3>
-<p>When you contact us, we may collect:</p>
-<ul>
-<li>Full name</li>
-<li>Email address</li>
-<li>Phone number</li>
-<li>Message or enquiry details</li>
-<li>Other information you voluntarily provide</li>
-</ul>
-<h3>B. Dealer &amp; Business Enquiry Information</h3>
-<p>When you submit a dealership enquiry, we may collect:</p>
-<ul>
-<li>Full name</li>
-<li>Business or store name</li>
-<li>Business email address</li>
-<li>Contact number</li>
-<li>City and state</li>
-<li>Business type</li>
-<li>Product interests</li>
-<li>Information relevant to your dealership enquiry</li>
-</ul>
-<p>We request that applicants provide only information reasonably necessary for their enquiry.</p>
-<h3>C. Product Support Information</h3>
-<p>If you contact us about a product, we may collect:</p>
-<ul>
-<li>Product name or model</li>
-<li>Description of the issue</li>
-<li>Purchase details, where relevant</li>
-<li>Photographs of the affected product</li>
-<li>Details necessary to review the enquiry</li>
-</ul>
-<p>Please do not submit sensitive personal information unless specifically requested and necessary.</p>
-<h3>D. Technical &amp; Website Information</h3>
-<p>Depending on the website's technical configuration, information such as IP address, device and browser information, access logs, referring pages, and website interaction data may be processed.</p>
-<p><span class="help-placeholder">[Confirm and describe the actual technical information collected by the website, including any analytics or tracking tools.]</span></p>
-</div></section>
-<section class="help-section" id="how-we-use-your-information"><h2><span class="help-section-number">3</span>How We Use Your Information</h2><div class="help-text">
-<p>We process personal information for purposes connected with operating the Little Goonz website and responding to legitimate enquiries.</p>
-<p>These purposes may include:</p>
-<h4>Responding to Enquiries</h4>
-<p>Answering questions about Little Goonz products, features, and availability.</p>
-<h4>Dealer Enquiry Processing</h4>
-<p>Reviewing retailer and dealership enquiries and communicating about potential business opportunities.</p>
-<h4>Product Support</h4>
-<p>Reviewing product-related concerns and providing relevant assistance.</p>
-<h4>Website Administration</h4>
-<p>Maintaining website functionality, preventing misuse, and protecting the website's security.</p>
-<h4>Communication Preferences</h4>
-<p>Sending updates or promotional communications only where the required permission or another applicable lawful basis exists.</p>
-<p>We will not use personal information for unrelated purposes without an appropriate legal basis.</p>
-</div></section>
-<section class="help-section" id="dealer-enquiry-information"><h2><span class="help-section-number">4</span>Dealer Enquiry Information</h2><div class="help-text">
-<p>Information submitted through our Become a Dealer page is intended to help us understand the applicant's business and evaluate potential dealership opportunities.</p>
-<p>Submission of an enquiry does not guarantee dealership approval or establish a dealer relationship.</p>
-<p>Personal information submitted through the enquiry form will be handled in accordance with this Privacy Policy and applicable law.</p>
-</div></section>
-<section class="help-section" id="cookies-similar-technologies"><h2><span class="help-section-number">5</span>Cookies &amp; Similar Technologies</h2><div class="help-text">
-<p>Our website may use cookies or similar technologies for functions such as website operation, security, remembering preferences, and, if enabled, understanding website usage.</p>
-<p>The categories of cookies and tracking tools actually used are:</p>
-<!-- <p><span class="help-placeholder">[Insert verified list of necessary cookies, analytics tools, advertising technologies, and third-party services.]</span></p> -->
-<p>Where applicable law requires consent for optional technologies, appropriate consent choices will be provided.</p>
-<p>Visitors may also be able to manage cookies through their browser settings, although disabling necessary cookies may affect website functionality.</p>
-</div></section>
-<section class="help-section" id="sharing-of-personal-information"><h2><span class="help-section-number">6</span>Sharing of Personal Information</h2><div class="help-text">
-<p>Personal information may be shared when reasonably necessary for legitimate website and business operations, including with:</p>
-<ul>
-<li>Authorized employees or representatives handling enquiries</li>
-<li>Website hosting and technical service providers</li>
-<li>Service providers assisting with communication or website operations</li>
-<li>Authorized business personnel handling dealer applications</li>
-<li>Government or regulatory authorities when legally required</li>
-</ul>
-<p>Any sharing must be consistent with the stated purposes, applicable contractual arrangements, and relevant legal requirements.</p>
-<!-- <p><span class="help-placeholder">[Confirm all actual third-party recipients and service providers.]</span></p> -->
-<p>We will not disclose personal information for unrelated marketing purposes without the necessary lawful basis.</p>
-</div></section>
-<section class="help-section" id="data-retention"><h2><span class="help-section-number">7</span>Data Retention</h2><div class="help-text">
-<p>We retain personal information only for as long as necessary for the purposes for which it was collected, subject to applicable legal, operational, and recordkeeping requirements.</p>
-<p>The actual retention periods or criteria are:</p>
-<ul>
-<li>General enquiries: <span class="help-placeholder">[Retention period]</span></li>
-<li>Dealer enquiries: <span class="help-placeholder">[Retention period]</span></li>
-<li>Product support records: <span class="help-placeholder">[Retention period]</span></li>
-<li>Website and technical logs: <span class="help-placeholder">[Retention period]</span></li>
-<li>Marketing subscription information, if applicable: <span class="help-placeholder">[Retention period or until withdrawal, subject to applicable requirements]</span></li>
-</ul>
-<p>When personal information is no longer required, we will delete, anonymize, or otherwise handle it in accordance with applicable law and our retention procedures.</p>
-</div></section>
-<section class="help-section" id="data-security"><h2><span class="help-section-number">8</span>Data Security</h2><div class="help-text">
-<p>We recognize the importance of protecting personal information against unauthorized access, misuse, alteration, loss, and disclosure.</p>
-<p>We implement appropriate technical and organizational safeguards based on the nature of the information processed and applicable legal requirements.</p>
-<p><span class="help-placeholder">[Confirm the actual security measures maintained by the website operator.]</span></p>
-<p>No internet-based transmission or storage method is completely free from security risks.</p>
-<p>Individuals should avoid sending passwords, banking credentials, or unnecessary sensitive information through general enquiry forms.</p>
-</div></section>
-<section class="help-section" id="children-s-privacy"><h2><span class="help-section-number">9</span>Children&#x27;s Privacy</h2><div class="help-text">
-<p>Little Goonz products are intended for children, but our website's contact, support, and dealership enquiry forms are intended for use by adults.</p>
-<p>We do not seek to collect personal information directly from children through these forms.</p>
-<p>Parents or guardians should supervise children's use of the website.</p>
-<p>If we become aware that personal information about a child has been collected in circumstances that do not comply with applicable law, we will take appropriate steps to address it.</p>
-<p>Any processing of children's personal information must comply with the applicable legal requirements concerning children and parental consent.</p>
-</div></section>
-<section class="help-section" id="your-privacy-rights"><h2><span class="help-section-number">10</span>Your Privacy Rights</h2><div class="help-text">
-<p>Subject to applicable law, individuals may have rights concerning their personal information, including rights to:</p>
-<ul>
-<li>Request information about personal data processing</li>
-<li>Request correction or updating of inaccurate information</li>
-<li>Request erasure where legally applicable</li>
-<li>Withdraw consent where processing is based on consent</li>
-<li>Raise questions or grievances concerning the handling of personal information</li>
-</ul>
-<p>Requests can be submitted to the privacy contact listed below.</p>
-<p>We may need to verify the identity or authority of the requester before processing certain requests.</p>
-<p>Applicable rights, procedures, and exceptions are governed by the laws in force at the relevant time.</p>
-</div></section>
-<section class="help-section" id="third-party-websites"><h2><span class="help-section-number">11</span>Third-Party Websites</h2><div class="help-text">
-<p>The Little Goonz website may contain links to external websites, including social media platforms and third-party services.</p>
-<p>We are not responsible for the independent privacy practices of external websites.</p>
-<p>Visitors should review the privacy policies of any external services they choose to use.</p>
-</div></section>
-<section class="help-section" id="international-data-processing"><h2><span class="help-section-number">12</span>International Data Processing</h2><div class="help-text">
-<p><span class="help-placeholder">[Confirm whether website hosting, analytics, email providers, or other service providers process or store personal information outside India.]</span></p>
-<p>Where personal information is transferred or processed internationally, Little Goonz will follow applicable legal requirements and safeguards.</p>
-</div></section>
-<section class="help-section" id="changes-to-this-privacy-policy"><h2><span class="help-section-number">13</span>Changes to This Privacy Policy</h2><div class="help-text">
-<p>We may update this Privacy Policy to reflect changes in our website, business practices, or applicable legal requirements.</p>
-<p>Material changes will be communicated as required by applicable law.</p>
-<p>The latest version will be made available on this page with the corresponding revision date.</p>
-</div></section>
-<section class="help-section" id="contact-privacy-grievances"><h2><span class="help-section-number">14</span>Contact &amp; Privacy Grievances</h2><div class="help-text">
-<p>For privacy-related questions, requests, or grievances, please contact:</p>
-<p>Little Goonz – Privacy Contact</p>
-<div class="help-contact-details"><dl>
-<div><dt>Legal Business Name</dt><dd><span class="help-placeholder">[Verified Legal Entity Name]</span></dd></div>
-<div><dt>Privacy / Grievance Contact</dt><dd><span class="help-placeholder">[Responsible Person or Designation]</span></dd></div>
-<div><dt>Email</dt><dd><a href="mailto:hello@littlegoonz.com">hello@littlegoonz.com</a></dd></div>
-<div><dt>Phone</dt><dd><a href="tel:+917290040518">+91 7290040518</a></dd></div>
-<div><dt>Business Address</dt><dd>C-599, DSIIDC industrial zone, Narela, Delhi-110040</dd></div>
-<div><dt>Website</dt><dd><span class="help-placeholder">[Official Website URL]</span></dd></div>
-</dl></div>
-<p>We will handle privacy-related requests and grievances in accordance with the procedures and timelines required by applicable law.</p>
-<a class="help-button" href="contact.html">Contact Us <span aria-hidden="true">&rarr;</span></a>
-</div></section>
-<p class="help-signoff">Little Goonz – Your Privacy Matters.</p>
-</article></div></main>
+    <main class="help-main help-main--privacy">
+        <section class="help-hero">
+            <div class="help-container">
+                <nav class="help-breadcrumb" aria-label="Breadcrumb">
+                    <ol>
+                        <li><a href="index.html">Home</a></li>
+                        <li aria-current="page">Privacy Policy</li>
+                    </ol>
+                </nav>
+                <p class="help-eyebrow">Little Goonz / Privacy Policy</p>
+                <h1 class="help-title">Privacy Policy</h1>
+                <!-- <div class="help-meta"><p>Effective Date: <span class="help-placeholder">[Publication Date]</span></p><p>Last Updated: <span class="help-placeholder">[Revision Date]</span></p></div> -->
+                <!-- <p class="help-draft-note">Draft details: highlighted fields are awaiting verified business information.</p> -->
+            </div>
+        </section>
+        <div class="help-container help-layout">
+            <aside class="help-sidebar">
+                <details class="help-toc-panel" open>
+                    <summary class="help-toc-summary">On this page <i class="fa-solid fa-chevron-down"
+                            aria-hidden="true"></i></summary>
+                    <nav class="help-toc" aria-label="On this page">
+                        <ol>
+                            <li><a href="#introduction"><span class="help-toc-number">1</span>Introduction</a></li>
+                            <li><a href="#information-we-collect"><span class="help-toc-number">2</span>Information We
+                                    Collect</a></li>
+                            <li><a href="#how-we-use-your-information"><span class="help-toc-number">3</span>How We Use
+                                    Your Information</a></li>
+                            <li><a href="#dealer-enquiry-information"><span class="help-toc-number">4</span>Dealer
+                                    Enquiry Information</a></li>
+                            <li><a href="#cookies-similar-technologies"><span class="help-toc-number">5</span>Cookies
+                                    &amp; Similar Technologies</a></li>
+                            <li><a href="#sharing-of-personal-information"><span class="help-toc-number">6</span>Sharing
+                                    of Personal Information</a></li>
+                            <li><a href="#data-retention"><span class="help-toc-number">7</span>Data Retention</a></li>
+                            <li><a href="#data-security"><span class="help-toc-number">8</span>Data Security</a></li>
+                            <li><a href="#children-s-privacy"><span class="help-toc-number">9</span>Children&#x27;s
+                                    Privacy</a></li>
+                            <li><a href="#your-privacy-rights"><span class="help-toc-number">10</span>Your Privacy
+                                    Rights</a></li>
+                            <li><a href="#third-party-websites"><span class="help-toc-number">11</span>Third-Party
+                                    Websites</a></li>
+                            <li><a href="#international-data-processing"><span
+                                        class="help-toc-number">12</span>International Data Processing</a></li>
+                            <li><a href="#changes-to-this-privacy-policy"><span class="help-toc-number">13</span>Changes
+                                    to This Privacy Policy</a></li>
+                            <li><a href="#contact-privacy-grievances"><span class="help-toc-number">14</span>Contact
+                                    &amp; Privacy Grievances</a></li>
+                        </ol>
+                    </nav>
+                    <nav class="help-related-nav" aria-label="Help pages">
+                        <h2>Help &amp; information</h2><a href="product-support.html">Product Support</a>
+                        <a href="safety-guidelines.html">Safety Guidelines</a>
+                        <a href="privacy.html" aria-current="page">Privacy Policy</a>
+                        <a href="terms.html">Terms &amp; Conditions</a>
+                    </nav>
+                </details>
+            </aside>
+            <article class="help-article" aria-label="Privacy Policy content">
+                <section class="help-section" id="introduction">
+                    <h2><span class="help-section-number">1</span>Introduction</h2>
+                    <div class="help-text">
+                        <p>Welcome to Little Goonz.</p>
+                        <p>We respect the privacy of individuals who visit our website, contact our team, request
+                            product information, or enquire about dealership opportunities.</p>
+                        <p>This Privacy Policy explains what personal information we collect, why we collect it, how it
+                            is used, when it may be shared, and how individuals can contact us about their information.
+                        </p>
+                        <p>The website is operated by Your Full Name, operating under the Little Goonz brand, at C-599,
+                            DSIIDC industrial zone, Narela, Delhi-110040.</p>
+                        <p>Throughout this Privacy Policy, "Little Goonz", "we", "our", and "us" refer to the website
+                            operator identified above.</p>
+                        <p>By using our website, you can review our privacy practices. Where consent is required for
+                            particular processing activities, we will request it separately in accordance with
+                            applicable law.</p>
+                    </div>
+                </section>
+                <section class="help-section" id="information-we-collect">
+                    <h2><span class="help-section-number">2</span>Information We Collect</h2>
+                    <div class="help-text">
+                        <p>Depending on how you interact with the website, we may collect the following information.</p>
+                        <h3>A. Contact Information</h3>
+                        <p>When you contact us, we may collect:</p>
+                        <ul>
+                            <li>Full name</li>
+                            <li>Email address</li>
+                            <li>Phone number</li>
+                            <li>Message or enquiry details</li>
+                            <li>Other information you voluntarily provide</li>
+                        </ul>
+                        <h3>B. Dealer &amp; Business Enquiry Information</h3>
+                        <p>When you submit a dealership enquiry, we may collect:</p>
+                        <ul>
+                            <li>Full name</li>
+                            <li>Business or store name</li>
+                            <li>Business email address</li>
+                            <li>Contact number</li>
+                            <li>City and state</li>
+                            <li>Business type</li>
+                            <li>Product interests</li>
+                            <li>Information relevant to your dealership enquiry</li>
+                        </ul>
+                        <p>We request that applicants provide only information reasonably necessary for their enquiry.
+                        </p>
+                        <h3>C. Product Support Information</h3>
+                        <p>If you contact us about a product, we may collect:</p>
+                        <ul>
+                            <li>Product name or model</li>
+                            <li>Description of the issue</li>
+                            <li>Purchase details, where relevant</li>
+                            <li>Photographs of the affected product</li>
+                            <li>Details necessary to review the enquiry</li>
+                        </ul>
+                        <p>Please do not submit sensitive personal information unless specifically requested and
+                            necessary.</p>
+                        <h3>D. Technical &amp; Website Information</h3>
+                        <p>Depending on the website's technical configuration, information such as IP address, device
+                            and browser information, access logs, referring pages, and website interaction data may be
+                            processed.</p>
+                        <p><span class="help-placeholder">[Confirm and describe the actual technical information
+                                collected by the website, including any analytics or tracking tools.]</span></p>
+                    </div>
+                </section>
+                <section class="help-section" id="how-we-use-your-information">
+                    <h2><span class="help-section-number">3</span>How We Use Your Information</h2>
+                    <div class="help-text">
+                        <p>We process personal information for purposes connected with operating the Little Goonz
+                            website and responding to legitimate enquiries.</p>
+                        <p>These purposes may include:</p>
+                        <h4>Responding to Enquiries</h4>
+                        <p>Answering questions about Little Goonz products, features, and availability.</p>
+                        <h4>Dealer Enquiry Processing</h4>
+                        <p>Reviewing retailer and dealership enquiries and communicating about potential business
+                            opportunities.</p>
+                        <h4>Product Support</h4>
+                        <p>Reviewing product-related concerns and providing relevant assistance.</p>
+                        <h4>Website Administration</h4>
+                        <p>Maintaining website functionality, preventing misuse, and protecting the website's security.
+                        </p>
+                        <h4>Communication Preferences</h4>
+                        <p>Sending updates or promotional communications only where the required permission or another
+                            applicable lawful basis exists.</p>
+                        <p>We will not use personal information for unrelated purposes without an appropriate legal
+                            basis.</p>
+                    </div>
+                </section>
+                <section class="help-section" id="dealer-enquiry-information">
+                    <h2><span class="help-section-number">4</span>Dealer Enquiry Information</h2>
+                    <div class="help-text">
+                        <p>Information submitted through our Become a Dealer page is intended to help us understand the
+                            applicant's business and evaluate potential dealership opportunities.</p>
+                        <p>Submission of an enquiry does not guarantee dealership approval or establish a dealer
+                            relationship.</p>
+                        <p>Personal information submitted through the enquiry form will be handled in accordance with
+                            this Privacy Policy and applicable law.</p>
+                    </div>
+                </section>
+                <section class="help-section" id="cookies-similar-technologies">
+                    <h2><span class="help-section-number">5</span>Cookies &amp; Similar Technologies</h2>
+                    <div class="help-text">
+                        <p>Our website may use cookies or similar technologies for functions such as website operation,
+                            security, remembering preferences, and, if enabled, understanding website usage.</p>
+                        <p>The categories of cookies and tracking tools actually used are:</p>
+                        <!-- <p><span class="help-placeholder">[Insert verified list of necessary cookies, analytics tools, advertising technologies, and third-party services.]</span></p> -->
+                        <p>Where applicable law requires consent for optional technologies, appropriate consent choices
+                            will be provided.</p>
+                        <p>Visitors may also be able to manage cookies through their browser settings, although
+                            disabling necessary cookies may affect website functionality.</p>
+                    </div>
+                </section>
+                <section class="help-section" id="sharing-of-personal-information">
+                    <h2><span class="help-section-number">6</span>Sharing of Personal Information</h2>
+                    <div class="help-text">
+                        <p>Personal information may be shared when reasonably necessary for legitimate website and
+                            business operations, including with:</p>
+                        <ul>
+                            <li>Authorized employees or representatives handling enquiries</li>
+                            <li>Website hosting and technical service providers</li>
+                            <li>Service providers assisting with communication or website operations</li>
+                            <li>Authorized business personnel handling dealer applications</li>
+                            <li>Government or regulatory authorities when legally required</li>
+                        </ul>
+                        <p>Any sharing must be consistent with the stated purposes, applicable contractual arrangements,
+                            and relevant legal requirements.</p>
+                        <!-- <p><span class="help-placeholder">[Confirm all actual third-party recipients and service providers.]</span></p> -->
+                        <p>We will not disclose personal information for unrelated marketing purposes without the
+                            necessary lawful basis.</p>
+                    </div>
+                </section>
+                <section class="help-section" id="data-retention">
+                    <h2><span class="help-section-number">7</span>Data Retention</h2>
+                    <div class="help-text">
+                        <p>We retain personal information only for as long as necessary for the purposes for which it
+                            was collected, subject to applicable legal, operational, and recordkeeping requirements.</p>
+                        <p>The actual retention periods or criteria are:</p>
+                        <ul>
+                            <li>General enquiries: <span class="help-placeholder">[Retention period]</span></li>
+                            <li>Dealer enquiries: <span class="help-placeholder">[Retention period]</span></li>
+                            <li>Product support records: <span class="help-placeholder">[Retention period]</span></li>
+                            <li>Website and technical logs: <span class="help-placeholder">[Retention period]</span>
+                            </li>
+                            <li>Marketing subscription information, if applicable: <span
+                                    class="help-placeholder">[Retention period or until withdrawal, subject to
+                                    applicable requirements]</span></li>
+                        </ul>
+                        <p>When personal information is no longer required, we will delete, anonymize, or otherwise
+                            handle it in accordance with applicable law and our retention procedures.</p>
+                    </div>
+                </section>
+                <section class="help-section" id="data-security">
+                    <h2><span class="help-section-number">8</span>Data Security</h2>
+                    <div class="help-text">
+                        <p>We recognize the importance of protecting personal information against unauthorized access,
+                            misuse, alteration, loss, and disclosure.</p>
+                        <p>We implement appropriate technical and organizational safeguards based on the nature of the
+                            information processed and applicable legal requirements.</p>
+                        <p><span class="help-placeholder">[Confirm the actual security measures maintained by the
+                                website operator.]</span></p>
+                        <p>No internet-based transmission or storage method is completely free from security risks.</p>
+                        <p>Individuals should avoid sending passwords, banking credentials, or unnecessary sensitive
+                            information through general enquiry forms.</p>
+                    </div>
+                </section>
+                <section class="help-section" id="children-s-privacy">
+                    <h2><span class="help-section-number">9</span>Children&#x27;s Privacy</h2>
+                    <div class="help-text">
+                        <p>Little Goonz products are intended for children, but our website's contact, support, and
+                            dealership enquiry forms are intended for use by adults.</p>
+                        <p>We do not seek to collect personal information directly from children through these forms.
+                        </p>
+                        <p>Parents or guardians should supervise children's use of the website.</p>
+                        <p>If we become aware that personal information about a child has been collected in
+                            circumstances that do not comply with applicable law, we will take appropriate steps to
+                            address it.</p>
+                        <p>Any processing of children's personal information must comply with the applicable legal
+                            requirements concerning children and parental consent.</p>
+                    </div>
+                </section>
+                <section class="help-section" id="your-privacy-rights">
+                    <h2><span class="help-section-number">10</span>Your Privacy Rights</h2>
+                    <div class="help-text">
+                        <p>Subject to applicable law, individuals may have rights concerning their personal information,
+                            including rights to:</p>
+                        <ul>
+                            <li>Request information about personal data processing</li>
+                            <li>Request correction or updating of inaccurate information</li>
+                            <li>Request erasure where legally applicable</li>
+                            <li>Withdraw consent where processing is based on consent</li>
+                            <li>Raise questions or grievances concerning the handling of personal information</li>
+                        </ul>
+                        <p>Requests can be submitted to the privacy contact listed below.</p>
+                        <p>We may need to verify the identity or authority of the requester before processing certain
+                            requests.</p>
+                        <p>Applicable rights, procedures, and exceptions are governed by the laws in force at the
+                            relevant time.</p>
+                    </div>
+                </section>
+                <section class="help-section" id="third-party-websites">
+                    <h2><span class="help-section-number">11</span>Third-Party Websites</h2>
+                    <div class="help-text">
+                        <p>The Little Goonz website may contain links to external websites, including social media
+                            platforms and third-party services.</p>
+                        <p>We are not responsible for the independent privacy practices of external websites.</p>
+                        <p>Visitors should review the privacy policies of any external services they choose to use.</p>
+                    </div>
+                </section>
+                <section class="help-section" id="international-data-processing">
+                    <h2><span class="help-section-number">12</span>International Data Processing</h2>
+                    <div class="help-text">
+                        <p><span class="help-placeholder">[Confirm whether website hosting, analytics, email providers,
+                                or other service providers process or store personal information outside India.]</span>
+                        </p>
+                        <p>Where personal information is transferred or processed internationally, Little Goonz will
+                            follow applicable legal requirements and safeguards.</p>
+                    </div>
+                </section>
+                <section class="help-section" id="changes-to-this-privacy-policy">
+                    <h2><span class="help-section-number">13</span>Changes to This Privacy Policy</h2>
+                    <div class="help-text">
+                        <p>We may update this Privacy Policy to reflect changes in our website, business practices, or
+                            applicable legal requirements.</p>
+                        <p>Material changes will be communicated as required by applicable law.</p>
+                        <p>The latest version will be made available on this page with the corresponding revision date.
+                        </p>
+                    </div>
+                </section>
+                <section class="help-section" id="contact-privacy-grievances">
+                    <h2><span class="help-section-number">14</span>Contact &amp; Privacy Grievances</h2>
+                    <div class="help-text">
+                        <p>For privacy-related questions, requests, or grievances, please contact:</p>
+                        <p>Little Goonz – Privacy Contact</p>
+                        <div class="help-contact-details">
+                            <dl>
+                                <div>
+                                    <dt>Legal Business Name</dt>
+                                    <dd><span class="help-placeholder">[Verified Legal Entity Name]</span></dd>
+                                </div>
+                                <div>
+                                    <dt>Privacy / Grievance Contact</dt>
+                                    <dd><span class="help-placeholder">[Responsible Person or Designation]</span></dd>
+                                </div>
+                                <div>
+                                    <dt>Email</dt>
+                                    <dd><a href="mailto:hello@littlegoonz.com">hello@littlegoonz.com</a></dd>
+                                </div>
+                                <div>
+                                    <dt>Phone</dt>
+                                    <dd><a href="tel:+917290040518">+91 7290040518</a></dd>
+                                </div>
+                                <div>
+                                    <dt>Business Address</dt>
+                                    <dd>C-599, DSIIDC industrial zone, Narela, Delhi-110040</dd>
+                                </div>
+                                <div>
+                                    <dt>Website</dt>
+                                    <dd><span class="help-placeholder">[Official Website URL]</span></dd>
+                                </div>
+                            </dl>
+                        </div>
+                        <p>We will handle privacy-related requests and grievances in accordance with the procedures and
+                            timelines required by applicable law.</p>
+                        <a class="help-button" href="contact.html">Contact Us <span aria-hidden="true">&rarr;</span></a>
+                    </div>
+                </section>
+                <p class="help-signoff">Little Goonz – Your Privacy Matters.</p>
+            </article>
+        </div>
+    </main>
 
     <!-- Little Goonz Footer Start -->
     <footer class="lg-footer" id="main-footer">
@@ -1142,8 +2050,8 @@
                             title="Facebook">
                             <i class="fa-brands fa-facebook-f"></i>
                         </a>
-                        <a href="https://www.instagram.com/littlegoonz.toys?rpxt=Ym1zbndhYWNpN3Zt" class="lg-footer__social-btn lg-footer__social-ig" aria-label="Instagram"
-                            title="Instagram">
+                        <a href="https://www.instagram.com/littlegoonz.toys?rpxt=Ym1zbndhYWNpN3Zt"
+                            class="lg-footer__social-btn lg-footer__social-ig" aria-label="Instagram" title="Instagram">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
                         <a href="#" class="lg-footer__social-btn lg-footer__social-yt" aria-label="YouTube"
@@ -1511,4 +2419,5 @@
     </script>
 
 </body>
+
 </html>
