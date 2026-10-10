@@ -1352,6 +1352,176 @@
         }
     </style>
 
+    <!-- Instagram feed styling is limited to this section. -->
+    <style>
+        .little-goonz-instagram {
+            position: relative;
+            isolation: isolate;
+            padding: 76px 0 84px;
+            background-color: var(--primary-color);
+            background-image:
+                radial-gradient(ellipse at 8% 12%, rgba(229, 26, 81, .2), transparent 38%),
+                radial-gradient(ellipse at 94% 30%, rgba(45, 188, 175, .16), transparent 38%),
+                linear-gradient(180deg, #412675 0%, var(--primary-color) 100%);
+        }
+
+        .little-goonz-instagram::before,
+        .little-goonz-instagram::after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .little-goonz-instagram::before {
+            top: 72px;
+            left: 4%;
+            width: 70px;
+            height: 70px;
+            border: 12px solid rgba(45, 188, 175, .22);
+            border-radius: 50%;
+        }
+
+        .little-goonz-instagram::after {
+            top: 70px;
+            right: 6%;
+            width: 32px;
+            height: 32px;
+            background: var(--highlight-color);
+            clip-path: polygon(50% 0, 61% 35%, 100% 50%, 61% 65%, 50% 100%, 39% 65%, 0 50%, 39% 35%);
+            transform: rotate(12deg);
+            opacity: .8;
+        }
+
+        .little-goonz-instagram > .container {
+            max-width: 1200px;
+        }
+
+        .little-goonz-instagram .instagram-feed-intro {
+            max-width: 740px;
+            margin: 0 auto 38px;
+            text-align: center;
+        }
+
+        .little-goonz-instagram .instagram-feed-intro h2 {
+            margin: 0 0 16px;
+            color: var(--white-color);
+            font-family: var(--accent-font);
+            font-size: clamp(34px, 3.6vw, 52px);
+            line-height: 1.18;
+        }
+
+        .little-goonz-instagram .instagram-feed-intro h2 span {
+            color: var(--highlight-color);
+        }
+
+        .little-goonz-instagram .instagram-feed-intro p {
+            margin: 0 auto 24px;
+            max-width: 570px;
+            color: rgba(255, 255, 255, .88);
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        .little-goonz-instagram .instagram-profile-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 11px;
+            max-width: 100%;
+            padding: 14px 24px;
+            border: 1px solid var(--highlight-color);
+            border-radius: 999px;
+            background: var(--highlight-color);
+            color: var(--primary-color);
+            font-size: 15px;
+            font-weight: 700;
+            line-height: 1.4;
+            box-shadow: 0 6px 0 rgba(14, 6, 38, .24);
+            transition: transform .2s ease, box-shadow .2s ease;
+        }
+
+        .little-goonz-instagram .instagram-profile-link .fa-instagram {
+            color: var(--primary-color);
+            font-size: 23px;
+        }
+
+        .little-goonz-instagram .instagram-profile-link .fa-arrow-up-right-from-square {
+            font-size: 12px;
+        }
+
+        .little-goonz-instagram .instagram-profile-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 0 rgba(14, 6, 38, .24);
+        }
+
+        .little-goonz-instagram .instagram-profile-link:focus-visible {
+            outline: 3px solid var(--white-color);
+            outline-offset: 5px;
+        }
+
+        .little-goonz-instagram .instagram-feed-frame {
+            position: relative;
+            min-width: 0;
+            min-height: 180px;
+            padding: 30px;
+            border: 2px solid rgba(255, 255, 255, .7);
+            border-radius: 32px;
+            background: var(--secondary-color);
+            box-shadow: 0 22px 48px rgba(14, 6, 38, .18);
+        }
+
+        .little-goonz-instagram .elfsight-app-f9de96f4-b988-4b70-b885-2e015dd655ea {
+            width: 100%;
+            min-width: 0;
+        }
+
+        @media (max-width: 767px) {
+            .little-goonz-instagram {
+                padding: 48px 0 56px;
+            }
+
+            .little-goonz-instagram::before {
+                top: 28px;
+                left: 3%;
+                width: 36px;
+                height: 36px;
+                border-width: 7px;
+                opacity: .5;
+            }
+
+            .little-goonz-instagram::after {
+                top: 24px;
+                right: 5%;
+                width: 20px;
+                height: 20px;
+                opacity: .5;
+            }
+
+            .little-goonz-instagram .instagram-feed-intro {
+                margin-bottom: 30px;
+            }
+
+            .little-goonz-instagram .instagram-feed-intro p {
+                font-size: 15px;
+            }
+
+            .little-goonz-instagram .instagram-feed-frame {
+                padding: 20px 12px;
+                border-radius: 24px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .little-goonz-instagram .instagram-profile-link {
+                transition: none;
+            }
+
+            .little-goonz-instagram .instagram-profile-link:hover {
+                transform: none;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -1460,7 +1630,7 @@
             <div class="swiper-wrapper">
                 <!-- Slide 1 Start -->
                 <div class="swiper-slide">
-                    <div class="hero-slide" style="background-image: url('images/newimagetesting.png');">
+                    <div class="hero-slide" style="background-image: url('images/Joyful Baby Walker Playtime in a Cozy Nursery.webp');">
                         <div class="container">
                             <div class="row align-items-center min-vh-100">
                                 <div class="col-lg-6 col-md-8">
@@ -1489,7 +1659,7 @@
 
                 <!-- Slide 2 Start -->
                 <div class="swiper-slide">
-                    <div class="hero-slide" style="background-image: url('images/hero-img2.png');">
+                    <div class="hero-slide" style="background-image: url('images/Joyful Kids Scootering in the Golden Plaza.webp');">
                         <div class="container">
                             <div class="row align-items-center min-vh-100">
                                 <div class="col-lg-6 col-md-8">
@@ -1517,7 +1687,7 @@
 
                 <!-- Slide 3 Start -->
                 <div class="swiper-slide">
-                    <div class="hero-slide hero-slide-3 " style="background-image: url('images/heroimgtest.png');">
+                    <div class="hero-slide hero-slide-3 " style="background-image: url('images/Golden-Hour Skatepark Adventure.webp');">
                         <div class="container">
                             <div class="row align-items-center min-vh-100">
                                 <div class="col-lg-6 col-md-8">
@@ -2059,82 +2229,75 @@
         </div>
     </div>
 
-    <div class="our-new-arrivals">
+    <!-- Little Goonz Instagram Feed Start -->
+    <section class="little-goonz-instagram" aria-labelledby="instagram-feed-title">
         <div class="container">
-            <div class="row section-row">
-                <div class="col-xl-12">
-                    <!-- Section Title Start -->
-                    <div class="section-title section-title-center">
-                        <!-- <span class="section-sub-title wow fadeInUp">New Arrivals</span> -->
-                        <h2 class="text-anime-style-2" data-cursor="-opaque">Every Little Ride Starts Somewhere</h2>
-                    </div>
-                    <!-- Section Title End -->
-                </div>
+            <div class="instagram-feed-intro">
+                <h2 id="instagram-feed-title">Little Adventures on <span>Instagram</span></h2>
+                <p>Follow along for little moments, big smiles, and everyday adventures.</p>
+                <a class="instagram-profile-link" href="https://www.instagram.com/littlegoonz.toys?rpxt=Ym1zbndhYWNpN3Zt" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                    <span>@littlegoonz.toys</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                </a>
             </div>
-
-            <div class="row">
-                <div class="col-xl-12">
-                    <!-- Arrivals Item List Start -->
-                    <div class="arrivals-item-list">
-                        <!-- Arrivals Item Start -->
-                        <div class="arrivals-item wow fadeInUp">
-                            <!-- Arrivals Item Image Start -->
-                            <div class="arrivals-item-image dark-section">
-                                <figure>
-                                    <img src="images/slidesection1.png" alt="">
-                                </figure>
-                            </div>
-                            <!-- Arrivals Item Image End -->
-
-                            <!-- Arrivals Item Content Start -->
-                            <div class="arrivals-item-content">
-                                <h3><a href="kids-walkers.html">Make Every First Step a Little Adventure</a></h3>
-                            </div>
-                            <!-- Arrivals Item Content End -->
-                        </div>
-                        <!-- Arrivals Item End -->
-
-                        <!-- Arrivals Item Start -->
-                        <div class="arrivals-item wow fadeInUp" data-wow-delay="0.2s">
-                            <!-- Arrivals Item Image Start -->
-                            <div class="arrivals-item-image dark-section">
-                                <figure>
-                                    <img src="images/slidesection2.png" alt="">
-                                </figure>
-                            </div>
-                            <!-- Arrivals Item Image End -->
-
-                            <!-- Arrivals Item Content Start -->
-                            <div class="arrivals-item-content">
-                                <h3><a href="kids-scooters.html">Turn Every Ride Into a New Adventure</a></h3>
-                            </div>
-                            <!-- Arrivals Item Content End -->
-                        </div>
-                        <!-- Arrivals Item End -->
-
-                        <!-- Arrivals Item Start -->
-                        <div class="arrivals-item wow fadeInUp" data-wow-delay="0.4s">
-                            <!-- Arrivals Item Image Start -->
-                            <div class="arrivals-item-image dark-section">
-                                <figure>
-                                    <img src="images/slidesection3.png" alt="">
-                                </figure>
-                            </div>
-                            <!-- Arrivals Item Image End -->
-
-                            <!-- Arrivals Item Content Start -->
-                            <div class="arrivals-item-content">
-                                <h3><a href="roller-skates.html">Roll, Glide & Discover Bigger Adventures</a></h3>
-                            </div>
-                            <!-- Arrivals Item Content End -->
-                        </div>
-                        <!-- Arrivals Item End -->
-                    </div>
-                    <!-- Arrivals Item List End -->
-                </div>
+            <div class="instagram-feed-frame">
+                <!-- Elfsight Instagram Feed | Untitled Instagram Feed -->
+                <script src="https://elfsightcdn.com/platform.js" async></script>
+                <div class="elfsight-app-f9de96f4-b988-4b70-b885-2e015dd655ea" data-elfsight-app-lazy></div>
             </div>
+            <!-- Keep this feed's promotional badge out of the page layout. -->
+            <script>
+                (function () {
+                    var app = document.querySelector('.little-goonz-instagram .elfsight-app-f9de96f4-b988-4b70-b885-2e015dd655ea');
+                    if (!app) return;
+                    var creditSelector = 'a[href^="https://elfsight.com/instagram-feed-instashow/"][href*="utm_campaign=free-widget"]';
+                    var watchedRoots = new WeakSet();
+                    var watchedCredits = new WeakSet();
+
+                    function hideCredit(credit) {
+                        if (!credit.matches(creditSelector)) return;
+                        if (credit.style.getPropertyValue('display') !== 'none' || credit.style.getPropertyPriority('display') !== 'important') {
+                            credit.style.setProperty('display', 'none', 'important');
+                        }
+                    }
+
+                    function updateCredits(root) {
+                        root.querySelectorAll(creditSelector).forEach(function (credit) {
+                            hideCredit(credit);
+                            if (watchedCredits.has(credit)) return;
+                            watchedCredits.add(credit);
+                            new MutationObserver(function () { hideCredit(credit); }).observe(credit, {
+                                attributes: true,
+                                attributeFilter: ['style', 'href']
+                            });
+                        });
+                    }
+
+                    function connectFeed() {
+                        updateCredits(app);
+                        app.querySelectorAll('.es-embed-root').forEach(function (host) {
+                            var root = host.shadowRoot;
+                            if (!root) return;
+                            updateCredits(root);
+                            if (watchedRoots.has(root)) return;
+                            watchedRoots.add(root);
+                            new MutationObserver(function () { updateCredits(root); }).observe(root, {
+                                childList: true,
+                                subtree: true
+                            });
+                        });
+                    }
+
+                    new MutationObserver(connectFeed).observe(app, { childList: true, subtree: true });
+                    var platform = document.querySelector('script[src="https://elfsightcdn.com/platform.js"]');
+                    if (platform) platform.addEventListener('load', connectFeed, { once: true });
+                    connectFeed();
+                })();
+            </script>
         </div>
-    </div>
+    </section>
+    <!-- Little Goonz Instagram Feed End -->
     <!-- CTA Section End -->
 
     <!-- Our Top Deals Section Start -->
