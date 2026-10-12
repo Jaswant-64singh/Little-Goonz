@@ -28,6 +28,29 @@
 		});
 	}	
 	
+	/* Shared header icons and current-page state, also copied into the mobile menu. */
+	var headerMenu = document.querySelector('header.reference-navbar #menu');
+	if (headerMenu) {
+		var menuIcons = {
+			'./': '<path fill="#fff5fc" d="m3 10 9-8 9 8v11h-6v-7H9v7H3Z"/><path d="M2 11 12 2l10 9M16 5V3h3v5"/>',
+			'shop.html': '<path fill="#f778ad" d="M5 7h14l2 14H3Z"/><path d="M8 8V6a4 4 0 0 1 8 0v2"/>',
+			'about.html': '<circle fill="#f778ad" cx="12" cy="6" r="3"/><circle fill="#fff5fc" cx="4.5" cy="9" r="2.5"/><circle fill="#fff5fc" cx="19.5" cy="9" r="2.5"/><path fill="#fff5fc" d="M2 21v-5a3 3 0 0 1 6 0v5Zm14 0v-5a3 3 0 0 1 6 0v5Z"/><path fill="#f778ad" d="M7 21v-6a5 5 0 0 1 10 0v6Z"/>',
+			'contact.html': '<path fill="#f778ad" d="M5 3h4l2 5-3 2a15 15 0 0 0 6 6l2-3 5 2v4a2 2 0 0 1-2 2C10 21 3 14 3 5a2 2 0 0 1 2-2Z"/><path d="M16 3a6 6 0 0 1 5 5"/>',
+			'become-a-dealer.html': '<path fill="#fff5fc" d="m2 7 4-3 5 3-4 9-5-3Zm20 0-4-3-5 3 4 9 5-3Z"/><path fill="#f778ad" d="m7 9 4-3 3 1 4 7-4 6a2 2 0 0 1-3 0l-5-5Z"/><path fill="#fff5fc" d="m11 6-3 4a2 2 0 0 0 3 2l2-2 5 4"/><path d="m10 15 4 4m-2-6 4 4"/>'
+		};
+		Array.prototype.forEach.call(headerMenu.querySelectorAll(':scope > li > a'), function (link) {
+			var icon = menuIcons[link.getAttribute('href')];
+			if (!icon) return;
+			link.classList.add('has-menu-icon');
+			link.insertAdjacentHTML('afterbegin', '<svg class="header-menu-icon" viewBox="0 0 24 24" fill="none" stroke="#342365" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">' + icon + '</svg>');
+		});
+		Array.prototype.forEach.call(headerMenu.querySelectorAll('a[href]'), function (link) {
+			if (new URL(link.getAttribute('href'), window.location.href).pathname === window.location.pathname) {
+				link.setAttribute('aria-current', 'page');
+			}
+		});
+	}
+
 	/* Slick Menu JS */
 	$('#menu').slicknav({
 		label : '',

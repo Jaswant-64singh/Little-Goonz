@@ -13981,3 +13981,34 @@ header.main-header .navbar {
 		grid-column: 1 / -1;
 	}
 }
+
+/* Shared header menu icons and the current Shop submenu page. */
+header.reference-navbar .header-menu-icon {
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	flex: 0 0 18px;
+	margin-right: 6px;
+	vertical-align: -3px;
+}
+
+header.reference-navbar #menu > li > .nav-link.has-menu-icon {
+	padding-inline: 10px !important;
+}
+
+header.reference-navbar #menu > li > ul .nav-link[aria-current="page"],
+header.reference-navbar .slicknav_nav ul li a.nav-link[aria-current="page"] {
+	background: #ffe9ee;
+	color: #342365;
+	box-shadow: inset 3px 0 0 #f32661;
+}
+
+@media (min-width: 1200px) and (max-width: 1330px) {
+	header.reference-navbar #menu > li > .nav-link.has-menu-icon {
+		padding-inline: 6px !important;
+	}
+
+	header.reference-navbar #menu > .submenu > .nav-link.has-menu-icon::after {
+		margin-left: 4px;
+	}
+}
