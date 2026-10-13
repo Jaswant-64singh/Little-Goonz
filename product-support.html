@@ -2,825 +2,50 @@
 <html lang="en">
 
 <head>
-    <!-- Meta -->
-    <meta charset="utf-8">
+
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Product information, assembly guidance, product concerns and support contact details for Little Goonz.">
     <meta name="keywords" content="">
     <meta name="author" content="Awaiken">
-    <!-- Page Title -->
+
     <title>Product Support | Little Goonz</title>
-    <!-- Favicon Icon -->
+
     <link rel="shortcut icon" type="image/x-icon" href="images/logofav.png">
-    <!-- Google Fonts Css-->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="preload" href="fonts/IT Pimo Demo.otf" as="font" type="font/otf" crossorigin>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mouse+Memoirs&display=swap"
         rel="stylesheet">
-    <!-- Bootstrap Css -->
+
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <!-- SlickNav Css -->
+
     <link href="css/slicknav.min.css" rel="stylesheet">
-    <!-- Swiper Css -->
+
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
-    <!-- Font Awesome Icon Css-->
+
     <link href="css/all.min.css" rel="stylesheet" media="screen">
-    <!-- Animated Css -->
-    <link href="css/animate.css" rel="stylesheet">
-    <!-- Magnific Popup Core Css File -->
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <!-- Mouse Cursor Css File -->
-    <link rel="stylesheet" href="css/mousecursor.css">
-    <!-- Main Custom Css -->
-    <link href="css/custom.css" rel="stylesheet" media="screen">
 
-    <!-- Reference navbar styles: scoped to this header only. -->
-    <style>
-        .topbar.branded-topbar {
-            padding: 4px 0;
-        }
+    <link href="css/animate.min.css" rel="stylesheet">
 
-        .branded-topbar .topbar-content-info {
-            min-height: 32px;
-            gap: 24px;
-        }
+    <link rel="stylesheet" href="css/magnific-popup.min.css">
 
-        .branded-topbar .topbar-contact {
-            min-width: 0;
-            flex-wrap: wrap;
-            gap: 6px 24px;
-        }
+    <link rel="stylesheet" href="css/mousecursor.min.css">
 
-        .branded-topbar .topbar-contact a {
-            white-space: nowrap;
-        }
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&amp;display=swap">
+    <link href="css/custom.min.css" rel="stylesheet" media="screen">
 
-        .branded-topbar .topbar-partner-logo {
-            display: block;
-            flex: 0 0 auto;
-            width: 112px;
-            height: 32px;
-            object-fit: contain;
-        }
+    <link rel="stylesheet" href="css/common.min.css">
 
-        @media (max-width: 767px) {
-            .branded-topbar .container {
-                padding-right: 16px;
-                padding-left: 16px;
-            }
-
-            .branded-topbar .topbar-content-info {
-                justify-content: space-between;
-                gap: 12px;
-            }
-
-            .branded-topbar .topbar-contact {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 3px;
-            }
-
-            .branded-topbar .topbar-contact a {
-                font-size: 13px !important;
-                line-height: 1.3;
-            }
-
-            .branded-topbar .topbar-contact a:nth-child(2) {
-                display: inline-block;
-            }
-
-            .branded-topbar .topbar-partner-logo {
-                width: 92px;
-                height: 28px;
-            }
-        }
-
-        header.reference-navbar {
-            background: #fafafa;
-            border-radius: 4px;
-        }
-
-        header.reference-navbar .header-sticky {
-            isolation: isolate;
-            background: #fafafa;
-            background-image: none;
-            border-radius: 4px;
-            box-shadow: inset 0 0 0 1px #e5e5e5;
-        }
-
-        header.reference-navbar .header-sticky::before {
-            content: '';
-            position: absolute;
-            top: 1px;
-            left: 0;
-            width: clamp(198px, 20.372vw, 274px);
-            height: 76px;
-            border-radius: 4px 0 0 4px;
-            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 274 76' preserveAspectRatio='none'%3E%3Cpath d='M0 0H220C247 13 266 39 274 76H0Z' fill='%23ffde3f'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
-            pointer-events: none;
-            z-index: -1;
-        }
-
-        header.reference-navbar .navbar {
-            max-width: none;
-            min-height: 78px;
-            margin: 0;
-            padding: 0 24px 0 0;
-            gap: 21px;
-            flex-wrap: nowrap;
-        }
-
-        header.reference-navbar .header-action-box {
-            position: relative;
-            flex: 0 0 clamp(198px, 20.372vw, 274px);
-            width: auto;
-            max-width: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        header.reference-navbar .navbar-brand {
-            position: relative;
-            width: 130px;
-            margin: 0 0 0 clamp(26px, 4.46vw, 60px);
-            padding: 0;
-        }
-
-        header.reference-navbar .navbar-brand img {
-            display: block;
-            width: 130px;
-            height: 62px;
-            max-width: none;
-            object-fit: contain;
-            filter: drop-shadow(0 2px 1px rgba(52, 35, 101, .25));
-        }
-
-        /* Give the existing logo's white LITTLE lettering the reference's purple ink. */
-        header.reference-navbar .navbar-brand::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: #342365;
-            -webkit-mask: url('images/companyslide1.png') center / contain no-repeat;
-            mask: url('images/companyslide1.png') center / contain no-repeat;
-            clip-path: inset(18% 0 58% 42%);
-            pointer-events: none;
-            z-index: 1;
-        }
-
-        header.reference-navbar .header-logo-spark {
-            position: absolute;
-            top: 1px;
-            left: calc(clamp(26px, 4.46vw, 60px) + 138px);
-            width: 21px;
-            height: 28px;
-            pointer-events: none;
-        }
-
-        header.reference-navbar .main-menu {
-            flex: 1 1 auto;
-            align-self: stretch;
-            min-width: 0;
-            width: auto;
-            gap: 12px;
-            border: 0;
-            padding: 0;
-            background: transparent;
-        }
-
-        header.reference-navbar .navbar-collapse {
-            flex: 0 0 auto;
-            width: auto;
-            max-width: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        header.reference-navbar .nav-menu-wrapper {
-            flex: 0 0 auto;
-            margin: 0;
-        }
-
-        header.reference-navbar #menu {
-            gap: 10px;
-            margin: 0;
-            padding: 0;
-            flex-wrap: nowrap;
-        }
-
-        header.reference-navbar #menu>li {
-            --menu-pill: #ed1050;
-            --menu-ink: #fff;
-            --menu-width: 85px;
-            margin: 0;
-            padding: 0;
-        }
-
-        header.reference-navbar #menu>li:nth-child(2) {
-            --menu-pill: #8dcbff;
-            --menu-ink: #101010;
-            --menu-width: 89px;
-        }
-
-        header.reference-navbar #menu>li:nth-child(3) {
-            --menu-pill: #ff7c24;
-            --menu-width: 96px;
-        }
-
-        header.reference-navbar #menu>li:nth-child(4) {
-            --menu-pill: #c0dc39;
-            --menu-ink: #101010;
-            --menu-width: 108px;
-        }
-
-        header.reference-navbar #menu>li:nth-child(5) {
-            --menu-pill: #a2e0e2;
-            --menu-ink: #101010;
-            --menu-width: 98px;
-        }
-
-        header.reference-navbar #menu>li:nth-child(6) {
-            --menu-pill: #c797f7;
-            --menu-ink: #101010;
-            --menu-width: 152px;
-        }
-
-        header.reference-navbar #menu>li>.nav-link {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            min-width: 0;
-            width: var(--menu-width);
-            min-height: 38px;
-            padding: 0 14px !important;
-            border: 0;
-            border-radius: 999px;
-            background: var(--menu-pill);
-            color: var(--menu-ink);
-            font-family: var(--accent-font);
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 1;
-            letter-spacing: 0;
-            text-transform: none;
-            white-space: nowrap;
-            box-shadow: 0 3px 5px rgba(0, 0, 0, .12), inset 0 1px 2px rgba(255, 255, 255, .18);
-            transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
-        }
-
-        header.reference-navbar #menu>li>.nav-link[href="become-a-dealer.html"] {
-            width: max-content;
-            min-width: 152px;
-            padding: 0 20px !important;
-        }
-
-        header.reference-navbar .nav-link::before {
-            content: none;
-        }
-
-        header.reference-navbar #menu>.submenu>.nav-link::after {
-            content: '';
-            width: 6px;
-            height: 6px;
-            margin: -3px 0 0 8px;
-            border-right: 1.5px solid currentColor;
-            border-bottom: 1.5px solid currentColor;
-            transform: rotate(45deg);
-        }
-
-        header.reference-navbar #menu>li>.nav-link:hover,
-        header.reference-navbar #menu>li>.nav-link:focus-visible {
-            color: var(--menu-ink);
-            transform: translateY(-1px);
-            filter: brightness(1.03);
-            box-shadow: 0 4px 7px rgba(0, 0, 0, .16);
-        }
-
-        header.reference-navbar a:focus-visible {
-            outline: 2px solid #342365;
-            outline-offset: 3px;
-        }
-
-        header.reference-navbar #menu>li>ul {
-            top: calc(100% + 9px);
-            border: 1px solid #e5e5e5;
-            padding: 7px 0;
-        }
-
-        /* The invisible bridge keeps the dropdown open while crossing the gap. */
-        header.reference-navbar #menu>li>ul::before {
-            content: '';
-            position: absolute;
-            top: -10px;
-            left: 0;
-            width: 100%;
-            height: 10px;
-        }
-
-        header.reference-navbar #menu li:focus-within>ul {
-            visibility: visible;
-            opacity: 1;
-            transform: scale(1);
-        }
-
-        header.reference-navbar #menu ul .nav-link {
-            font-size: 17px;
-            line-height: 1.3;
-            letter-spacing: 0;
-            text-transform: none;
-        }
-
-        header.reference-navbar .header-nav-tools {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            flex: 0 0 350px;
-            align-self: stretch;
-            gap: 10px;
-            margin-left: auto;
-        }
-
-        header.reference-navbar .header-nav-tools::before {
-            content: '';
-            position: absolute;
-            top: 1px;
-            bottom: 1px;
-            left: -52px;
-            right: -23px;
-            border-radius: 0 4px 4px 0;
-            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 426 76' preserveAspectRatio='none'%3E%3Cpath d='M0 0H426V76H82C44 68 15 43 0 0Z' fill='%230080b2'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
-            pointer-events: none;
-            z-index: -1;
-        }
-
-        header.reference-navbar .header-plane-doodle {
-            flex: 0 0 86px;
-            width: 86px;
-            height: 54px;
-            pointer-events: none;
-        }
-
-        header.reference-navbar .header-shop-cta {
-            justify-content: center;
-            width: 132px;
-            min-height: 38px;
-            gap: 9px;
-            padding: 0 14px;
-            border-radius: 999px;
-            background: #fff;
-            color: #f51158;
-            font-family: var(--accent-font);
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 1;
-            letter-spacing: 0;
-            white-space: nowrap;
-            box-shadow: inset 0 1px 2px rgba(0, 0, 0, .06);
-        }
-
-        header.reference-navbar .header-shop-cta i {
-            font-size: 13px;
-        }
-
-        header.reference-navbar .header-shop-cta:hover,
-        header.reference-navbar .header-shop-cta:focus-visible {
-            color: #f51158;
-            background: #fff;
-            transform: translateY(-1px);
-            box-shadow: 0 3px 6px rgba(0, 0, 0, .12);
-        }
-
-        header.reference-navbar .header-nav-social {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex: 0 0 104px;
-            height: 31px;
-            margin-left: 6px;
-            padding-left: 17px;
-            border-left: 1px solid rgba(255, 255, 255, .36);
-        }
-
-        header.reference-navbar .header-nav-social a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 20px;
-            min-height: 31px;
-            color: #fff;
-            font-size: 15px;
-            line-height: 1;
-            transition: transform .2s ease;
-        }
-
-        header.reference-navbar .header-nav-social a:hover {
-            transform: translateY(-1px);
-        }
-
-        @media (min-width: 1200px) {
-            header.reference-navbar .navbar-collapse {
-                display: flex !important;
-                position: static;
-                flex: 1 1 auto;
-                min-width: 0;
-                justify-content: center;
-                /* Balance the logo gap and the blue panel's curved leading edge. */
-                padding-right: 61px;
-                transform: none;
-            }
-
-            header.reference-navbar .responsive-menu,
-            header.reference-navbar .navbar-toggle {
-                display: none;
-            }
-        }
-
-        @media (min-width: 1200px) and (max-width: 1459px) {
-            header.reference-navbar .header-nav-tools {
-                flex-basis: 264px;
-            }
-
-            header.reference-navbar .header-plane-doodle {
-                display: none;
-            }
-        }
-
-        @media (min-width: 1200px) and (max-width: 1330px) {
-            header.reference-navbar .navbar {
-                gap: 16px;
-                padding-right: 20px;
-            }
-
-            header.reference-navbar .navbar-collapse {
-                padding-right: 56px;
-            }
-
-            header.reference-navbar .header-action-box,
-            header.reference-navbar .header-sticky::before {
-                width: 178px;
-            }
-
-            header.reference-navbar .header-action-box {
-                flex-basis: 178px;
-            }
-
-            header.reference-navbar .navbar-brand {
-                margin-left: 24px;
-            }
-
-            header.reference-navbar .header-logo-spark {
-                display: none;
-            }
-
-            header.reference-navbar #menu {
-                gap: 8px;
-            }
-
-            header.reference-navbar #menu>li>.nav-link {
-                width: calc(var(--menu-width) - 9px);
-                font-size: 15px;
-                padding: 0 10px !important;
-            }
-
-            header.reference-navbar .header-nav-tools {
-                flex-basis: 264px;
-            }
-
-            header.reference-navbar .header-nav-tools::before {
-                right: -19px;
-            }
-
-            header.reference-navbar .header-plane-doodle {
-                display: none;
-            }
-        }
-
-        @media (max-width: 1199px) {
-            header.reference-navbar .navbar {
-                padding: 0 20px;
-                gap: 16px;
-            }
-
-            header.reference-navbar .header-sticky::before {
-                width: 210px;
-            }
-
-            header.reference-navbar .header-action-box {
-                flex: 0 0 auto;
-            }
-
-            header.reference-navbar .navbar-brand {
-                margin-left: 4px;
-            }
-
-            header.reference-navbar .header-logo-spark {
-                left: 142px;
-            }
-
-            header.reference-navbar .main-menu {
-                justify-content: flex-end;
-            }
-
-            header.reference-navbar .navbar-collapse {
-                display: none !important;
-            }
-
-            header.reference-navbar .header-nav-tools {
-                flex: 0 0 auto;
-                min-height: 78px;
-            }
-
-            header.reference-navbar .header-nav-tools::before {
-                left: -70px;
-                right: -19px;
-            }
-
-            header.reference-navbar .header-plane-doodle {
-                display: none;
-            }
-
-            header.reference-navbar .navbar-toggle {
-                display: block;
-                margin-left: 2px;
-            }
-
-            header.reference-navbar .slicknav_btn {
-                width: 38px;
-                height: 38px;
-                border-radius: 50%;
-                background: rgba(255, 255, 255, .15);
-            }
-
-            header.reference-navbar .slicknav_icon {
-                width: 22px;
-                height: 17px;
-                margin: 0;
-            }
-
-            header.reference-navbar .responsive-menu {
-                display: block;
-            }
-
-            header.reference-navbar .slicknav_menu {
-                position: absolute;
-                width: 100%;
-                background: transparent;
-                padding: 0;
-            }
-
-            header.reference-navbar .slicknav_nav {
-                max-height: calc(100vh - 140px);
-                max-height: calc(100dvh - 140px);
-                overflow-y: auto;
-                margin: 0;
-                padding: 8px 16px 16px;
-                border: 1px solid #e5e5e5;
-                border-top: 0;
-                background: #fafafa;
-                box-shadow: 0 8px 12px rgba(0, 0, 0, .1);
-            }
-
-            header.reference-navbar .slicknav_nav>li {
-                margin: 8px 0 0;
-            }
-
-            header.reference-navbar .slicknav_nav>li>a {
-                min-height: 44px;
-                margin: 0;
-                padding: 12px 18px;
-                border-radius: 24px !important;
-                background: #ed1050;
-                color: #fff;
-                font-family: var(--accent-font);
-                font-size: 18px;
-                line-height: 20px;
-                text-transform: none;
-                box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
-            }
-
-            header.reference-navbar .slicknav_nav>li:nth-child(2)>a {
-                background: #8dcbff;
-                color: #101010;
-            }
-
-            header.reference-navbar .slicknav_nav>li:nth-child(3)>a {
-                background: #ff7c24;
-            }
-
-            header.reference-navbar .slicknav_nav>li:nth-child(4)>a {
-                background: #c0dc39;
-                color: #101010;
-            }
-
-            header.reference-navbar .slicknav_nav>li:nth-child(5)>a {
-                background: #a2e0e2;
-                color: #101010;
-            }
-
-            header.reference-navbar .slicknav_nav>li:nth-child(6)>a {
-                background: #c797f7;
-                color: #101010;
-            }
-
-            header.reference-navbar .slicknav_nav .slicknav_row>a {
-                color: inherit;
-                font-size: inherit;
-                padding: 0;
-                line-height: inherit;
-                text-transform: none;
-            }
-
-            header.reference-navbar .slicknav_arrow::after {
-                color: #101010;
-            }
-
-            header.reference-navbar .slicknav_nav ul {
-                margin: 6px 0 0;
-            }
-
-            header.reference-navbar .slicknav_nav ul li a {
-                padding: 10px 24px;
-                color: #342365;
-                font-family: var(--accent-font);
-                font-size: 17px;
-                text-transform: none;
-            }
-
-            header.reference-navbar .slicknav_nav ul li a:hover {
-                background: #f0f0f0;
-            }
-        }
-
-        @media (max-width: 599px) {
-            header.reference-navbar .navbar {
-                padding: 0 12px;
-                gap: 10px;
-            }
-
-            header.reference-navbar .header-sticky::before {
-                width: 164px;
-            }
-
-            header.reference-navbar .navbar-brand {
-                width: 112px;
-                margin-left: 0;
-            }
-
-            header.reference-navbar .navbar-brand img {
-                width: 112px;
-                height: 62px;
-            }
-
-            header.reference-navbar .header-logo-spark {
-                display: none;
-            }
-
-            header.reference-navbar .header-nav-tools {
-                gap: 8px;
-            }
-
-            header.reference-navbar .header-nav-tools::before {
-                left: -10px;
-                right: -11px;
-            }
-
-            header.reference-navbar .header-shop-cta {
-                width: 122px;
-                min-height: 38px;
-                padding: 0 10px;
-                font-size: 15px;
-            }
-
-            header.reference-navbar .header-nav-social {
-                position: absolute;
-                display: none;
-                top: 78px;
-                right: -11px;
-                width: 104px;
-                height: 38px;
-                margin: 0;
-                padding: 0 12px;
-                border: 0;
-                border-radius: 0 0 0 16px;
-                background: #0080b2;
-            }
-
-            header.reference-navbar .header-nav-social a {
-                min-height: 38px;
-            }
-
-            header.reference-navbar:has(.slicknav_open) .header-nav-social {
-                display: flex;
-                z-index: 1;
-            }
-
-            header.reference-navbar .slicknav_nav {
-                padding-top: 38px;
-            }
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            header.reference-navbar a {
-                transition: none !important;
-            }
-        }
-    </style>
-    <!-- Help-page content styles; shared header/footer retain their exact styles. -->
-    <style>
-        .help-main { --help-purple:#38177f; --help-pink:#f32661; --help-ink:#283450; --help-cream:#fff8ee; --help-soft:#fff0f4; background:var(--help-cream); color:var(--help-ink); font-family:var(--default-font); font-size:16px; line-height:1.8; overflow:clip; }
-        .help-main--safety { --help-soft:#e7f7f3; }
-        .help-main--privacy { --help-soft:#efeafb; }
-        .help-main--terms { --help-soft:#fff3d7; }
-        .help-main *, .help-main *::before, .help-main *::after { box-sizing:border-box; }
-        .help-main h1, .help-main h2, .help-main h3, .help-main h4 { font-family:var(--accent-font); font-weight:400; color:var(--help-purple); letter-spacing:0; text-transform:none; }
-        .help-main p { color:inherit; }
-        .help-main a { color:var(--help-purple); text-decoration:underline; text-underline-offset:4px; }
-        .help-main a:hover { color:var(--help-pink); }
-        .help-main a:focus-visible, .help-main summary:focus-visible, .help-section:focus-visible { outline:3px solid var(--help-purple); outline-offset:4px; }
-        .help-container { width:min(100%,1360px); padding-inline:44px; margin-inline:auto; }
-        .help-hero { position:relative; isolation:isolate; padding:29px 0 48px; background:linear-gradient(120deg,var(--help-cream) 20%,var(--help-soft)); border-bottom:1px solid #e9dfea; }
-        .help-hero::before { content:""; position:absolute; right:-105px; top:35px; width:310px; height:310px; border:2px dashed #a691cf; border-radius:47% 53% 57% 43% / 53% 44% 56% 47%; opacity:.22; transform:rotate(10deg); z-index:-1; pointer-events:none; }
-        .help-hero::after { content:""; position:absolute; right:130px; top:80px; width:37px; height:37px; background:#ffb800; opacity:.8; clip-path:polygon(50% 0,60% 35%,100% 50%,60% 60%,50% 100%,40% 60%,0 50%,40% 35%); transform:rotate(15deg); z-index:-1; pointer-events:none; }
-        .help-breadcrumb ol { display:flex; align-items:center; flex-wrap:wrap; gap:8px 12px; list-style:none; margin:0 0 35px; padding:0; font-size:14px; color:var(--help-purple); }
-        .help-breadcrumb li+li::before { content:"/"; color:#a096b1; margin-right:12px; }
-        .help-breadcrumb a { text-decoration:none; }
-        .help-breadcrumb a:hover { text-decoration:underline; }
-        .help-main .help-eyebrow { display:flex; align-items:center; gap:12px; color:var(--help-pink); font-size:13px; font-weight:800; letter-spacing:1.6px; text-transform:uppercase; margin:0 0 17px; }
-        .help-eyebrow::after { content:""; width:36px; height:9px; flex:0 0 36px; background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 38 10'%3E%3Cpath d='M2 5Q10 0 18 5T36 5' fill='none' stroke='%23FFB800' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E") center/contain no-repeat; }
-        .help-title { font-size:clamp(44px,5vw,68px); line-height:1.15; margin:0 0 20px; max-width:950px; }
-        .help-hero-copy { max-width:920px; }
-        .help-main .help-subtitle { color:var(--help-purple); font-family:var(--accent-font); font-size:28px; line-height:1.35; margin:0 0 17px; }
-        .help-intro { font-size:17px; line-height:1.8; max-width:890px; }
-        .help-intro p { margin:0 0 13px; }
-        .help-intro p:last-child { margin-bottom:0; }
-        .help-actions { display:flex; flex-wrap:wrap; gap:14px; margin-top:25px; }
-        .help-main a.help-button { display:inline-flex; align-items:center; justify-content:center; gap:12px; min-height:48px; padding:11px 22px; border:2px solid var(--help-pink); border-radius:26px; background:var(--help-pink); color:#fff; font-family:var(--accent-font); font-size:18px; line-height:1.3; box-shadow:0 3px 0 var(--help-purple); text-decoration:none; transition:transform .2s,box-shadow .2s; }
-        .help-main a.help-button:hover { transform:translateY(-2px); box-shadow:0 5px 0 var(--help-purple); }
-        .help-button i { font-size:14px; }
-        .help-main a.help-button--secondary { background:#fff; color:var(--help-purple); border-color:var(--help-purple); box-shadow:none; }
-        .help-main a.help-button--secondary:hover { box-shadow:0 3px 0 var(--help-purple); }
-        .help-meta { display:flex; flex-wrap:wrap; gap:10px 24px; color:var(--help-purple); font-size:14px; margin:12px 0 22px; }
-        .help-meta p { margin:0; }
-        .help-main .help-draft-note { font-size:14px; line-height:1.7; max-width:900px; padding:12px 17px; margin:0; border:1px solid #ead5a0; border-left:4px solid #ffb800; border-radius:12px; background:#fff5d9; color:#72501b; }
-        .help-placeholder { color:#765114; background:#fff2c5; padding:2px 5px; border-radius:5px; overflow-wrap:anywhere; box-decoration-break:clone; -webkit-box-decoration-break:clone; }
-        .help-layout { display:grid; grid-template-columns:260px minmax(0,1fr); gap:46px; align-items:start; padding-block:52px 75px; }
-        .help-sidebar { position:sticky; top:105px; min-width:0; }
-        .help-toc-panel { border:1px solid #e6dced; border-radius:20px; background:#fff; overflow:auto; max-height:calc(100vh - 130px); scrollbar-width:thin; scrollbar-color:#d6c5e8 #fff; box-shadow:0 7px 26px #38177f05; }
-        .help-toc-summary { display:flex; align-items:center; justify-content:space-between; gap:10px; padding:18px 19px; margin:0; font-family:var(--accent-font); color:var(--help-purple); font-size:24px; line-height:1.3; list-style:none; cursor:pointer; }
-        .help-toc-summary::-webkit-details-marker { display:none; }
-        .help-toc-summary i { font-size:12px; transition:transform .2s; }
-        .help-toc-panel[open] .help-toc-summary i { transform:rotate(180deg); }
-        .help-toc ol { list-style:none; margin:0; padding:0 10px 14px; }
-        .help-toc li { margin:0; }
-        .help-toc a { display:flex; align-items:flex-start; gap:9px; padding:9px 10px; font-size:13px; line-height:1.55; text-decoration:none; border-left:3px solid transparent; border-radius:0 9px 9px 0; }
-        .help-toc a:hover, .help-toc a[aria-current="location"] { color:var(--help-purple); background:#fff0f4; border-left-color:var(--help-pink); }
-        .help-toc-number { display:inline-block; color:var(--help-pink); font-weight:700; font-size:12px; min-width:16px; padding-top:1px; }
-        .help-related-nav { display:grid; gap:7px; border-top:1px solid #eee5f2; padding:17px 19px 20px; }
-        .help-related-nav h2 { font-size:20px; line-height:1.3; margin:0 0 5px; }
-        .help-related-nav a { font-size:13px; text-decoration:none; }
-        .help-related-nav a[aria-current="page"] { color:var(--help-pink); font-weight:700; }
-        .help-article { min-width:0; }
-        .help-section { position:relative; padding:31px 32px; margin-bottom:23px; background:#fff; border:1px solid #e9dfee; border-radius:22px; scroll-margin-top:105px; }
-        .help-section h2 { display:flex; align-items:flex-start; gap:14px; font-size:30px; line-height:1.35; margin:0 0 22px; }
-        .help-section-number { display:grid; place-items:center; width:35px; height:35px; flex:0 0 35px; background:#fff0cb; color:var(--help-purple); border-radius:11px; font-size:21px; line-height:1; margin-top:2px; }
-        .help-text { font-size:16px; line-height:1.85; }
-        .help-text > p { margin:0 0 18px; }
-        .help-text > :last-child { margin-bottom:0; }
-        .help-text h3 { font-size:25px; line-height:1.35; margin:27px 0 12px; }
-        .help-text h4 { font-size:21px; line-height:1.4; margin:21px 0 8px; }
-        .help-text ul, .help-text ol { padding-left:24px; margin:0 0 19px; }
-        .help-text li { padding-left:3px; margin:7px 0; }
-        .help-text li::marker { color:var(--help-pink); }
-        .help-text p.help-product-label { margin-bottom:7px; }
-        .help-callout { padding:17px 20px; margin:21px 0; border-left:4px solid #ffb800; background:#fff6dd; border-radius:0 13px 13px 0; font-size:15px; }
-        .help-callout p { margin:0; }
-        .help-callout--important { border-left-color:var(--help-pink); background:#fff0f4; }
-        .help-topic-grid, .help-product-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; margin:20px 0; }
-        .help-topic, .help-product-card { min-width:0; padding:19px 20px; background:#fff9f1; border:1px solid #f1e5e1; border-radius:15px; }
-        .help-topic h3, .help-product-card h3 { font-size:23px; margin:0 0 10px; }
-        .help-topic p { font-size:15px; line-height:1.75; margin:0; }
-        .help-product-card ul { margin-bottom:0; padding-left:19px; }
-        .help-product-card li { font-size:15px; margin:5px 0; }
-        .help-contact-details { margin:20px 0; background:#faf7fe; border:1px solid #eae0f2; border-radius:15px; padding:5px 19px; }
-        .help-contact-details dl { margin:0; }
-        .help-contact-details dl > div { display:grid; grid-template-columns:160px minmax(0,1fr); gap:15px; padding:13px 0; border-bottom:1px solid #e7dff0; }
-        .help-contact-details dl > div:last-child { border-bottom:0; }
-        .help-contact-details dt { font-size:14px; font-weight:700; color:var(--help-purple); }
-        .help-contact-details dd { margin:0; font-size:15px; line-height:1.8; overflow-wrap:anywhere; }
-        .help-contact-details a { overflow-wrap:anywhere; }
-        .help-main p.help-signoff { color:var(--help-purple); font-family:var(--accent-font); font-size:25px; line-height:1.4; padding:22px 25px; background:#ede6f9; border-radius:17px; margin:28px 0 0; text-align:center; }
-        @media (max-width:1199px) { .help-container { padding-inline:32px; } .help-layout { grid-template-columns:235px minmax(0,1fr); gap:28px; } .help-section { padding:27px; } .help-section h2 { font-size:27px; } .help-topic-grid, .help-product-grid { grid-template-columns:minmax(0,1fr); } }
-        @media (max-width:991px) { .help-layout { grid-template-columns:minmax(0,1fr); gap:25px; padding-top:32px; } .help-sidebar { position:static; } .help-toc-panel { max-height:none; } .help-toc ol { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:3px 9px; } .help-related-nav { grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; } .help-related-nav h2 { grid-column:1/-1; } .help-topic-grid, .help-product-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .help-section { scroll-margin-top:98px; } .help-hero::after { top:75px; right:45px; width:24px; height:24px; opacity:.45; } }
-        @media (max-width:575px) { .help-container { padding-inline:20px; } .help-hero { padding:24px 0 32px; } .help-breadcrumb ol { margin-bottom:27px; font-size:13px; } .help-main .help-eyebrow { font-size:11px; letter-spacing:1.2px; gap:9px; } .help-title { font-size:43px; margin-bottom:18px; } .help-main .help-subtitle { font-size:25px; } .help-intro { font-size:16px; line-height:1.8; } .help-meta { gap:11px; flex-direction:column; margin-bottom:18px; font-size:13px; } .help-main .help-draft-note { font-size:13px; } .help-hero::before { top:60px; right:-160px; width:260px; height:260px; } .help-hero::after { display:none; } .help-layout { padding-block:25px 46px; gap:22px; } .help-toc-summary { font-size:23px; } .help-toc ol { grid-template-columns:minmax(0,1fr); } .help-toc a { font-size:14px; padding-block:10px; } .help-related-nav { grid-template-columns:minmax(0,1fr); } .help-section { border-radius:18px; padding:22px 20px; margin-bottom:19px; scroll-margin-top:97px; } .help-section h2 { font-size:25px; gap:10px; margin-bottom:20px; } .help-section-number { width:29px; height:29px; flex-basis:29px; font-size:18px; border-radius:9px; margin-top:2px; } .help-text { font-size:16px; line-height:1.8; } .help-text h3 { font-size:23px; margin-top:24px; } .help-text h4 { font-size:20px; } .help-text ul, .help-text ol { padding-left:21px; } .help-text li { padding-left:1px; } .help-topic-grid, .help-product-grid { grid-template-columns:minmax(0,1fr); gap:12px; } .help-topic, .help-product-card { padding:17px; } .help-contact-details { padding-inline:14px; } .help-contact-details dl > div { grid-template-columns:minmax(0,1fr); gap:3px; } .help-contact-details dd { font-size:14px; } .help-callout { padding:15px; } .help-main p.help-signoff { padding:19px; font-size:23px; } .help-main a.help-button { font-size:17px; padding-inline:18px; } }
-        @media (max-width:359px) { .help-container { padding-inline:16px; } .help-title { font-size:39px; } .help-section { padding:20px 16px; } .help-section h2 { font-size:23px; } .help-actions { gap:12px; } }
-        @media (prefers-reduced-motion:reduce) { .help-main *, .help-main *::before, .help-main *::after { transition:none !important; animation:none !important; scroll-behavior:auto !important; } .help-main a.help-button:hover { transform:none; } }
-    </style>
+    <link rel="stylesheet" href="css/common-help.min.css">
 </head>
 <body>
-    <!-- Topbar Section Start -->
+
     <div class="topbar new-top branded-topbar">
         <div class="container">
             <div class="row align-items-center">
@@ -832,30 +57,28 @@
                             <a href="mailto:hello@littlegoonz.com"><i class="fa-solid fa-envelope"></i>
                                 hello@littlegoonz.com</a>
                         </div>
-                        <img class="topbar-partner-logo" src="images/logo.png" alt="Bodygym">
+                        <img class="topbar-partner-logo" src="images/logo.png" alt="Bodygym" width="280" height="79" decoding="async" fetchpriority="high">
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Topbar Section End -->
-    <!-- Header Start -->
+
     <header class="main-header reference-navbar">
         <div class="header-sticky">
             <nav class="navbar navbar-expand-lg">
                 <div class="header-action-box">
-                    <!-- Logo Start -->
+
                     <a class="navbar-brand" href="./">
-                        <img src="images/companyslide1.png" alt="Logo">
+                        <img src="images/companyslide1.png" alt="Logo" width="3158" height="1483" decoding="async">
                     </a>
-                    <!-- Logo End -->
+
                     <svg class="header-logo-spark" viewBox="0 0 21 28" fill="none" aria-hidden="true">
                         <path d="M3 12L7 2M8 15L16 7M11 21L19 18M12 26L18 26" stroke="#ff5275" stroke-width="2.5"
                             stroke-linecap="round" />
                     </svg>
                 </div>
 
-                <!-- Main Menu Start -->
                 <div class="main-menu">
                     <div class="collapse navbar-collapse">
                         <div class="nav-menu-wrapper">
@@ -901,12 +124,12 @@
                         <div class="navbar-toggle"></div>
                     </div>
                 </div>
-                <!-- Main Menu End -->
+
             </nav>
             <div class="responsive-menu"></div>
         </div>
     </header>
-    <!-- Header End -->
+
 <main class="help-main help-main--support"><section class="help-hero"><div class="help-container"><nav class="help-breadcrumb" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li aria-current="page">Product Support</li></ol></nav><p class="help-eyebrow">Little Goonz / Product Support</p><h1 class="help-title">Product Support</h1><div class="help-hero-copy"><p class="help-subtitle">We&#x27;re Here for Every Little Adventure</p><div class="help-intro"><p>At Little Goonz, we believe every little explorer deserves a fun and enjoyable experience. From first-step walkers to scooters, roller skates, skateboards, and protective accessories, our products are created to bring movement, play, and adventure into childhood.</p>
 <p>If you need help understanding a product, checking its features, finding usage information, or reporting an issue, our team is here to guide you.</p></div></div><div class="help-actions"><a class="help-button" href="#contact-product-support">Contact Support <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a><a class="help-button help-button--secondary" href="shop.html">Explore products <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div></div></section><div class="help-container help-layout"><aside class="help-sidebar"><details class="help-toc-panel" open><summary class="help-toc-summary">On this page <i class="fa-solid fa-chevron-down" aria-hidden="true"></i></summary><nav class="help-toc" aria-label="On this page"><ol><li><a href="#how-can-we-help-you"><span class="help-toc-number">1</span>How Can We Help You?</a></li><li><a href="#products-we-support"><span class="help-toc-number">2</span>Products We Support</a></li><li><a href="#product-assembly-maintenance"><span class="help-toc-number">3</span>Product Assembly &amp; Maintenance</a></li><li><a href="#reporting-a-product-issue"><span class="help-toc-number">4</span>Reporting a Product Issue</a></li><li><a href="#warranty-product-assistance"><span class="help-toc-number">5</span>Warranty &amp; Product Assistance</a></li><li><a href="#products-purchased-through-retailers"><span class="help-toc-number">6</span>Products Purchased Through Retailers</a></li><li><a href="#contact-product-support"><span class="help-toc-number">7</span>Contact Product Support</a></li><li><a href="#important-safety-reminder"><span class="help-toc-number">8</span>Important Safety Reminder</a></li></ol></nav><nav class="help-related-nav" aria-label="Help pages"><h2>Help &amp; information</h2><a href="product-support.html" aria-current="page">Product Support</a><a href="safety-guidelines.html">Safety Guidelines</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms &amp; Conditions</a></nav></details></aside><article class="help-article" aria-label="Product Support content"><section class="help-section" id="how-can-we-help-you"><h2><span class="help-section-number">1</span>How Can We Help You?</h2><div class="help-text"><p>Our product support service is intended to assist parents, customers, retailers, and dealers with questions about Little Goonz products.</p>
 <div class="help-topic-grid"><div class="help-topic"><h3>Product Information</h3><p>Find information about product features, recommended age groups, usage modes, and available models.</p></div>
@@ -940,26 +163,23 @@
 <a class="help-button" href="contact.html">Contact Support <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div></section><section class="help-section" id="important-safety-reminder"><h2><span class="help-section-number">8</span>Important Safety Reminder</h2><div class="help-text"><p>Adult supervision, age-appropriate product selection, correct assembly, and suitable usage conditions are important when children use mobility and riding products.</p>
 <p>Read the product-specific safety instructions and visit our <a href="safety-guidelines.html">Safety Guidelines</a> page before use.</p>
 <p class="help-signoff">Little Goonz – Let the Adventure Begin.</p></div></section></article></div></main>
-    <!-- Little Goonz Footer Start -->
+
     <footer class="lg-footer" id="main-footer">
-        <!-- Organic Top Wave & Accent Blobs -->
+
         <div class="lg-footer__wave-wrap" aria-hidden="true">
             <svg class="lg-footer__wave-svg" viewBox="0 0 1440 110" fill="none" xmlns="http://www.w3.org/2000/svg"
                 preserveAspectRatio="none">
-                <!-- Top Left Yellow Organic Shape -->
+
                 <path
                     d="M0 25C40 8 95 0 150 18C185 29 210 55 240 50C255 47 268 35 285 42C300 48 315 62 330 68C270 95 140 105 0 85V25Z"
                     fill="#FFB900" opacity="0.95" />
 
-                <!-- Top Right Pink Organic Shape -->
                 <path
                     d="M1120 40C1180 15 1250 8 1320 22C1370 32 1410 15 1440 5V85C1380 98 1260 90 1180 65C1150 55 1135 48 1120 40Z"
                     fill="#F32661" opacity="0.9" />
 
-                <!-- Top Right-Middle Turquoise Shape -->
                 <path d="M980 52C1030 35 1080 38 1130 55C1100 80 1040 88 980 75V52Z" fill="#32C8C2" opacity="0.9" />
 
-                <!-- Main Deep Purple Smooth Organic Wave -->
                 <path
                     d="M0 58C90 32 180 25 270 48C360 70 450 88 550 78C650 68 740 38 840 32C940 26 1030 52 1130 65C1230 78 1340 60 1440 38V110H0V58Z"
                     fill="#29166F" />
@@ -967,26 +187,19 @@
         </div>
 
         <div class="lg-footer__container">
-            <!-- 5-Column Navigation & Brand Grid -->
+
             <div class="lg-footer__grid">
 
-                <!-- Column 1: Brand -->
                 <div class="lg-footer__brand">
-                    <!-- Little Goonz Mascot Creature -->
 
-
-                    <!-- Little Goonz Logo -->
                     <a href="index.html" class="lg-footer__logo-link">
-                        <img src="images/companyslide1.png" alt="Little Goonz" class="lg-footer__logo-img">
+                        <img src="images/companyslide1.png" alt="Little Goonz" class="lg-footer__logo-img" width="3158" height="1483" decoding="async" loading="lazy">
                     </a>
 
-                    <!-- Brand Description -->
                     <p class="lg-footer__description">
                         Fun, safe &amp; innovative toys and mobility gear for your little one to grow, play and explore.
                     </p>
 
-
-                    <!-- Social Media Links -->
                     <div class="lg-footer__socials">
                         <a href="#" class="lg-footer__social-btn lg-footer__social-fb" aria-label="Facebook"
                             title="Facebook">
@@ -1007,7 +220,6 @@
                     </div>
                 </div>
 
-                <!-- Column 2: SHOP -->
                 <div class="lg-footer__col lg-footer__col-shop">
                     <div class="lg-footer__heading-wrap">
                         <h3 class="lg-footer__heading lg-footer__heading--yellow">SHOP</h3>
@@ -1042,7 +254,6 @@
                     </ul>
                 </div>
 
-                <!-- Column 3: COMPANY -->
                 <div class="lg-footer__col lg-footer__col-company">
                     <div class="lg-footer__heading-wrap">
                         <h3 class="lg-footer__heading lg-footer__heading--turquoise">COMPANY</h3>
@@ -1077,7 +288,6 @@
                     </ul>
                 </div>
 
-                <!-- Column 4: HELP & SUPPORT -->
                 <div class="lg-footer__col lg-footer__col-support">
                     <div class="lg-footer__heading-wrap">
                         <h3 class="lg-footer__heading lg-footer__heading--pink">HELP &amp; SUPPORT</h3>
@@ -1108,7 +318,6 @@
                     </ul>
                 </div>
 
-                <!-- Column 5: STAY IN THE LOOP (Newsletter) -->
                 <div class="lg-footer__col lg-footer__col-newsletter">
                     <div class="lg-footer__heading-wrap">
                         <h3 class="lg-footer__heading lg-footer__heading--yellow">STAY IN THE LOOP</h3>
@@ -1123,7 +332,6 @@
                         Subscribe to get special offers, new arrivals &amp; parenting tips.
                     </p>
 
-                    <!-- Newsletter Form -->
                     <form class="lg-footer__form" action="#" method="POST" onsubmit="event.preventDefault();">
                         <div class="lg-footer__input-wrap">
                             <input type="email" class="lg-footer__input" placeholder="Enter your email" required
@@ -1141,9 +349,8 @@
 
             </div>
 
-            <!-- Trust / Value Indicators Bar -->
             <div class="lg-footer__trust">
-                <!-- Trust Item 1: Safe & Certified -->
+
                 <div class="lg-footer__trust-item">
                     <div class="lg-footer__trust-icon-box lg-footer__trust-purple" aria-hidden="true">
                         <svg viewBox="0 0 24 24">
@@ -1154,7 +361,6 @@
                     <p class="lg-footer__trust-text">Safe &amp;<br>Certified</p>
                 </div>
 
-                <!-- Trust Item 2: Made for Little Goonz -->
                 <div class="lg-footer__trust-item">
                     <div class="lg-footer__trust-icon-box lg-footer__trust-pink" aria-hidden="true">
                         <svg viewBox="0 0 24 24">
@@ -1168,7 +374,6 @@
                     <p class="lg-footer__trust-text">Made for<br>Little Goonz</p>
                 </div>
 
-                <!-- Trust Item 3: Premium Quality -->
                 <div class="lg-footer__trust-item">
                     <div class="lg-footer__trust-icon-box lg-footer__trust-turquoise" aria-hidden="true">
                         <svg viewBox="0 0 24 24">
@@ -1180,7 +385,6 @@
                     <p class="lg-footer__trust-text">Premium<br>Quality</p>
                 </div>
 
-                <!-- Trust Item 4: Fast & Reliable -->
                 <div class="lg-footer__trust-item">
                     <div class="lg-footer__trust-icon-box lg-footer__trust-yellow" aria-hidden="true">
                         <svg viewBox="0 0 24 24">
@@ -1194,33 +398,30 @@
                 </div>
             </div>
 
-            <!-- Subtle Horizontal Divider -->
             <hr class="lg-footer__divider">
 
-            <!-- Footer Bottom Bar -->
             <div class="lg-footer__bottom">
-                <!-- Left: Copyright & Heart -->
+
                 <p class="lg-footer__copyright">
                     <span class="lg-footer__heart-icon" aria-hidden="true">♥</span>
                     &copy; 2026 Little Goonz. All rights reserved.
                 </p>
 
-                <!-- Center: Decorative Playful Elements -->
                 <div class="lg-footer__bottom-decor" aria-hidden="true">
-                    <!-- Turquoise Squiggle -->
+
                     <svg class="lg-footer__decor-squiggle" viewBox="0 0 36 8" fill="none">
                         <path d="M2 4C5 1 8 7 11 4C14 1 17 7 20 4C23 1 26 7 29 4C32 1 35 7" stroke="#32C8C2"
                             stroke-width="2" stroke-linecap="round" />
                     </svg>
-                    <!-- Yellow Dot -->
+
                     <span class="lg-footer__decor-dot"></span>
-                    <!-- Pink Star -->
+
                     <svg class="lg-footer__decor-star" viewBox="0 0 24 24" fill="none" stroke="#F32661" stroke-width="2"
                         stroke-linecap="round" stroke-linejoin="round">
                         <polygon
                             points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
                     </svg>
-                    <!-- Turquoise Grid -->
+
                     <div class="lg-footer__decor-grid">
                         <span class="lg-footer__decor-grid-dot"></span>
                         <span class="lg-footer__decor-grid-dot"></span>
@@ -1231,19 +432,18 @@
                     </div>
                 </div>
 
-                <!-- Right: Secure Payments & Logos -->
                 <div class="lg-footer__payments">
                     <span class="lg-footer__payments-label">Secure Payments</span>
                     <div class="lg-footer__payment-badges">
-                        <!-- VISA -->
+
                         <div class="lg-footer__payment-badge" title="Visa">
-                            <img src="images/icon-payment-options-5.svg" alt="Visa">
+                            <img src="images/icon-payment-options-5.svg" alt="Visa" width="46" height="30" decoding="async" loading="lazy">
                         </div>
-                        <!-- Mastercard -->
+
                         <div class="lg-footer__payment-badge" title="Mastercard">
-                            <img src="images/icon-payment-options-6.svg" alt="Mastercard">
+                            <img src="images/icon-payment-options-6.svg" alt="Mastercard" width="46" height="30" decoding="async" loading="lazy">
                         </div>
-                        <!-- RuPay -->
+
                         <div class="lg-footer__payment-badge" title="RuPay">
                             <svg viewBox="0 0 74 24" width="48" height="18" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -1253,7 +453,7 @@
                                 <polygon points="63,5 68,12 63,19 67,19 72,12 67,5" fill="#00A859" />
                             </svg>
                         </div>
-                        <!-- UPI -->
+
                         <div class="lg-footer__payment-badge" title="UPI">
                             <svg viewBox="0 0 60 24" width="46" height="18" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -1269,96 +469,19 @@
 
         </div>
     </footer>
-    <!-- Little Goonz Footer End -->
-    <!-- Jquery Library File -->
-    <script src="js/jquery-3.7.1.min.js"></script>
-    <!-- Bootstrap js file -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- Validator js file -->
-    <script src="js/validator.min.js"></script>
-    <!-- SlickNav js file -->
-    <script src="js/jquery.slicknav.js"></script>
-    <!-- Swiper js file -->
-    <script src="js/swiper-bundle.min.js"></script>
-    <!-- Counter js file -->
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/jquery.counterup.min.js"></script>
-    <!-- Magnific js file -->
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <!-- SmoothScroll -->
-    <script src="js/SmoothScroll.js"></script>
-    <!-- Parallax js -->
-    <script src="js/parallaxie.js"></script>
-    <!-- MagicCursor js file -->
-    <script src="js/gsap.min.js"></script>
-    <script src="js/magiccursor.js"></script>
-    <!-- Text Effect js file -->
-    <script src="js/SplitText.min.js"></script>
-    <script src="js/ScrollTrigger.min.js"></script>
-    <!-- YTPlayer js File -->
-    <script src="js/jquery.mb.YTPlayer.min.js"></script>
-    <!-- Wow js file -->
-    <script src="js/wow.min.js"></script>
-    <!-- Main Custom js file -->
-    <script src="js/function.js"></script>
-    <!-- Keep SlickNav's existing toggle and handlers in the navbar's mobile slot. -->
-    <script>
-        (function () {
-            var header = document.querySelector('header.reference-navbar');
-            if (!header) return;
-            var toggle = header.querySelector('.responsive-menu .slicknav_btn');
-            var slot = header.querySelector('.navbar-toggle');
-            if (toggle && slot) {
-                toggle.setAttribute('aria-label', 'Toggle navigation');
-                slot.appendChild(toggle);
-            }
-        })();
-    </script>
-    <script>
-        (function () {
-            'use strict';
-            var main = document.querySelector('.help-main');
-            if (!main) return;
-            var panel = main.querySelector('.help-toc-panel');
-            var compact = window.matchMedia('(max-width: 991px)');
-            function sizeContents() { if (panel) panel.open = !compact.matches; }
-            sizeContents();
-            if (compact.addEventListener) compact.addEventListener('change', sizeContents);
-            else compact.addListener(sizeContents);
-            var links = Array.prototype.slice.call(main.querySelectorAll('.help-toc a[href^="#"]'));
-            var sections = links.map(function (link) { return document.getElementById(link.hash.slice(1)); }).filter(Boolean);
-            var scheduled = false;
-            function updateCurrent() {
-                scheduled = false;
-                if (!sections.length) return;
-                var active = sections[0];
-                sections.forEach(function (section) { if (section.getBoundingClientRect().top <= 160) active = section; });
-                links.forEach(function (link) {
-                    if (link.hash === '#' + active.id) link.setAttribute('aria-current', 'location');
-                    else link.removeAttribute('aria-current');
-                });
-            }
-            window.addEventListener('scroll', function () {
-                if (!scheduled) { scheduled = true; window.requestAnimationFrame(updateCurrent); }
-            }, { passive: true });
-            updateCurrent();
-            var reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
-            main.addEventListener('click', function (event) {
-                var link = event.target.closest('a[href^="#"]');
-                if (!link || event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-                var target = document.getElementById(link.hash.slice(1));
-                if (!target || !main.contains(target)) return;
-                event.preventDefault();
-                target.scrollIntoView({ behavior: reduced.matches ? 'auto' : 'smooth', block: 'start' });
-                if (location.hash !== link.hash) window.history.pushState(null, '', link.hash);
-                if (!target.hasAttribute('tabindex')) {
-                    target.setAttribute('tabindex', '-1');
-                    target.addEventListener('blur', function clearFocus() { target.removeAttribute('tabindex'); target.removeEventListener('blur', clearFocus); });
-                }
-                target.focus({ preventScroll: true });
-            });
-        })();
-    </script>
+
+    <script src="js/jquery-3.7.1.min.js" defer></script>
+
+    <script src="js/jquery.slicknav.min.js" defer></script>
+
+    <script src="js/SmoothScroll.min.js" defer></script>
+
+    <script src="js/gsap.min.js" defer></script>
+    <script src="js/magiccursor.min.js" defer></script>
+
+    <script src="js/function.min.js" defer></script>
+
+    <script src="js/product-support.min.js" defer></script>
 
 </body>
 </html>

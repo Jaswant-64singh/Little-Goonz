@@ -2,7 +2,6 @@
     "use strict";
 	
 	var $window = $(window); 
-	var $body = $('body'); 
 
 	/* Preloader Effect */
 	$window.on('load', function(){
@@ -66,7 +65,7 @@
 
 	/* testimonial Slider Stone JS */
 	if ($('.testimonial-slider').length) {
-		const testimonial_slider = new Swiper('.testimonial-slider .swiper', {
+		new Swiper('.testimonial-slider .swiper', {
 			slidesPerView : 1,
 			speed: 1500,
 			spaceBetween: 30,
@@ -83,7 +82,7 @@
 
 	/* Testimonials Comapany Slider JS */
 	if ($('.testimonials-company-slider').length) {
-		const testimonials_company_slider = new Swiper('.testimonials-company-slider .swiper', {
+		new Swiper('.testimonials-company-slider .swiper', {
 			slidesPerView : 3,
 			speed: 2000,
 			spaceBetween: 20,
@@ -104,31 +103,36 @@
 
 	/* Product Single Image Slider JS */
 	// THUMBNAILS (LEFT)
-	var swiperThumbs = new Swiper(".product-single-image-slider", {
-		spaceBetween: 10,
-		slidesPerView: 3,
-		loop: true,
-		speed: 1000,
-		watchSlidesProgress: true,
-		slideToClickedSlide: true,
-		allowTouchMove: true,
-		breakpoints:{
-			767:{
-				spaceBetween: 0,
+	var swiperThumbs;
+	if ($('.product-single-image-slider').length) {
+		swiperThumbs = new Swiper(".product-single-image-slider", {
+			spaceBetween: 10,
+			slidesPerView: 3,
+			loop: true,
+			speed: 1000,
+			watchSlidesProgress: true,
+			slideToClickedSlide: true,
+			allowTouchMove: true,
+			breakpoints:{
+				767:{
+					spaceBetween: 0,
+				}
 			}
-		}
-	});
+		});
+	}
 
 	// MAIN IMAGE (RIGHT)
-	var swiperMain = new Swiper(".product-single-image-item", {
-		spaceBetween: 0,
-		slidesPerView: 1,
-		loop: true,
-		speed: 1000,
-		thumbs: {
-			swiper: swiperThumbs,
-		},
-	});
+	if ($('.product-single-image-item').length) {
+		new Swiper(".product-single-image-item", {
+			spaceBetween: 0,
+			slidesPerView: 1,
+			loop: true,
+			speed: 1000,
+			thumbs: {
+				swiper: swiperThumbs,
+			},
+		});
+	}
 
 	/* Skill Bar */
 	if ($('.skills-progress-bar').length) {
@@ -145,7 +149,7 @@
 
 	/* Youtube Background Video JS */
 	if ($('#youtubevideo').length) {
-		var myPlayer = $("#youtubevideo").YTPlayer();
+		$("#youtubevideo").YTPlayer();
 	}
 
 	/* Init Counter */
@@ -220,7 +224,6 @@
 		
 		if ($('.text-anime-style-1').length) {
 			let staggerAmount 	= 0.05,
-				translateXValue = 0,
 				delayValue 		= 0.5,
 			   animatedTextElements = document.querySelectorAll('.text-anime-style-1');
 			
@@ -315,12 +318,14 @@
 
 	/* Contact form validation */
 	var $contactform = $("#contactForm");
-	$contactform.validator({focus: false}).on("submit", function (event) {
-		if (!event.isDefaultPrevented()) {
-			event.preventDefault();
-			submitForm();
-		}
-	});
+	if ($contactform.length) {
+		$contactform.validator({focus: false}).on("submit", function (event) {
+			if (!event.isDefaultPrevented()) {
+				event.preventDefault();
+				submitForm();
+			}
+		});
+	}
 
 	function submitForm(){
 		/* Ajax call to submit form */
@@ -339,7 +344,7 @@
 	}
 
 	function formSuccess(){
-		$contactform[0].reset();
+		if ($contactform[0]) $contactform[0].reset();
 		submitMSG(true, "Message Sent Successfully!")
 	}
 
@@ -354,7 +359,7 @@
 	/* Contact form validation end */
 
 	/* Animated Wow Js */	
-	new WOW().init();
+	if ($('.wow').length) new WOW().init();
 
 	/* Popup Video */
 	if ($('.popup-video').length) {
@@ -370,11 +375,14 @@
 	/* product quantity Input Js */
 	document.querySelectorAll(".qty-box").forEach(box => {
 		const input = box.querySelector(".qty-input");
+		const plus = box.querySelector(".plus");
+		const minus = box.querySelector(".minus");
+		if (!input || !plus || !minus) return;
 
-		box.querySelector(".plus").onclick = () =>
+		plus.onclick = () =>
 		input.value = String(+input.value + 1).padStart(2, "0");
 
-		box.querySelector(".minus").onclick = () =>
+		minus.onclick = () =>
 		input.value = String(Math.max(1, +input.value - 1)).padStart(2, "0");
 	});
 
@@ -404,7 +412,7 @@
 
 /* Hero Slider JS */
 if ($('.hero-swiper').length) {
-	const hero_slider = new Swiper('.hero-swiper', {
+	new Swiper('.hero-swiper', {
 		slidesPerView : 1,
 		speed: 1000,
 		spaceBetween: 0,

@@ -2,736 +2,49 @@
 <html lang="en">
 
 <head>
-    <!-- Meta -->
-    <meta charset="utf-8">
+
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <meta name="description" content="Explore Little Goonz walkers, scooters, roller skates, skateboards and safety accessories from the 2026 catalogue.">
     <meta name="keywords" content="">
     <meta name="author" content="Awaiken">
-    <!-- Page Title -->
+
     <title>Shop | Little Goonz</title>
-    <!-- Favicon Icon -->
+
     <link rel="shortcut icon" type="image/x-icon" href="images/logofav.png">
-    <!-- Google Fonts Css-->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="preload" href="fonts/IT Pimo Demo.otf" as="font" type="font/otf" crossorigin>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mouse+Memoirs&display=swap"
         rel="stylesheet">
-    <!-- Bootstrap Css -->
+
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <!-- SlickNav Css -->
+
     <link href="css/slicknav.min.css" rel="stylesheet">
-    <!-- Swiper Css -->
+
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
-    <!-- Font Awesome Icon Css-->
+
     <link href="css/all.min.css" rel="stylesheet" media="screen">
-    <!-- Animated Css -->
-    <link href="css/animate.css" rel="stylesheet">
-    <!-- Magnific Popup Core Css File -->
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <!-- Mouse Cursor Css File -->
-    <link rel="stylesheet" href="css/mousecursor.css">
-    <!-- Main Custom Css -->
-    <link href="css/custom.css" rel="stylesheet" media="screen">
 
-    <!-- Reference navbar styles: scoped to this header only. -->
-    <style>
-        .topbar.branded-topbar {
-            padding: 4px 0;
-        }
+    <link href="css/animate.min.css" rel="stylesheet">
 
-        .branded-topbar .topbar-content-info {
-            min-height: 32px;
-            gap: 24px;
-        }
+    <link rel="stylesheet" href="css/magnific-popup.min.css">
 
-        .branded-topbar .topbar-contact {
-            min-width: 0;
-            flex-wrap: wrap;
-            gap: 6px 24px;
-        }
+    <link rel="stylesheet" href="css/mousecursor.min.css">
 
-        .branded-topbar .topbar-contact a {
-            white-space: nowrap;
-        }
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&amp;display=swap">
+    <link href="css/custom.min.css" rel="stylesheet" media="screen">
 
-        .branded-topbar .topbar-partner-logo {
-            display: block;
-            flex: 0 0 auto;
-            width: 112px;
-            height: 32px;
-            object-fit: contain;
-        }
-
-        @media (max-width: 767px) {
-            .branded-topbar .container {
-                padding-right: 16px;
-                padding-left: 16px;
-            }
-
-            .branded-topbar .topbar-content-info {
-                justify-content: space-between;
-                gap: 12px;
-            }
-
-            .branded-topbar .topbar-contact {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 3px;
-            }
-
-            .branded-topbar .topbar-contact a {
-                font-size: 13px !important;
-                line-height: 1.3;
-            }
-
-            .branded-topbar .topbar-contact a:nth-child(2) {
-                display: inline-block;
-            }
-
-            .branded-topbar .topbar-partner-logo {
-                width: 92px;
-                height: 28px;
-            }
-        }
-
-        header.reference-navbar {
-            background: #fafafa;
-            border-radius: 4px;
-        }
-
-        header.reference-navbar .header-sticky {
-            isolation: isolate;
-            background: #fafafa;
-            background-image: none;
-            border-radius: 4px;
-            box-shadow: inset 0 0 0 1px #e5e5e5;
-        }
-
-        header.reference-navbar .header-sticky::before {
-            content: '';
-            position: absolute;
-            top: 1px;
-            left: 0;
-            width: clamp(198px, 20.372vw, 274px);
-            height: 76px;
-            border-radius: 4px 0 0 4px;
-            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 274 76' preserveAspectRatio='none'%3E%3Cpath d='M0 0H220C247 13 266 39 274 76H0Z' fill='%23ffde3f'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
-            pointer-events: none;
-            z-index: -1;
-        }
-
-        header.reference-navbar .navbar {
-            max-width: none;
-            min-height: 78px;
-            margin: 0;
-            padding: 0 24px 0 0;
-            gap: 21px;
-            flex-wrap: nowrap;
-        }
-
-        header.reference-navbar .header-action-box {
-            position: relative;
-            flex: 0 0 clamp(198px, 20.372vw, 274px);
-            width: auto;
-            max-width: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        header.reference-navbar .navbar-brand {
-            position: relative;
-            width: 130px;
-            margin: 0 0 0 clamp(26px, 4.46vw, 60px);
-            padding: 0;
-        }
-
-        header.reference-navbar .navbar-brand img {
-            display: block;
-            width: 130px;
-            height: 62px;
-            max-width: none;
-            object-fit: contain;
-            filter: drop-shadow(0 2px 1px rgba(52, 35, 101, .25));
-        }
-
-        /* Give the existing logo's white LITTLE lettering the reference's purple ink. */
-        header.reference-navbar .navbar-brand::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: #342365;
-            -webkit-mask: url('images/companyslide1.png') center / contain no-repeat;
-            mask: url('images/companyslide1.png') center / contain no-repeat;
-            clip-path: inset(18% 0 58% 42%);
-            pointer-events: none;
-            z-index: 1;
-        }
-
-        header.reference-navbar .header-logo-spark {
-            position: absolute;
-            top: 1px;
-            left: calc(clamp(26px, 4.46vw, 60px) + 138px);
-            width: 21px;
-            height: 28px;
-            pointer-events: none;
-        }
-
-        header.reference-navbar .main-menu {
-            flex: 1 1 auto;
-            align-self: stretch;
-            min-width: 0;
-            width: auto;
-            gap: 12px;
-            border: 0;
-            padding: 0;
-            background: transparent;
-        }
-
-        header.reference-navbar .navbar-collapse {
-            flex: 0 0 auto;
-            width: auto;
-            max-width: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        header.reference-navbar .nav-menu-wrapper {
-            flex: 0 0 auto;
-            margin: 0;
-        }
-
-        header.reference-navbar #menu {
-            gap: 10px;
-            margin: 0;
-            padding: 0;
-            flex-wrap: nowrap;
-        }
-
-        header.reference-navbar #menu>li {
-            --menu-pill: #ed1050;
-            --menu-ink: #fff;
-            --menu-width: 85px;
-            margin: 0;
-            padding: 0;
-        }
-
-        header.reference-navbar #menu>li:nth-child(2) {
-            --menu-pill: #8dcbff;
-            --menu-ink: #101010;
-            --menu-width: 89px;
-        }
-
-        header.reference-navbar #menu>li:nth-child(3) {
-            --menu-pill: #ff7c24;
-            --menu-width: 96px;
-        }
-
-        header.reference-navbar #menu>li:nth-child(4) {
-            --menu-pill: #c0dc39;
-            --menu-ink: #101010;
-            --menu-width: 108px;
-        }
-
-        header.reference-navbar #menu>li:nth-child(5) {
-            --menu-pill: #a2e0e2;
-            --menu-ink: #101010;
-            --menu-width: 98px;
-        }
-
-        header.reference-navbar #menu>li:nth-child(6) {
-            --menu-pill: #c797f7;
-            --menu-ink: #101010;
-            --menu-width: 152px;
-        }
-
-        header.reference-navbar #menu>li>.nav-link {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            min-width: 0;
-            width: var(--menu-width);
-            min-height: 38px;
-            padding: 0 14px !important;
-            border: 0;
-            border-radius: 999px;
-            background: var(--menu-pill);
-            color: var(--menu-ink);
-            font-family: var(--accent-font);
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 1;
-            letter-spacing: 0;
-            text-transform: none;
-            white-space: nowrap;
-            box-shadow: 0 3px 5px rgba(0, 0, 0, .12), inset 0 1px 2px rgba(255, 255, 255, .18);
-            transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
-        }
-
-        header.reference-navbar #menu>li>.nav-link[href="become-a-dealer.html"] {
-            width: max-content;
-            min-width: 152px;
-            padding: 0 20px !important;
-        }
-
-        header.reference-navbar .nav-link::before {
-            content: none;
-        }
-
-        header.reference-navbar #menu>.submenu>.nav-link::after {
-            content: '';
-            width: 6px;
-            height: 6px;
-            margin: -3px 0 0 8px;
-            border-right: 1.5px solid currentColor;
-            border-bottom: 1.5px solid currentColor;
-            transform: rotate(45deg);
-        }
-
-        header.reference-navbar #menu>li>.nav-link:hover,
-        header.reference-navbar #menu>li>.nav-link:focus-visible {
-            color: var(--menu-ink);
-            transform: translateY(-1px);
-            filter: brightness(1.03);
-            box-shadow: 0 4px 7px rgba(0, 0, 0, .16);
-        }
-
-        header.reference-navbar a:focus-visible {
-            outline: 2px solid #342365;
-            outline-offset: 3px;
-        }
-
-        header.reference-navbar #menu>li>ul {
-            top: calc(100% + 9px);
-            border: 1px solid #e5e5e5;
-            padding: 7px 0;
-        }
-
-        /* The invisible bridge keeps the dropdown open while crossing the gap. */
-        header.reference-navbar #menu>li>ul::before {
-            content: '';
-            position: absolute;
-            top: -10px;
-            left: 0;
-            width: 100%;
-            height: 10px;
-        }
-
-        header.reference-navbar #menu li:focus-within>ul {
-            visibility: visible;
-            opacity: 1;
-            transform: scale(1);
-        }
-
-        header.reference-navbar #menu ul .nav-link {
-            font-size: 17px;
-            line-height: 1.3;
-            letter-spacing: 0;
-            text-transform: none;
-        }
-
-        header.reference-navbar .header-nav-tools {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            flex: 0 0 350px;
-            align-self: stretch;
-            gap: 10px;
-            margin-left: auto;
-        }
-
-        header.reference-navbar .header-nav-tools::before {
-            content: '';
-            position: absolute;
-            top: 1px;
-            bottom: 1px;
-            left: -52px;
-            right: -23px;
-            border-radius: 0 4px 4px 0;
-            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 426 76' preserveAspectRatio='none'%3E%3Cpath d='M0 0H426V76H82C44 68 15 43 0 0Z' fill='%230080b2'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
-            pointer-events: none;
-            z-index: -1;
-        }
-
-        header.reference-navbar .header-plane-doodle {
-            flex: 0 0 86px;
-            width: 86px;
-            height: 54px;
-            pointer-events: none;
-        }
-
-        header.reference-navbar .header-shop-cta {
-            justify-content: center;
-            width: 132px;
-            min-height: 38px;
-            gap: 9px;
-            padding: 0 14px;
-            border-radius: 999px;
-            background: #fff;
-            color: #f51158;
-            font-family: var(--accent-font);
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 1;
-            letter-spacing: 0;
-            white-space: nowrap;
-            box-shadow: inset 0 1px 2px rgba(0, 0, 0, .06);
-        }
-
-        header.reference-navbar .header-shop-cta i {
-            font-size: 13px;
-        }
-
-        header.reference-navbar .header-shop-cta:hover,
-        header.reference-navbar .header-shop-cta:focus-visible {
-            color: #f51158;
-            background: #fff;
-            transform: translateY(-1px);
-            box-shadow: 0 3px 6px rgba(0, 0, 0, .12);
-        }
-
-        header.reference-navbar .header-nav-social {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex: 0 0 104px;
-            height: 31px;
-            margin-left: 6px;
-            padding-left: 17px;
-            border-left: 1px solid rgba(255, 255, 255, .36);
-        }
-
-        header.reference-navbar .header-nav-social a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 20px;
-            min-height: 31px;
-            color: #fff;
-            font-size: 15px;
-            line-height: 1;
-            transition: transform .2s ease;
-        }
-
-        header.reference-navbar .header-nav-social a:hover {
-            transform: translateY(-1px);
-        }
-
-        @media (min-width: 1200px) {
-            header.reference-navbar .navbar-collapse {
-                display: flex !important;
-                position: static;
-                flex: 1 1 auto;
-                min-width: 0;
-                justify-content: center;
-                /* Balance the logo gap and the blue panel's curved leading edge. */
-                padding-right: 61px;
-                transform: none;
-            }
-
-            header.reference-navbar .responsive-menu,
-            header.reference-navbar .navbar-toggle {
-                display: none;
-            }
-        }
-
-        @media (min-width: 1200px) and (max-width: 1459px) {
-            header.reference-navbar .header-nav-tools {
-                flex-basis: 264px;
-            }
-
-            header.reference-navbar .header-plane-doodle {
-                display: none;
-            }
-        }
-
-        @media (min-width: 1200px) and (max-width: 1330px) {
-            header.reference-navbar .navbar {
-                gap: 16px;
-                padding-right: 20px;
-            }
-
-            header.reference-navbar .navbar-collapse {
-                padding-right: 56px;
-            }
-
-            header.reference-navbar .header-action-box,
-            header.reference-navbar .header-sticky::before {
-                width: 178px;
-            }
-
-            header.reference-navbar .header-action-box {
-                flex-basis: 178px;
-            }
-
-            header.reference-navbar .navbar-brand {
-                margin-left: 24px;
-            }
-
-            header.reference-navbar .header-logo-spark {
-                display: none;
-            }
-
-            header.reference-navbar #menu {
-                gap: 8px;
-            }
-
-            header.reference-navbar #menu>li>.nav-link {
-                width: calc(var(--menu-width) - 9px);
-                font-size: 15px;
-                padding: 0 10px !important;
-            }
-
-            header.reference-navbar .header-nav-tools {
-                flex-basis: 264px;
-            }
-
-            header.reference-navbar .header-nav-tools::before {
-                right: -19px;
-            }
-
-            header.reference-navbar .header-plane-doodle {
-                display: none;
-            }
-        }
-
-        @media (max-width: 1199px) {
-            header.reference-navbar .navbar {
-                padding: 0 20px;
-                gap: 16px;
-            }
-
-            header.reference-navbar .header-sticky::before {
-                width: 210px;
-            }
-
-            header.reference-navbar .header-action-box {
-                flex: 0 0 auto;
-            }
-
-            header.reference-navbar .navbar-brand {
-                margin-left: 4px;
-            }
-
-            header.reference-navbar .header-logo-spark {
-                left: 142px;
-            }
-
-            header.reference-navbar .main-menu {
-                justify-content: flex-end;
-            }
-
-            header.reference-navbar .navbar-collapse {
-                display: none !important;
-            }
-
-            header.reference-navbar .header-nav-tools {
-                flex: 0 0 auto;
-                min-height: 78px;
-            }
-
-            header.reference-navbar .header-nav-tools::before {
-                left: -70px;
-                right: -19px;
-            }
-
-            header.reference-navbar .header-plane-doodle {
-                display: none;
-            }
-
-            header.reference-navbar .navbar-toggle {
-                display: block;
-                margin-left: 2px;
-            }
-
-            header.reference-navbar .slicknav_btn {
-                width: 38px;
-                height: 38px;
-                border-radius: 50%;
-                background: rgba(255, 255, 255, .15);
-            }
-
-            header.reference-navbar .slicknav_icon {
-                width: 22px;
-                height: 17px;
-                margin: 0;
-            }
-
-            header.reference-navbar .responsive-menu {
-                display: block;
-            }
-
-            header.reference-navbar .slicknav_menu {
-                position: absolute;
-                width: 100%;
-                background: transparent;
-                padding: 0;
-            }
-
-            header.reference-navbar .slicknav_nav {
-                max-height: calc(100vh - 140px);
-                max-height: calc(100dvh - 140px);
-                overflow-y: auto;
-                margin: 0;
-                padding: 8px 16px 16px;
-                border: 1px solid #e5e5e5;
-                border-top: 0;
-                background: #fafafa;
-                box-shadow: 0 8px 12px rgba(0, 0, 0, .1);
-            }
-
-            header.reference-navbar .slicknav_nav>li {
-                margin: 8px 0 0;
-            }
-
-            header.reference-navbar .slicknav_nav>li>a {
-                min-height: 44px;
-                margin: 0;
-                padding: 12px 18px;
-                border-radius: 24px !important;
-                background: #ed1050;
-                color: #fff;
-                font-family: var(--accent-font);
-                font-size: 18px;
-                line-height: 20px;
-                text-transform: none;
-                box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
-            }
-
-            header.reference-navbar .slicknav_nav>li:nth-child(2)>a {
-                background: #8dcbff;
-                color: #101010;
-            }
-
-            header.reference-navbar .slicknav_nav>li:nth-child(3)>a {
-                background: #ff7c24;
-            }
-
-            header.reference-navbar .slicknav_nav>li:nth-child(4)>a {
-                background: #c0dc39;
-                color: #101010;
-            }
-
-            header.reference-navbar .slicknav_nav>li:nth-child(5)>a {
-                background: #a2e0e2;
-                color: #101010;
-            }
-
-            header.reference-navbar .slicknav_nav>li:nth-child(6)>a {
-                background: #c797f7;
-                color: #101010;
-            }
-
-            header.reference-navbar .slicknav_nav .slicknav_row>a {
-                color: inherit;
-                font-size: inherit;
-                padding: 0;
-                line-height: inherit;
-                text-transform: none;
-            }
-
-            header.reference-navbar .slicknav_arrow::after {
-                color: #101010;
-            }
-
-            header.reference-navbar .slicknav_nav ul {
-                margin: 6px 0 0;
-            }
-
-            header.reference-navbar .slicknav_nav ul li a {
-                padding: 10px 24px;
-                color: #342365;
-                font-family: var(--accent-font);
-                font-size: 17px;
-                text-transform: none;
-            }
-
-            header.reference-navbar .slicknav_nav ul li a:hover {
-                background: #f0f0f0;
-            }
-        }
-
-        @media (max-width: 599px) {
-            header.reference-navbar .navbar {
-                padding: 0 12px;
-                gap: 10px;
-            }
-
-            header.reference-navbar .header-sticky::before {
-                width: 164px;
-            }
-
-            header.reference-navbar .navbar-brand {
-                width: 112px;
-                margin-left: 0;
-            }
-
-            header.reference-navbar .navbar-brand img {
-                width: 112px;
-                height: 62px;
-            }
-
-            header.reference-navbar .header-logo-spark {
-                display: none;
-            }
-
-            header.reference-navbar .header-nav-tools {
-                gap: 8px;
-            }
-
-            header.reference-navbar .header-nav-tools::before {
-                left: -10px;
-                right: -11px;
-            }
-
-            header.reference-navbar .header-shop-cta {
-                width: 122px;
-                min-height: 38px;
-                padding: 0 10px;
-                font-size: 15px;
-            }
-
-            header.reference-navbar .header-nav-social {
-                position: absolute;
-                display: none;
-                top: 78px;
-                right: -11px;
-                width: 104px;
-                height: 38px;
-                margin: 0;
-                padding: 0 12px;
-                border: 0;
-                border-radius: 0 0 0 16px;
-                background: #0080b2;
-            }
-
-            header.reference-navbar .header-nav-social a {
-                min-height: 38px;
-            }
-
-            header.reference-navbar:has(.slicknav_open) .header-nav-social {
-                display: flex;
-                z-index: 1;
-            }
-
-            header.reference-navbar .slicknav_nav {
-                padding-top: 38px;
-            }
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            header.reference-navbar a {
-                transition: none !important;
-            }
-        }
-    </style>
-    <link rel="stylesheet" href="css/catalog.css">
+    <link rel="stylesheet" href="css/common.min.css">
+    <link rel="stylesheet" href="css/catalog.min.css">
 </head>
 <body>
-    <!-- Topbar Section Start -->
+
     <div class="topbar new-top branded-topbar">
         <div class="container">
             <div class="row align-items-center">
@@ -743,30 +56,28 @@
                             <a href="mailto:hello@littlegoonz.com"><i class="fa-solid fa-envelope"></i>
                                 hello@littlegoonz.com</a>
                         </div>
-                        <img class="topbar-partner-logo" src="images/logo.png" alt="Bodygym">
+                        <img class="topbar-partner-logo" src="images/logo.png" alt="Bodygym" width="280" height="79" decoding="async" fetchpriority="high">
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Topbar Section End -->
-    <!-- Header Start -->
+
     <header class="main-header reference-navbar">
         <div class="header-sticky">
             <nav class="navbar navbar-expand-lg">
                 <div class="header-action-box">
-                    <!-- Logo Start -->
+
                     <a class="navbar-brand" href="./">
-                        <img src="images/companyslide1.png" alt="Logo">
+                        <img src="images/companyslide1.png" alt="Logo" width="3158" height="1483" decoding="async">
                     </a>
-                    <!-- Logo End -->
+
                     <svg class="header-logo-spark" viewBox="0 0 21 28" fill="none" aria-hidden="true">
                         <path d="M3 12L7 2M8 15L16 7M11 21L19 18M12 26L18 26" stroke="#ff5275" stroke-width="2.5"
                             stroke-linecap="round" />
                     </svg>
                 </div>
 
-                <!-- Main Menu Start -->
                 <div class="main-menu">
                     <div class="collapse navbar-collapse">
                         <div class="nav-menu-wrapper">
@@ -812,49 +123,46 @@
                         <div class="navbar-toggle"></div>
                     </div>
                 </div>
-                <!-- Main Menu End -->
+
             </nav>
             <div class="responsive-menu"></div>
         </div>
     </header>
-    <!-- Header End -->
-<main class="catalog-main" style="--category-accent: #F32661; --category-soft: #FFE9EE"><section class="catalog-hero"><div class="catalog-container"><nav aria-label="Breadcrumb"><ol class="catalog-breadcrumb"><li><a href="./">Home</a></li><li aria-current="page">Shop</li></ol></nav><div class="catalog-hero-grid"><div class="catalog-hero-copy"><p class="catalog-eyebrow">Explore. Imagine. Play.</p><h1 class="catalog-title">Little explorers.<br>Big adventures.</h1><p class="catalog-lead">From first-step walkers to scooters, skates, skateboards and accessories. Discover the Little Goonz catalogue collection and find their next little adventure.</p><div class="catalog-badges"><span class="catalog-badge">5 categories</span><span class="catalog-badge">9 products</span><span class="catalog-badge">2026 collection</span></div><div class="catalog-actions"><a class="catalog-button" href="#shop-categories">Explore the collection <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a><a class="catalog-button catalog-button--secondary" href="Little Goonz Catalog 2026.pdf">View catalogue <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div></div><div class="catalog-hero-art"><img src="images/catalog/teddy-trek-red.png" alt="Teddy Trek Kids Walker in red" class="catalog-hero-image" fetchpriority="high" decoding="async"><span class="catalog-hero-note">Let the adventure begin!</span></div></div></div></section><nav class="catalog-category-nav catalog-container" aria-label="Shop categories"><a class="catalog-category-link" href="kids-walkers.html">Kids Walkers</a><a class="catalog-category-link" href="kids-scooters.html">Kids Scooters</a><a class="catalog-category-link" href="roller-skates.html">Roller Skates</a><a class="catalog-category-link" href="skateboards.html">Skateboards</a><a class="catalog-category-link" href="safety-accessories.html">Safety Accessories</a></nav><section class="catalog-section catalog-container" id="shop-categories"><p class="catalog-eyebrow">Something for their next adventure</p><h2 class="catalog-heading">Meet the collection</h2><p class="catalog-section-lead">Choose a category to see the products, original catalogue images and all the little details.</p><div class="catalog-overview-grid"><article class="catalog-preview" style="--category-soft: #FFE9EE; --category-accent: #F32661">
-        <a class="catalog-preview-image" href="kids-walkers.html" aria-label="Explore Kids Walkers"><img src="images/catalog/teddy-trek-red.png" alt="Teddy Trek Kids Walker in red" class="" loading="lazy" decoding="async"></a>
+
+<main class="catalog-main" style="--category-accent: #F32661; --category-soft: #FFE9EE"><section class="catalog-hero"><div class="catalog-container"><nav aria-label="Breadcrumb"><ol class="catalog-breadcrumb"><li><a href="./">Home</a></li><li aria-current="page">Shop</li></ol></nav><div class="catalog-hero-grid"><div class="catalog-hero-copy"><p class="catalog-eyebrow">Explore. Imagine. Play.</p><h1 class="catalog-title">Little explorers.<br>Big adventures.</h1><p class="catalog-lead">From first-step walkers to scooters, skates, skateboards and accessories. Discover the Little Goonz catalogue collection and find their next little adventure.</p><div class="catalog-badges"><span class="catalog-badge">5 categories</span><span class="catalog-badge">9 products</span><span class="catalog-badge">2026 collection</span></div><div class="catalog-actions"><a class="catalog-button" href="#shop-categories">Explore the collection <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a><a class="catalog-button catalog-button--secondary" href="Little Goonz Catalog 2026.pdf">View catalogue <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div></div><div class="catalog-hero-art"><img src="images/catalog/teddy-trek-red.png" alt="Teddy Trek Kids Walker in red" class="catalog-hero-image" fetchpriority="high" decoding="async" width="1335" height="1981"><span class="catalog-hero-note">Let the adventure begin!</span></div></div></div></section><nav class="catalog-category-nav catalog-container" aria-label="Shop categories"><a class="catalog-category-link" href="kids-walkers.html">Kids Walkers</a><a class="catalog-category-link" href="kids-scooters.html">Kids Scooters</a><a class="catalog-category-link" href="roller-skates.html">Roller Skates</a><a class="catalog-category-link" href="skateboards.html">Skateboards</a><a class="catalog-category-link" href="safety-accessories.html">Safety Accessories</a></nav><section class="catalog-section catalog-container" id="shop-categories"><p class="catalog-eyebrow">Something for their next adventure</p><h2 class="catalog-heading">Meet the collection</h2><p class="catalog-section-lead">Choose a category to see the products, original catalogue images and all the little details.</p><div class="catalog-overview-grid"><article class="catalog-preview" style="--category-soft: #FFE9EE; --category-accent: #F32661">
+        <a class="catalog-preview-image" href="kids-walkers.html" aria-label="Explore Kids Walkers"><img src="images/catalog/teddy-trek-red.png" alt="Teddy Trek Kids Walker in red" class="" loading="lazy" decoding="async" width="1335" height="1981"></a>
         <div class="catalog-preview-body"><span class="catalog-mini-label">2 products</span><h3 class="catalog-preview-title"><a href="kids-walkers.html">Kids Walkers</a></h3><p class="catalog-preview-text">Meet Teddy Trek and Joystep: two playful 4-in-1 walkers with detachable music trays, parental handles and more than one way to enjoy the day.</p><a class="catalog-inline-link" href="kids-walkers.html">Explore Kids Walkers <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div>
     </article><article class="catalog-preview" style="--category-soft: #E4F8F5; --category-accent: #32C8C2">
-        <a class="catalog-preview-image" href="kids-scooters.html" aria-label="Explore Kids Scooters"><img src="images/catalog/zippy-dx-blue.png" alt="Zippy DX Scooter in blue with play toy" class="" loading="lazy" decoding="async"></a>
+        <a class="catalog-preview-image" href="kids-scooters.html" aria-label="Explore Kids Scooters"><img src="images/catalog/zippy-dx-blue.png" alt="Zippy DX Scooter in blue with play toy" class="" loading="lazy" decoding="async" width="1384" height="1817"></a>
         <div class="catalog-preview-body"><span class="catalog-mini-label">2 products</span><h3 class="catalog-preview-title"><a href="kids-scooters.html">Kids Scooters</a></h3><p class="catalog-preview-text">Make room for the Zippy duo. Explore twist-and-turn scooters with LED PU wheels, a rear brake and a folding design made for the next little adventure.</p><a class="catalog-inline-link" href="kids-scooters.html">Explore Kids Scooters <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div>
     </article><article class="catalog-preview" style="--category-soft: #EEE8FC; --category-accent: #9370DB">
-        <a class="catalog-preview-image" href="roller-skates.html" aria-label="Explore Roller Skates"><img src="images/catalog/hyper-speed-skates-blue.png" alt="Leon Athletic Hyper Speed Skates with blue wheels" class="" loading="lazy" decoding="async"></a>
+        <a class="catalog-preview-image" href="roller-skates.html" aria-label="Explore Roller Skates"><img src="images/catalog/hyper-speed-skates-blue.png" alt="Leon Athletic Hyper Speed Skates with blue wheels" class="" loading="lazy" decoding="async" width="1224" height="919"></a>
         <div class="catalog-preview-body"><span class="catalog-mini-label">1 product</span><h3 class="catalog-preview-title"><a href="roller-skates.html">Roller Skates</a></h3><p class="catalog-preview-text">Discover Leon Athletic Hyper Speed Skates, with a rust-proof body, durable wheels and double shock absorption. A new way for little explorers to get rolling.</p><a class="catalog-inline-link" href="roller-skates.html">Explore Roller Skates <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div>
     </article><article class="catalog-preview" style="--category-soft: #FFF3D7; --category-accent: #FFB900">
-        <a class="catalog-preview-image" href="skateboards.html" aria-label="Explore Skateboards"><img src="images/catalog/pp-skate-board-red.png" alt="PP Skate Board, red deck top and underside views" class="" loading="lazy" decoding="async"></a>
+        <a class="catalog-preview-image" href="skateboards.html" aria-label="Explore Skateboards"><img src="images/catalog/pp-skate-board-red.png" alt="PP Skate Board, red deck top and underside views" class="" loading="lazy" decoding="async" width="1009" height="685"></a>
         <div class="catalog-preview-body"><span class="catalog-mini-label">1 product</span><h3 class="catalog-preview-title"><a href="skateboards.html">Skateboards</a></h3><p class="catalog-preview-text">Meet the Leon Athletic PP Skate Board. A durable PP deck, bold racing graphics and resilient wheels bring a splash of personality to every four-wheel adventure.</p><a class="catalog-inline-link" href="skateboards.html">Explore Skateboards <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div>
     </article><article class="catalog-preview" style="--category-soft: #E6F2FB; --category-accent: #0070AB">
-        <a class="catalog-preview-image" href="safety-accessories.html" aria-label="Explore Safety Accessories"><img src="images/catalog/sports-helmet-pro-red.png" alt="Sports Helmet Pro in red and white" class="" loading="lazy" decoding="async"></a>
+        <a class="catalog-preview-image" href="safety-accessories.html" aria-label="Explore Safety Accessories"><img src="images/catalog/sports-helmet-pro-red.png" alt="Sports Helmet Pro in red and white" class="" loading="lazy" decoding="async" width="1125" height="767"></a>
         <div class="catalog-preview-body"><span class="catalog-mini-label">3 products</span><h3 class="catalog-preview-title"><a href="safety-accessories.html">Safety Accessories</a></h3><p class="catalog-preview-text">Explore Sports Helmet Pro, Sports Helmet Lite and the Knee / Elbow / Wrist Guard Set. Find the accessories pictured in the catalogue, with color choices to complete the collection.</p><a class="catalog-inline-link" href="safety-accessories.html">Explore Safety Accessories <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div>
     </article></div></section><section class="catalog-help-band catalog-container"><div><p class="catalog-eyebrow">A little help goes a long way</p><h2>Let's find their next adventure.</h2><p>Have a question about a model, color or size? Our team is here to help.</p></div><div class="catalog-actions"><a class="catalog-button" href="contact.html">Talk to our team <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a><a class="catalog-button catalog-button--secondary" href="Little Goonz Catalog 2026.pdf">Browse the catalogue <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div></section></main>
-<dialog id="catalog-image-dialog" class="catalog-image-dialog" aria-label="Product image"><button class="catalog-dialog-close" type="button" aria-label="Close product image"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button><img alt=""></dialog>
-    <!-- Little Goonz Footer Start -->
+<dialog id="catalog-image-dialog" class="catalog-image-dialog" aria-label="Product image"><button class="catalog-dialog-close" type="button" aria-label="Close product image"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button><img alt="" decoding="async"></dialog>
+
     <footer class="lg-footer" id="main-footer">
-        <!-- Organic Top Wave & Accent Blobs -->
+
         <div class="lg-footer__wave-wrap" aria-hidden="true">
             <svg class="lg-footer__wave-svg" viewBox="0 0 1440 110" fill="none" xmlns="http://www.w3.org/2000/svg"
                 preserveAspectRatio="none">
-                <!-- Top Left Yellow Organic Shape -->
+
                 <path
                     d="M0 25C40 8 95 0 150 18C185 29 210 55 240 50C255 47 268 35 285 42C300 48 315 62 330 68C270 95 140 105 0 85V25Z"
                     fill="#FFB900" opacity="0.95" />
 
-                <!-- Top Right Pink Organic Shape -->
                 <path
                     d="M1120 40C1180 15 1250 8 1320 22C1370 32 1410 15 1440 5V85C1380 98 1260 90 1180 65C1150 55 1135 48 1120 40Z"
                     fill="#F32661" opacity="0.9" />
 
-                <!-- Top Right-Middle Turquoise Shape -->
                 <path d="M980 52C1030 35 1080 38 1130 55C1100 80 1040 88 980 75V52Z" fill="#32C8C2" opacity="0.9" />
 
-                <!-- Main Deep Purple Smooth Organic Wave -->
                 <path
                     d="M0 58C90 32 180 25 270 48C360 70 450 88 550 78C650 68 740 38 840 32C940 26 1030 52 1130 65C1230 78 1340 60 1440 38V110H0V58Z"
                     fill="#29166F" />
@@ -862,26 +170,19 @@
         </div>
 
         <div class="lg-footer__container">
-            <!-- 5-Column Navigation & Brand Grid -->
+
             <div class="lg-footer__grid">
 
-                <!-- Column 1: Brand -->
                 <div class="lg-footer__brand">
-                    <!-- Little Goonz Mascot Creature -->
 
-
-                    <!-- Little Goonz Logo -->
                     <a href="index.html" class="lg-footer__logo-link">
-                        <img src="images/companyslide1.png" alt="Little Goonz" class="lg-footer__logo-img">
+                        <img src="images/companyslide1.png" alt="Little Goonz" class="lg-footer__logo-img" width="3158" height="1483" decoding="async" loading="lazy">
                     </a>
 
-                    <!-- Brand Description -->
                     <p class="lg-footer__description">
                         Fun, safe &amp; innovative toys and mobility gear for your little one to grow, play and explore.
                     </p>
 
-
-                    <!-- Social Media Links -->
                     <div class="lg-footer__socials">
                         <a href="#" class="lg-footer__social-btn lg-footer__social-fb" aria-label="Facebook"
                             title="Facebook">
@@ -902,7 +203,6 @@
                     </div>
                 </div>
 
-                <!-- Column 2: SHOP -->
                 <div class="lg-footer__col lg-footer__col-shop">
                     <div class="lg-footer__heading-wrap">
                         <h3 class="lg-footer__heading lg-footer__heading--yellow">SHOP</h3>
@@ -937,7 +237,6 @@
                     </ul>
                 </div>
 
-                <!-- Column 3: COMPANY -->
                 <div class="lg-footer__col lg-footer__col-company">
                     <div class="lg-footer__heading-wrap">
                         <h3 class="lg-footer__heading lg-footer__heading--turquoise">COMPANY</h3>
@@ -972,7 +271,6 @@
                     </ul>
                 </div>
 
-                <!-- Column 4: HELP & SUPPORT -->
                 <div class="lg-footer__col lg-footer__col-support">
                     <div class="lg-footer__heading-wrap">
                         <h3 class="lg-footer__heading lg-footer__heading--pink">HELP &amp; SUPPORT</h3>
@@ -1003,7 +301,6 @@
                     </ul>
                 </div>
 
-                <!-- Column 5: STAY IN THE LOOP (Newsletter) -->
                 <div class="lg-footer__col lg-footer__col-newsletter">
                     <div class="lg-footer__heading-wrap">
                         <h3 class="lg-footer__heading lg-footer__heading--yellow">STAY IN THE LOOP</h3>
@@ -1018,7 +315,6 @@
                         Subscribe to get special offers, new arrivals &amp; parenting tips.
                     </p>
 
-                    <!-- Newsletter Form -->
                     <form class="lg-footer__form" action="#" method="POST" onsubmit="event.preventDefault();">
                         <div class="lg-footer__input-wrap">
                             <input type="email" class="lg-footer__input" placeholder="Enter your email" required
@@ -1036,9 +332,8 @@
 
             </div>
 
-            <!-- Trust / Value Indicators Bar -->
             <div class="lg-footer__trust">
-                <!-- Trust Item 1: Safe & Certified -->
+
                 <div class="lg-footer__trust-item">
                     <div class="lg-footer__trust-icon-box lg-footer__trust-purple" aria-hidden="true">
                         <svg viewBox="0 0 24 24">
@@ -1049,7 +344,6 @@
                     <p class="lg-footer__trust-text">Safe &amp;<br>Certified</p>
                 </div>
 
-                <!-- Trust Item 2: Made for Little Goonz -->
                 <div class="lg-footer__trust-item">
                     <div class="lg-footer__trust-icon-box lg-footer__trust-pink" aria-hidden="true">
                         <svg viewBox="0 0 24 24">
@@ -1063,7 +357,6 @@
                     <p class="lg-footer__trust-text">Made for<br>Little Goonz</p>
                 </div>
 
-                <!-- Trust Item 3: Premium Quality -->
                 <div class="lg-footer__trust-item">
                     <div class="lg-footer__trust-icon-box lg-footer__trust-turquoise" aria-hidden="true">
                         <svg viewBox="0 0 24 24">
@@ -1075,7 +368,6 @@
                     <p class="lg-footer__trust-text">Premium<br>Quality</p>
                 </div>
 
-                <!-- Trust Item 4: Fast & Reliable -->
                 <div class="lg-footer__trust-item">
                     <div class="lg-footer__trust-icon-box lg-footer__trust-yellow" aria-hidden="true">
                         <svg viewBox="0 0 24 24">
@@ -1089,33 +381,30 @@
                 </div>
             </div>
 
-            <!-- Subtle Horizontal Divider -->
             <hr class="lg-footer__divider">
 
-            <!-- Footer Bottom Bar -->
             <div class="lg-footer__bottom">
-                <!-- Left: Copyright & Heart -->
+
                 <p class="lg-footer__copyright">
                     <span class="lg-footer__heart-icon" aria-hidden="true">♥</span>
                     &copy; 2026 Little Goonz. All rights reserved.
                 </p>
 
-                <!-- Center: Decorative Playful Elements -->
                 <div class="lg-footer__bottom-decor" aria-hidden="true">
-                    <!-- Turquoise Squiggle -->
+
                     <svg class="lg-footer__decor-squiggle" viewBox="0 0 36 8" fill="none">
                         <path d="M2 4C5 1 8 7 11 4C14 1 17 7 20 4C23 1 26 7 29 4C32 1 35 7" stroke="#32C8C2"
                             stroke-width="2" stroke-linecap="round" />
                     </svg>
-                    <!-- Yellow Dot -->
+
                     <span class="lg-footer__decor-dot"></span>
-                    <!-- Pink Star -->
+
                     <svg class="lg-footer__decor-star" viewBox="0 0 24 24" fill="none" stroke="#F32661" stroke-width="2"
                         stroke-linecap="round" stroke-linejoin="round">
                         <polygon
                             points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
                     </svg>
-                    <!-- Turquoise Grid -->
+
                     <div class="lg-footer__decor-grid">
                         <span class="lg-footer__decor-grid-dot"></span>
                         <span class="lg-footer__decor-grid-dot"></span>
@@ -1126,19 +415,18 @@
                     </div>
                 </div>
 
-                <!-- Right: Secure Payments & Logos -->
                 <div class="lg-footer__payments">
                     <span class="lg-footer__payments-label">Secure Payments</span>
                     <div class="lg-footer__payment-badges">
-                        <!-- VISA -->
+
                         <div class="lg-footer__payment-badge" title="Visa">
-                            <img src="images/icon-payment-options-5.svg" alt="Visa">
+                            <img src="images/icon-payment-options-5.svg" alt="Visa" width="46" height="30" decoding="async" loading="lazy">
                         </div>
-                        <!-- Mastercard -->
+
                         <div class="lg-footer__payment-badge" title="Mastercard">
-                            <img src="images/icon-payment-options-6.svg" alt="Mastercard">
+                            <img src="images/icon-payment-options-6.svg" alt="Mastercard" width="46" height="30" decoding="async" loading="lazy">
                         </div>
-                        <!-- RuPay -->
+
                         <div class="lg-footer__payment-badge" title="RuPay">
                             <svg viewBox="0 0 74 24" width="48" height="18" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -1148,7 +436,7 @@
                                 <polygon points="63,5 68,12 63,19 67,19 72,12 67,5" fill="#00A859" />
                             </svg>
                         </div>
-                        <!-- UPI -->
+
                         <div class="lg-footer__payment-badge" title="UPI">
                             <svg viewBox="0 0 60 24" width="46" height="18" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -1164,51 +452,20 @@
 
         </div>
     </footer>
-    <!-- Little Goonz Footer End -->
-    <!-- Jquery Library File -->
-    <script src="js/jquery-3.7.1.min.js"></script>
-    <!-- Bootstrap js file -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- Validator js file -->
-    <script src="js/validator.min.js"></script>
-    <!-- SlickNav js file -->
-    <script src="js/jquery.slicknav.js"></script>
-    <!-- Swiper js file -->
-    <script src="js/swiper-bundle.min.js"></script>
-    <!-- Counter js file -->
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/jquery.counterup.min.js"></script>
-    <!-- Magnific js file -->
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <!-- SmoothScroll -->
-    <script src="js/SmoothScroll.js"></script>
-    <!-- Parallax js -->
-    <script src="js/parallaxie.js"></script>
-    <!-- MagicCursor js file -->
-    <script src="js/gsap.min.js"></script>
-    <script src="js/magiccursor.js"></script>
-    <!-- Text Effect js file -->
-    <script src="js/SplitText.min.js"></script>
-    <script src="js/ScrollTrigger.min.js"></script>
-    <!-- YTPlayer js File -->
-    <script src="js/jquery.mb.YTPlayer.min.js"></script>
-    <!-- Wow js file -->
-    <script src="js/wow.min.js"></script>
-    <!-- Main Custom js file -->
-    <script src="js/function.js"></script>
-    <!-- Keep SlickNav's existing toggle and handlers in the navbar's mobile slot. -->
-    <script>
-        (function () {
-            var header = document.querySelector('header.reference-navbar');
-            if (!header) return;
-            var toggle = header.querySelector('.responsive-menu .slicknav_btn');
-            var slot = header.querySelector('.navbar-toggle');
-            if (toggle && slot) {
-                toggle.setAttribute('aria-label', 'Toggle navigation');
-                slot.appendChild(toggle);
-            }
-        })();
-    </script>
-    <script src="js/catalog.js"></script>
+
+    <script src="js/jquery-3.7.1.min.js" defer></script>
+
+    <script src="js/jquery.slicknav.min.js" defer></script>
+
+    <script src="js/SmoothScroll.min.js" defer></script>
+
+    <script src="js/gsap.min.js" defer></script>
+    <script src="js/magiccursor.min.js" defer></script>
+
+    <script src="js/function.min.js" defer></script>
+
+    <script src="js/shop.min.js" defer></script>
+    <script src="js/catalog.min.js" defer></script>
+
 </body>
 </html>
