@@ -18,6 +18,23 @@
             white-space: nowrap;
         }
 
+        .branded-topbar .topbar-partner-brand {
+            display: flex;
+            align-items: center;
+            flex: 0 0 auto;
+            gap: 10px;
+        }
+
+        .branded-topbar .topbar-partner-text {
+            color: var(--primary-color);
+            font-size: 11px;
+            font-weight: 600;
+            line-height: 1.2;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
         .branded-topbar .topbar-partner-logo {
             display: block;
             flex: 0 0 auto;
@@ -52,9 +69,37 @@
                 display: inline-block;
             }
 
+            .branded-topbar .topbar-partner-brand {
+                flex-direction: column;
+                gap: 2px;
+            }
+
+            .branded-topbar .topbar-partner-text {
+                font-size: 9px;
+                letter-spacing: .05em;
+            }
+
             .branded-topbar .topbar-partner-logo {
                 width: 92px;
                 height: 28px;
+            }
+        }
+
+        @media (max-width: 359px) {
+            .branded-topbar .topbar-content-info {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 6px 12px;
+            }
+
+            .branded-topbar .topbar-contact {
+                width: 100%;
+                align-items: center;
+            }
+
+            .branded-topbar .topbar-partner-brand {
+                flex-direction: row;
+                gap: 8px;
             }
         }
 
