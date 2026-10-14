@@ -23,6 +23,7 @@
             align-items: center;
             flex: 0 0 auto;
             gap: 10px;
+            transform: translateX(max(0px, calc((100vw - 1300px) / 2)));
         }
 
         .branded-topbar .topbar-partner-text {
@@ -121,18 +122,18 @@
             position: absolute;
             top: 1px;
             left: 0;
-            width: clamp(198px, 20.372vw, 274px);
+            width: 320px;
             bottom: 1px;
             height: auto;
             border-radius: 4px 0 0 4px;
-            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 274 76' preserveAspectRatio='none'%3E%3Crect width='274' height='76' fill='white'/%3E%3Cpath d='M0 43C14 30 29 37 37 50C52 34 74 49 76 62L100 76H0Z' fill='%23f1edff'/%3E%3Cpath d='M0 62C22 47 39 58 48 68C68 62 75 72 86 76H0Z' fill='%23e4dcff'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 274 76' preserveAspectRatio='none'%3E%3Cpath d='M0 43C14 30 29 37 37 50C52 34 74 49 76 62L100 76H0Z' fill='%23f1edff'/%3E%3Cpath d='M0 62C22 47 39 58 48 68C68 62 75 72 86 76H0Z' fill='%23e4dcff'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
             pointer-events: none;
             z-index: -1;
         }
 
         header.reference-navbar .navbar {
             max-width: none;
-            min-height: 94px;
+            min-height: 116px;
             margin: 0;
             padding: 0 24px 0 0;
             gap: 21px;
@@ -141,7 +142,7 @@
 
         header.reference-navbar .header-action-box {
             position: relative;
-            flex: 0 0 clamp(198px, 20.372vw, 274px);
+            flex: 0 0 320px;
             width: auto;
             max-width: none;
             margin: 0;
@@ -150,7 +151,7 @@
 
         header.reference-navbar .navbar-brand {
             position: relative;
-            width: 160px;
+            width: 208px;
             margin: 0 0 0 clamp(26px, 4.46vw, 60px);
             padding: 0;
         }
@@ -179,8 +180,8 @@
 
         header.reference-navbar .header-logo-spark {
             position: absolute;
-            top: 18px;
-            left: calc(clamp(26px, 4.46vw, 60px) + 166px);
+            top: 26px;
+            left: calc(clamp(26px, 4.46vw, 60px) + 214px);
             width: 40px;
             height: 45px;
             background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M5 26C0 41 28 45 29 27' fill='none' stroke='%23342365' stroke-width='1.8' stroke-dasharray='3 3' stroke-linecap='round'/%3E%3Cpath d='M16 14L42 4L31 27L27 18L16 14Z' fill='%23f5b51a' stroke='%23342365' stroke-width='1.8' stroke-linejoin='round'/%3E%3Cpath d='M27 18L42 4' fill='none' stroke='%23342365' stroke-width='1.8'/%3E%3C/svg%3E") center / contain no-repeat;
@@ -472,15 +473,15 @@
 
             header.reference-navbar .header-action-box,
             header.reference-navbar .header-sticky::before {
-                width: 178px;
+                width: 226px;
             }
 
             header.reference-navbar .header-action-box {
-                flex-basis: 178px;
+                flex-basis: 226px;
             }
 
             header.reference-navbar .navbar-brand {
-                width: 148px;
+                width: 192.4px;
                 margin-left: 18px;
             }
 
@@ -518,7 +519,7 @@
             }
 
             header.reference-navbar .header-sticky::before {
-                width: 210px;
+                width: 240px;
             }
 
             header.reference-navbar .header-action-box {
@@ -543,7 +544,7 @@
 
             header.reference-navbar .header-nav-tools {
                 flex: 0 0 auto;
-                min-height: 94px;
+                min-height: 116px;
             }
 
             header.reference-navbar .header-nav-tools::before {
@@ -585,8 +586,8 @@
             }
 
             header.reference-navbar .slicknav_nav {
-                max-height: calc(100vh - 156px);
-                max-height: calc(100dvh - 156px);
+                max-height: calc(100vh - 190px);
+                max-height: calc(100dvh - 190px);
                 overflow-y: auto;
                 margin: 0;
                 padding: 8px 16px 16px;
@@ -669,16 +670,17 @@
 
         @media (max-width: 599px) {
             header.reference-navbar .navbar {
+                min-height: 104px;
                 padding: 0 12px;
                 gap: 10px;
             }
 
             header.reference-navbar .header-sticky::before {
-                width: 164px;
+                width: 192px;
             }
 
             header.reference-navbar .navbar-brand {
-                width: clamp(112px, calc(100vw - 237px), 148px);
+                width: clamp(112px, calc(100vw - 221px), 176px);
                 margin-left: 0;
             }
 
@@ -692,6 +694,7 @@
             }
 
             header.reference-navbar .header-nav-tools {
+                min-height: 104px;
                 gap: 8px;
             }
 
